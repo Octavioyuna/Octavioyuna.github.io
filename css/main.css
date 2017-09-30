@@ -1,43 +1,292 @@
+/*main.css*/
+/*OE, 2016*/
+/*This is the main css style for the travel website. I have a class called c1 which is for misc*/
 body {
-    margin: 60px auto;
-    width: 70%;
+background-color:#ffffff;
+font-family: "PT Sans",'Helvetica Neue',Arial,Helvetica,sans-serif;
+font-family: Ubuntu, sans-serif;
 }
-nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
-    list-style: none;
-    font-weight: bold;
+a {text-decoration:none;}
+p {padding-left:5px;}
+.img {
+text-align: center;
 }
-nav ul li, footer ul li {
-    display: inline;
-    margin-right: 20px;
+/**************/
+/*Specific divs;These are unique areas inside the web page*/
+/**************/
+/*holds everything with respect to entire page*/
+.container {
+background-color: #517fa4;
+width:60%;
+position:absolute;
+margin-left:20%;
+margin-right:20%;
+
 }
-a {
+/*holds title and menu*/
+.header {
+background-color: #417fa4;
+padding:0.5%;
+margin:0.5%;
+
+
+background: url("https://1f1b338e3d2f1109f6c5016c056e396cc674172e-www.googledrive.com/host/0B4s1SN9NUOKqb2E5RFFDcDRPTWs") no-repeat center center fixed;
+-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+
+}
+.title {
+background-color: #517fb4;
+    padding-left:0.5%;
+    padding-right:0.5%;
+}
+/*holds nav menu*/
+.nav {
+background-color: #006599;
+float:left;
+width:25%;
+padding:0.5%;
+margin:0.5%;
+font-size:100%;
+}
+/*holds content text*/
+.content {
+background-color:#519fa4;
+float:left;
+width:54%;
+padding:0.5%;
+margin:0.5%;
+}
+/*holds content img*/
+.right {
+background-color: #800080;
+float:left;
+width:15%;
+padding:0.5%;
+margin:0.5%;
+}
+/*holds other info*/
+.footer {
+clear:left;
+background-color:#f3f10c;
+}
+/**************/
+/*menu def;top or main menu*/
+/**************/
+.menu {
+background-color: #002147;
+    padding-left:0.5%;
+    padding-right:0.5%;
+text-align: center;
+font-family:"PT Sans",'Helvetica Neue',Arial,Helvetica,sans-serif;
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.menu li {
+    float: left;
+    padding-left:0.5%;
+    padding-right:0.5%;
+}
+
+.menu li a {
+    color: #ffffff;
+    display: inline-block;
+    text-align: center;
     text-decoration: none;
-    color: #999;
-}
-a:hover {
-    text-decoration: underline;
-}
-h1 {
-    font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-}
-p {
-    font-size: 1.5em;
-    line-height: 1.4em;
-    color: #333;
-}
-footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
+    
+border-style: solid;
+border-width: 1px;
+border-color: #D8D8D8;
+padding:0.5%;
 }
 
-ul.posts { 
-    margin: 20px auto 40px; 
-    font-size: 1.5em;
+.menu li a:hover {
+    color: #002147;
+background: #ffffff;
+border-style: solid;
+border-width: 1px;
+border-color: #3B6AA0;
+padding:0.5%;
+}
+/**************/
+/*c1 def;class for unique elements*/
+/**************/
+h1.c1 {
+text-align: center;
+font-size: 150%;
+color: #002147;
+}
+h2.c1 {
+font-size: 110%;
+color: #002147;
+}
+a.c1 {
+border-style: solid;
+border-width: 1px;
+border-color: #D8D8D8;
+}
+a.c1:hover {
+color: #383838;
+background: #E8E8E8;
+border-style: solid;
+border-width: 1px;
+border-color: #3B6AA0;
+}
+p.c1 {
+}
+p.c1Small {
+font-size: 50%;
+}
+p.c1Small2 {
+font-size: 50%;
+text-align: right;
+}
+table.c1 {
+border: solid #3B6AA0;
+border-width: 1px;
+background-color: #E8E8E8;
+}
+img.c1 {
+width: 130px;
+height: 130px;
+}
+img.c1Small {
+width: 24px;
+height: 24px;
+border: 0;
+}
+.c1InfoContainer {
+border: solid #E8E8E8;
+border-width: 1px;
+background-color: #602040;
+float:left;
+width:40%;
+padding: 0.1cm 0.2cm;
+}
+div.c1ImgContainer {
+text-align: center;
+padding: 0.1cm;
+}
+div.c1ImgContainer img {
+width:60%;
+}
+/**************/
+/*collapsibleList*/
+/*modified from:http://code.stephenmorley.org/javascript/collapsible-lists/*/
+/**************/
+/*collapsibleList*/
+.collapsibleList li{
+list-style-image:url('http://code.stephenmorley.org/javascript/collapsible-lists/button.png');
+cursor:auto;
+        margin:0;
+        padding:0;
+        list-style-position:inside;
+}
+li.collapsibleListOpen{
+list-style-image:url('http://code.stephenmorley.org/javascript/collapsible-lists/button-open.png');
+cursor:pointer;
+}
+li.collapsibleListClosed{
+list-style-image:url('http://code.stephenmorley.org/javascript/collapsible-lists/button-closed.png');
+cursor:pointer;
+}
+.collapsibleList li { background: green; }
+.collapsibleList li:nth-child(odd) { background: red; }
+
+.article-tabs{
+    display:table;
+    table-layout:fixed;
+    margin-bottom:0.25rem;
+}
+.article-tabs .tab-title{
+    margin-left:0;
+    display:table-cell;
+    float:none;
+    position:static
 }
 
-ul.posts li {
-    list-style: none;
+.article-tabs .tab-title a{
+    display:block;
+    height:75px;
+    padding:.2rem .5625rem;
+    border-right:1px solid white;
+    font-weight:bold;color:white
+}
+.article-tabs .tab-title a:hover{
+    background:#3c63af;
+    color:white
+}
+.article-tabs .tab-title.active a{
+    position:relative;
+    height:83px;
+    font-weight:bold;
+    font-family:"arial"
+}
+.article-tabs .tab-title.active a:after{
+    content:"\f103";
+    position:absolute;
+    bottom:.3125rem;
+    left:.5rem;
+    font-size:16px
+}
+.article-tabs .tab-title.active a:hover{
+    cursor:inherit
+}
+
+
+.tab-title{
+    margin-left:0;
+    display:table-cell;
+    float:none;position:static
+}
+.article-tabs .tab-title a{
+    display:block;
+    height:75px;
+    padding:.5rem .5625rem;
+    border-right:1px solid white;
+    font-weight:bold;color:white
+}
+.article-tabs .tab-title a:hover{
+    background:#3c63af;
+    color:white
+}
+.article-tabs .tab-title.active a{
+    position:relative;
+    height:83px;
+    font-weight:bold;
+    font-family:"arial"
+}
+.article-tabs .tab-title.active a:after{
+    content:"\f103";
+    position:absolute;
+    bottom:.2rem;
+    left:.2rem;
+    font-size:16px
+}
+.article-tabs .tab-title.active a:hover{
+    cursor:inherit
+}
+.author-list{
+    overflow:visible;
+    margin-left:0;
+    margin-bottom:.625rem
+}
+.author-list li{
+    float:left;
+    list-style-type:none;
+    position:relative;
+    margin-left:-3px
+}
+.author-list li.active a:hover{
+    text-decoration:none
+}.author-list li[data-js-toggle='toggle_trigger'] a{
+    color:#3c63af
 }
