@@ -26,7 +26,12 @@ margin-right:20%;
 /*holds title and menu*/
 .header {
 
-  background: url("https://upload.wikimedia.org/wikipedia/commons/9/98/VicunaSalarDeUyuni_20170503.jpg");
+
+  background: url("https://upload.wikimedia.org/wikipedia/commons/9/98/VicunaSalarDeUyuni_20170503.jpg") no-repeat center center fixed;
+-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 
 
 }
