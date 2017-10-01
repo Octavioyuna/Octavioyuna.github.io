@@ -20,7 +20,7 @@ text-align: center;
 /**************/
 /*holds everything with respect to entire page*/
 .container {
-background-color: #9199a9;
+background-color: #ffffff;
 width:60%;
 position:absolute;
 margin-left:20%;
@@ -29,34 +29,34 @@ margin-right:20%;
 }
 /*holds title and menu*/
 .header {
-
-  background: url("https://docs.google.com/uc?id=0BwEAQnmQpXgpMTRNZmF5SFZnLVU") no-repeat center center fixed;
--webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-
+background-color: #ffffff;
 }
 .logo {
-background-color: #9199a9;
+background-color: #ffffff;
 
 }
 .title {
-background-color: #517fb6;
+background-color: #ffffff;
     padding-left:0.5%;
     padding-right:0.5%;
-}  
+}
+.mainMenu {
+background-color: #bababa;
+  background-image: url(../image/background.jpg);
+  background-size: cover;
+  resize: both;
+padding:0.5%;
+}
 .separator {
 background-color: #bababa;
-
 }
 /*holds main div*/
 .bodyMain {
-background-color:#9199a9;
+background-color:#ffffff;
 }
 /*holds nav menu*/
 .nav {
-background-color:#9199a9;
+background-color:#ffffff;
 float:left;
 width:25%;
 padding:0.5%;
@@ -65,7 +65,7 @@ font-size:100%;
 }
 /*holds content text*/
 .content {
-background-color:#999991;
+background-color:#eeeeee;
 float:left;
 width:54%;
 padding:0.5%;
@@ -97,7 +97,7 @@ margin:0.5%;
 }
 /*holds content img*/
 .right {
-background-color: #9199a9;
+background-color: #hhhhhh;
 float:left;
 width:15%;
 padding:0.5%;
@@ -106,7 +106,7 @@ margin:0.5%;
 /*holds other info*/
 .footer {
 clear:left;
-background-color:#f3f10c;
+background-color:#hhhhhh;
 }
 /**************/
 /*menu def;top or main menu*/
@@ -155,7 +155,7 @@ padding:0.5%;
 /*c1 def;class for unique elements*/
 /**************/
 h1.c1 {
-text-align: center;
+text-align: left;
 font-size: 150%;
 color: #002147;
 }
@@ -214,6 +214,11 @@ padding: 0.1cm;
 div.c1ImgContainer img {
 width:100%;
 }
+div.c1LogoImgContainer img {
+width: 60px;
+height: 60px;
+padding: 0.1cm;
+}
 /**************/
 /*collapsibleList*/
 /*modified from:http://code.stephenmorley.org/javascript/collapsible-lists/*/
@@ -234,8 +239,8 @@ li.collapsibleListClosed{
 list-style-image:url('http://code.stephenmorley.org/javascript/collapsible-lists/button-closed.png');
 cursor:pointer;
 }
-.collapsibleList li { background: #cccccc; }
-.collapsibleList li:nth-child(odd) { background: #dddddd; }
+.collapsibleList li { background: #hhhhhh; }
+.collapsibleList li:nth-child(odd) { background: #hhhhhh; }
 
 .article-tabs{
     display:table;
