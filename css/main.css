@@ -28,7 +28,7 @@ margin-right:20%;
 padding:0.5%;
 margin:0.5%;
 
-  background:url(./image/physicalMapSmall2.JPG) no-repeat center center fixed;
+  background-image:url(./image/physicalMapSmall2.JPG) no-repeat center center fixed;
 -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
