@@ -25,7 +25,7 @@ width:60%;
 position:absolute;
 margin-left:20%;
 margin-right:20%;
-
+padding-bottom:0.5%;
 }
 /*holds title and menu*/
 .header {
@@ -33,9 +33,13 @@ background-color: #ffffff;
 }
 .logo {
 background-color: #ffffff;
-
 }
 .title {
+background-color: #ffffff;
+    padding-left:0.5%;
+    padding-right:0.5%;
+}
+.subtitle {
 background-color: #ffffff;
     padding-left:0.5%;
     padding-right:0.5%;
@@ -48,7 +52,8 @@ background-color: #bababa;
 padding:0.5%;
 }
 .separator {
-background-color: #bababa;
+background-color: #002147;
+clear:left;
 }
 /*holds main div*/
 .bodyMain {
@@ -73,7 +78,7 @@ margin:0.5%;
 }
 /**/
 .contentItem {
-background-color:#9199a9;
+background-color:#dddddd;
 float:left;
 width:98%;
 padding:0.5%;
@@ -81,7 +86,7 @@ margin:0.5%;
 }
 /**/
 .contentItemText {
-background-color:#9199a9;
+background-color:#dddddd;
 float:left;
 width:55%;
 padding:0.5%;
@@ -89,7 +94,7 @@ margin:0.5%;
 }
 /**/
 .contentItemImg {
-background-color:#9199a9;
+background-color:#dddddd;
 float:left;
 width:41%;
 padding:0.5%;
@@ -97,7 +102,7 @@ margin:0.5%;
 }
 /*holds content img*/
 .right {
-background-color: #hhhhhh;
+background-color: #eeeeee;
 float:left;
 width:15%;
 padding:0.5%;
@@ -106,7 +111,7 @@ margin:0.5%;
 /*holds other info*/
 .footer {
 clear:left;
-background-color:#hhhhhh;
+background-color:#ffffff;
 }
 /**************/
 /*menu def;top or main menu*/
@@ -179,10 +184,10 @@ p.c1 {
   font-size: 100%;
 }
 p.c1Small {
-font-size: 50%;
+font-size: 100%;
 }
 .c1Small2 {
-font-size: 50%;
+font-size: 100%;
 text-align: right;
 }
 table.c1 {
@@ -195,8 +200,8 @@ width: 130px;
 height: 130px;
 }
 img.c1Small {
-width: 24px;
-height: 24px;
+width: 100px;
+height: 100px;
 border: 0;
 }
 .c1InfoContainer {
@@ -215,8 +220,8 @@ div.c1ImgContainer img {
 width:100%;
 }
 div.c1LogoImgContainer img {
-width: 60px;
-height: 60px;
+width: 70px;
+height: 70px;
 padding: 0.1cm;
 }
 /**************/
