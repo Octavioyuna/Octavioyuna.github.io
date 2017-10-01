@@ -20,7 +20,7 @@ text-align: center;
 /**************/
 /*holds everything with respect to entire page*/
 .container {
-background-color: #517fb4;
+background-color: #9199a9;
 width:60%;
 position:absolute;
 margin-left:20%;
@@ -38,7 +38,7 @@ margin-right:20%;
 
 }
 .logo {
-background-color: #546804;
+background-color: #9199a9;
 
 }
 .title {
@@ -52,11 +52,11 @@ background-color: #bababa;
 }
 /*holds main div*/
 .bodyMain {
-background-color:#20f10c;
+background-color:#9199a9;
 }
 /*holds nav menu*/
 .nav {
-background-color:#889999;
+background-color:#9199a9;
 float:left;
 width:25%;
 padding:0.5%;
@@ -81,7 +81,7 @@ margin:0.5%;
 }
 /**/
 .contentItemText {
-background-color:#999919;
+background-color:#9199a9;
 float:left;
 width:55%;
 padding:0.5%;
@@ -89,7 +89,7 @@ margin:0.5%;
 }
 /**/
 .contentItemImg {
-background-color:#909999;
+background-color:#9199a9;
 float:left;
 width:41%;
 padding:0.5%;
@@ -97,7 +97,7 @@ margin:0.5%;
 }
 /*holds content img*/
 .right {
-background-color: #cccccc;
+background-color: #9199a9;
 float:left;
 width:15%;
 padding:0.5%;
