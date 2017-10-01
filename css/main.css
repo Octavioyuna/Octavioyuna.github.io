@@ -36,15 +36,19 @@ margin-right:20%;
   -o-background-size: cover;
   background-size: cover;
 
-
 }
 .title {
-background-color: #517fb4;
+background-color: #517fb6;
     padding-left:0.5%;
     padding-right:0.5%;
 }
+/*holds main div*/
+.bodyMain {
+background-color:#20f10c;
+}
 /*holds nav menu*/
 .nav {
+background-color:#889999;
 float:left;
 width:25%;
 padding:0.5%;
@@ -197,8 +201,8 @@ li.collapsibleListClosed{
 list-style-image:url('http://code.stephenmorley.org/javascript/collapsible-lists/button-closed.png');
 cursor:pointer;
 }
-.collapsibleList li { background: #517fb4; }
-.collapsibleList li:nth-child(odd) { background: #517fb4; }
+.collapsibleList li { background: #cc0ccc; }
+.collapsibleList li:nth-child(odd) { background: #ccccc1; }
 
 .article-tabs{
     display:table;
