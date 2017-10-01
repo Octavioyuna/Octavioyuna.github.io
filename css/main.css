@@ -37,10 +37,18 @@ margin-right:20%;
   background-size: cover;
 
 }
+.logo {
+background-color: #546804;
+
+}
 .title {
 background-color: #517fb6;
     padding-left:0.5%;
     padding-right:0.5%;
+}  
+.separator {
+background-color: #bababa;
+
 }
 /*holds main div*/
 .bodyMain {
@@ -57,9 +65,33 @@ font-size:100%;
 }
 /*holds content text*/
 .content {
-background-color:#999999;
+background-color:#999991;
 float:left;
 width:54%;
+padding:0.5%;
+margin:0.5%;
+}
+/**/
+.contentItem {
+background-color:#9199a9;
+float:left;
+width:98%;
+padding:0.5%;
+margin:0.5%;
+}
+/**/
+.contentItemText {
+background-color:#999919;
+float:left;
+width:55%;
+padding:0.5%;
+margin:0.5%;
+}
+/**/
+.contentItemImg {
+background-color:#909999;
+float:left;
+width:41%;
 padding:0.5%;
 margin:0.5%;
 }
@@ -144,11 +176,12 @@ border-width: 1px;
 border-color: #3B6AA0;
 }
 p.c1 {
+  font-size: 100%;
 }
 p.c1Small {
 font-size: 50%;
 }
-p.c1Small2 {
+.c1Small2 {
 font-size: 50%;
 text-align: right;
 }
@@ -179,7 +212,7 @@ text-align: center;
 padding: 0.1cm;
 }
 div.c1ImgContainer img {
-width:60%;
+width:100%;
 }
 /**************/
 /*collapsibleList*/
@@ -201,8 +234,8 @@ li.collapsibleListClosed{
 list-style-image:url('http://code.stephenmorley.org/javascript/collapsible-lists/button-closed.png');
 cursor:pointer;
 }
-.collapsibleList li { background: #cc0ccc; }
-.collapsibleList li:nth-child(odd) { background: #ccccc1; }
+.collapsibleList li { background: #cccccc; }
+.collapsibleList li:nth-child(odd) { background: #dddddd; }
 
 .article-tabs{
     display:table;
@@ -210,7 +243,6 @@ cursor:pointer;
     margin-bottom:0.25rem;
 }
 .article-tabs .tab-title{
-    margin-left:0;
     display:table-cell;
     float:none;
     position:static
@@ -246,7 +278,6 @@ cursor:pointer;
 
 
 .tab-title{
-    margin-left:0;
     display:table-cell;
     float:none;position:static
 }
