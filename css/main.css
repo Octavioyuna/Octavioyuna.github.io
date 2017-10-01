@@ -16,7 +16,7 @@ text-align: center;
 /**************/
 /*holds everything with respect to entire page*/
 .container {
-background-color: #517fa4;
+background-color: #517fb4;
 width:60%;
 position:absolute;
 margin-left:20%;
@@ -25,7 +25,6 @@ margin-right:20%;
 }
 /*holds title and menu*/
 .header {
-
 
   background: url("https://upload.wikimedia.org/wikipedia/commons/9/98/VicunaSalarDeUyuni_20170503.jpg") no-repeat center center fixed;
 -webkit-background-size: cover;
@@ -42,7 +41,6 @@ background-color: #517fb4;
 }
 /*holds nav menu*/
 .nav {
-background-color: #006599;
 float:left;
 width:25%;
 padding:0.5%;
@@ -51,7 +49,7 @@ font-size:100%;
 }
 /*holds content text*/
 .content {
-background-color:#519fa4;
+background-color:#006699;
 float:left;
 width:54%;
 padding:0.5%;
@@ -59,7 +57,7 @@ margin:0.5%;
 }
 /*holds content img*/
 .right {
-background-color: #800080;
+background-color: #517fb4;
 float:left;
 width:15%;
 padding:0.5%;
@@ -195,8 +193,8 @@ li.collapsibleListClosed{
 list-style-image:url('http://code.stephenmorley.org/javascript/collapsible-lists/button-closed.png');
 cursor:pointer;
 }
-.collapsibleList li { background: green; }
-.collapsibleList li:nth-child(odd) { background: red; }
+.collapsibleList li { background: #517fb4; }
+.collapsibleList li:nth-child(odd) { background: #517fb4; }
 
 .article-tabs{
     display:table;
