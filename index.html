@@ -26,44 +26,40 @@
 <body onload="startTime();CollapsibleLists.apply();">
   <div class="container">
     
-
     <div class="header">
       
-
       <div class="logo">
-                    <div class="c1LogoImgContainer"><img src=
-            "./image/logo.jpg" alt="img" /></div>
+                    <div class="c1LogoImgContainer"><img src="./image/logo.jpg" alt="img" /></div>
       </div>
 
       <div class="title">
-        
-
         <h1 class="c1">Chuchos Vagabundos</h1>
+      </div>
+      <div class="subtitle">
+        <h2 class="c1">Travel tips and recommendations</h2>
       </div>
 
       <div class="mainMenu">
         <ul class="article-tabs">
-          <li class="tab-title"><a href="index.html">Home</a></li>
+          <li class="tab-title"><a href="./index.html">Home</a></li>
 
-          <li class="tab-title"><a href="about.html">About</a></li>
+          <li class="tab-title"><a href="./about.html">About</a></li>
 
-          <li class="tab-title"><a href="links.html">Links</a></li>
+          <li class="tab-title"><a href="./links.html">Links</a></li>
 
-          <li class="tab-title"><a href=
-          "contact.html">Contact</a></li>
+          <li class="tab-title"><a href="./contact.html">Contact</a></li>
         </ul>
       </div>
 
       <div class="separator">
-        separator
+        &nbsp;
       </div>
     </div>
 
     <div class="bodyMain">
-      bodyMain
 
       <div class="nav">
-        expand/collapse all
+        <button onclick="expand_all()">expand/collapse all</button>
 
         <ul class="collapsibleList">
           <li>World
@@ -123,7 +119,7 @@
 			              <li>France
 
                 <ul>
-                  <li>Paris</li>
+                  <li><a href="./places/paris.html">Paris</a></li>
 
                   <li>Strassbourg</li>
                 </ul>
@@ -134,15 +130,9 @@
       </div>
 
       <div class="content">
-        content
-
         <h1 class="c1">Paris</h1>
-
         <div class="contentItem">
-          contentItem
-
           <div class="contentItemText">
-            contentItemText
 
             <h2 class="c1">Cathedrals</h2>
 
@@ -158,7 +148,6 @@
           </div>
 
           <div class="contentItemImg">
-            contentItemImg
 
             <div class="c1ImgContainer"><img src=
             "./image/notreDame.jpg" alt="img" /></div>
@@ -166,10 +155,8 @@
         </div>
 
         <div class="contentItem">
-          contentItem
 
           <div class="contentItemText">
-            contentItemText
 
             <h2 class="c1">Tour Eiffel</h2>
 
@@ -185,7 +172,6 @@
           </div>
 
           <div class="contentItemImg">
-            contentItemImg
 
             <div class="c1ImgContainer"><img src=
             "./image/eiffelTower1.jpg" alt="img" /></div>
@@ -194,14 +180,12 @@
       </div>
 
       <div class="right">
-        right
-
+<h2 class="c1">Maps and links</h2>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83998.94740083!2d2.276848905608841!3d48.858837635464745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C+France!5e0!3m2!1sen!2suk!4v1506858569827" width=90% frameborder="0" style="border:0"></iframe>
-      </div>bodyMain
+      </div>
     </div>
 
     <div class="footer">
-      footer
 
       <div class="nav">
         <p id="dateTxt" class="c1Small"><script type=
@@ -231,18 +215,20 @@
                                                 } else {
                                                     date = d.getYear();
                                                 }
-                                                                                                month = d.getUTCMonth()
-                                                                                                month = month + ","
-                                                                                                document.write(month);
+                                                month = d.getUTCMonth()
+                                                month = month + "."
+                                                document.write(month);
                                                 document.write(date);
         //]]>
-        </script>&nbsp;OE,UK</p>
+        </script>
+&nbsp;OE,UK
+</p>
       </div>
-
       <div class="separator">
-        separator
+        &nbsp;
       </div>
     </div>
+
   </div>
 </body>
 </html>
