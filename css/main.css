@@ -45,14 +45,14 @@ background-color: #ffffff;
     padding-right:0.5%;
 }
 .mainMenu {
-background-color: #bababa;
+background-color: #ffffff;
   background-image: url(../image/background.jpg);
   background-size: cover;
   resize: both;
 padding:0.5%;
 }
 .separator {
-background-color: #002147;
+background-color: #3c63af;
 clear:left;
 }
 /*holds main div*/
