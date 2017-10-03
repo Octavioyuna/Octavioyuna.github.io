@@ -14,23 +14,12 @@
   "HTML Tidy for Linux (vers 25 March 2009), see www.w3.org" />
 
   <title>Chuchos Vagabundos</title>
+	<!-- external css -->
   <link rel="stylesheet" type="text/css" href="./css/main.css" />
+	<!-- external js -->
   <script type="text/javascript" src="./scripts/js.js">
-</script><!-- external js -->
-	<!-- Adding expand / col -->
-	  <script>
-    function listExpansion() {
-      var element = document.getElementById('listHeader');
-	   
-      if (element.innerText == 'Expand All') { 
-        element.innerHTML = 'Collapse All';
-	      CollapsibleLists.collapse(false); 
-      } else { 
-        element.innerHTML = 'Expand All';
-        CollapsibleLists.collapse(true);
-      }
-    }
-  </script>
+</script>
+
 </head>
 
 <body onload="startTime();CollapsibleLists.apply();">
