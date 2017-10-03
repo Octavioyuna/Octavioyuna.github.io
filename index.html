@@ -73,8 +73,11 @@
 
       <div class="nav">
         <button onclick="expand_all()">expand/collapse all</button>
-
-        <ul class="collapsibleList">
+	      
+	        <div id="listHeader" onClick="listExpansion()">Expand All</div>
+  <div class="content">
+	  
+        <ul class="collapsibleList" id="hubList">
           <li>World
 
             <ul>
@@ -140,6 +143,7 @@
             </ul>
           </li>
         </ul>
+	  </div>
       </div>
 
       <div class="content">
