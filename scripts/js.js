@@ -162,6 +162,29 @@
 			if (li == node) toggle(node);
 			
 			};
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				    // Post-order traversal of the collapsible list(s) 
+    // if collapse is true, then all list items implode, else they explode.
+    this.collapse = function(collapse){
+      // find all elements with class collapsibleList(Open|Closed) and click   them
+      var elements = document.getElementsByClassName('collapsibleList' + (collapse ? 'Open' : 'Closed'));
+      for (var i = elements.length; i--;) {
+        elements[i].click();
+      }
+    };
+
 			
 			}
 			
