@@ -21,6 +21,19 @@
   <script type="text/javascript" src=
   "./scripts/CollapsibleLists.js">
 </script>
+	<!-- Adding expand / col -->
+	  <script>
+    function listExpansion() {
+      var element = document.getElementById('listHeader');
+      if (element.innerText == 'Expand All') { 
+        element.innerHTML = 'Collapse All';
+        CollapsibleLists.collapse(false); 
+      } else { 
+        element.innerHTML = 'Expand All';
+        CollapsibleLists.collapse(true);
+      }
+    }
+  </script>
 </head>
 
 <body onload="startTime();CollapsibleLists.apply();">
