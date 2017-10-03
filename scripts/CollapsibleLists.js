@@ -48,6 +48,16 @@ var CollapsibleLists =
         }
 
       };
+        
+                  				    // Post-order traversal of the collapsible list(s) 
+    // if collapse is true, then all list items implode, else they explode.
+    this.collapse = function(collapse){
+      // find all elements with class collapsibleList(Open|Closed) and click   them
+      var elements = document.getElementsByClassName('collapsibleList' + (collapse ? 'Open' : 'Closed'));
+      for (var i = elements.length; i--;) {
+        elements[i].click();
+      }
+    };
 
       /* Makes the specified list collapsible. The parameters are:
        *
@@ -112,16 +122,7 @@ var CollapsibleLists =
 
         };
           
-          				    // Post-order traversal of the collapsible list(s) 
-    // if collapse is true, then all list items implode, else they explode.
-    this.collapse = function(collapse){
-      // find all elements with class collapsibleList(Open|Closed) and click   them
-        alert(location.hostname);
-      var elements = document.getElementsByClassName('collapsibleList' + (collapse ? 'Open' : 'Closed'));
-      for (var i = elements.length; i--;) {
-        elements[i].click();
-      }
-    };
+
 
       }
 
