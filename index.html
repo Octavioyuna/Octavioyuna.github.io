@@ -40,9 +40,13 @@
 <body onload="startTime();CollapsibleLists.apply();">
   <div class="container">
     
-    <div class="header">
+    <div id="headerDiv "class="header"></div>
       
-
+<script>
+$(function(){
+  $("#headerDiv").load("headerClassContent.html");
+});
+</script>
 
     <div class="bodyMain">
 
