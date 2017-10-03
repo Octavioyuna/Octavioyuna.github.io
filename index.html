@@ -25,6 +25,7 @@
 	  <script>
     function listExpansion() {
       var element = document.getElementById('listHeader');
+	    alert(location.hostname);
       if (element.innerText == 'Expand All') { 
         element.innerHTML = 'Collapse All';
         CollapsibleLists.collapse(false); 
