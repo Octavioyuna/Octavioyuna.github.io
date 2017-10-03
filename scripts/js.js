@@ -320,3 +320,15 @@ function prepareList() {
 });
 
 
+	// Adding expand / collapse
+    function listExpansion() {
+      var element = document.getElementById('listHeader');
+	   
+      if (element.innerText == 'Expand All') { 
+        element.innerHTML = 'Collapse All';
+	      CollapsibleLists.collapse(false); 
+      } else { 
+        element.innerHTML = 'Expand All';
+        CollapsibleLists.collapse(true);
+      }
+    };
