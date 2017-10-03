@@ -244,8 +244,8 @@ li.collapsibleListClosed{
 list-style-image:url('http://code.stephenmorley.org/javascript/collapsible-lists/button-closed.png');
 cursor:pointer;
 }
-.collapsibleList li { background: #hhhhhh; }
-.collapsibleList li:nth-child(odd) { background: #hhhhhh; }
+.collapsibleList li { background: #ffffff; }
+.collapsibleList li:nth-child(odd) { background: #eeeeee; }
 
 .article-tabs{
     display:table;
