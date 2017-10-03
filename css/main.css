@@ -67,6 +67,9 @@ width:25%;
 padding:0.5%;
 margin:0.5%;
 font-size:100%;
+     display: flex; /*added*/
+  flex-direction: column; /*added*/
+      overflow-y: scroll;
 }
 /*holds content text*/
 .content {
