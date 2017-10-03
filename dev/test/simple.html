@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple</title>
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+</head>
+<body>
+
+<h1>Simplea</h1>
+<p>This is a paragraph.</p>
+
+<header id="myHead"></header>
+<nav id="myNav"></nav>
+Content
+<div id="Stuff"></div>
+
+<script>
+ document.getElementById("Stuff").innerHTML='<object type="text/html" data="p2.html"></object>';
+</script>
+
+<div id="StuffA"></div>
+
+<script src="//code.jquery.com/jquery.min.js"></script>
+<script>
+$.get("p3.html", function(data){
+    $("#StuffA").replaceWith(data);
+});
+</script>
+
+
+
+<script src="https://www.w3schools.com/lib/w3data.js"></script> 
+
+<div w3-include-html="p3.html"></div>
+
+<script>
+w3.includeHTML();
+</script>
+
+
+
+<object type="text/html" data="p3.html"></object>
+
+<div class="test"></div>
+
+
+
+<div class="test2"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="script.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--Navigation bar-->
+<div id="nav-placeholder">
+
+</div>
+
+<script>
+$(function(){
+  $("#nav-placeholder2").load("p2.html");
+});
+</script>
+<!--end of Navigation bar-->
+
+
+
+
+
+
+
+<div id="nav-placeholder2">
+</div>
+
+<script src="//code.jquery.com/jquery.min.js"></script>
+<script>
+$.get("p2.html", function(data){
+    $("#nav-placeholder").replaceWith(data);
+});
+</script>
+
+
+
+<div class="navbar-frame"></div>
+
+<script style="text/javascript" res="script2.js"></script>
+
+
+
+
+<footer id="myFooter"></footer>
+
+<script src="load_essentials.js"></script>
+</body>
+</html>
