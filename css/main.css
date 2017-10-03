@@ -6,7 +6,7 @@
  */
 /* Use this file to define css style. I have a class called c1 which is for misc. */
 body {
-background-color:#999999;
+background-color:#ffffff;
 font-family: "PT Sans",'Helvetica Neue',Arial,Helvetica,sans-serif;
 font-family: Ubuntu, sans-serif;
 }
@@ -52,7 +52,7 @@ background-color: #ffffff;
 padding:0.5%;
 }
 .separator {
-background-color: #888888;
+background-color: #3c63af;
 clear:left;
 }
 /*holds main div*/
