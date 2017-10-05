@@ -33,6 +33,7 @@
 			    document.getElementById('dateTxt').innerHTML = wd + " " + d + "." + m + "." + y + " " + hou + ":" + min + ":" + sec;
 			
 			    t = setTimeout('startTime()', 500);
+			document.write("Home");
 			}
 			
 			function checkTime(i) {
@@ -54,8 +55,8 @@ function writeSimpleDate() {
                                                 } else {
                                                     date = d.getYear();
                                                 }
-                                                month = d.getUTCMonth()
-                                                month = month + "."
+                                                month = d.getUTCMonth();
+                                                month = month + ".";
                                                 document.write(month);
                                                 document.write(date);
 }
