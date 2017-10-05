@@ -52,20 +52,8 @@ background-color: #ffffff;
 padding:0.5%;
 }
 .separator {
-/*background-color: #3c63af;*/
+background-color: #ffffff;
 clear:left;
-  background: 3c63af; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left top, #3c63af,#eeeeee, #ffffff); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(bottom right, #3c63af,#eeeeee, #ffffff); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(bottom right, #3c63af,#eeeeee, #ffffff); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom right, #3c63af,#eeeeee, #ffffff); /* Standard syntax */
-    
-background: -webkit-gradient(linear, center top, center bottom, from(#3c63af), to(#ffffff));
-background: -webkit-linear-gradient(#3c63af, #ffffff);
-background: -moz-linear-gradient(#3c63af, #ffffff);
-background: -o-linear-gradient(#3c63af, #ffffff);
-background: -ms-linear-gradient(#3c63af, #ffffff);
-background: linear-gradient(#3c63af, #ffffff);
 }
 /*holds main div*/
 .bodyMain {
