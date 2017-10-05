@@ -44,9 +44,21 @@
 			
 			
 			
-			
-			
-			
+			/*write date*/
+function writeSimpleDate() {
+                                                var d = new Date();
+                                                var date;
+                                                var browser = navigator.appName;
+                                                if (browser == "Netscape") {
+                                                    date = d.getYear() + 1900;
+                                                } else {
+                                                    date = d.getYear();
+                                                }
+                                                month = d.getUTCMonth()
+                                                month = month + "."
+                                                document.write(month);
+                                                document.write(date);
+}
 
 			
 			/*
