@@ -12,35 +12,16 @@
 <head>
   <meta name="generator" content=
   "HTML Tidy for Linux (vers 25 March 2009), see www.w3.org" />
-
   <title>Chuchos Vagabundos</title>
-	
 		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	<!-- external css -->
   <link rel="stylesheet" type="text/css" href="./css/main.css" />
 	<!-- external js -->
   <script type="text/javascript" src="./scripts/js.js">
 </script>
-	<script>
-		  <!-- external js -->
-	// Adding expand / collapse
-    function listExpansion() {
-      var element = document.getElementById('listHeader');
-	   
-      if (element.innerText == 'Expand All') { 
-        element.innerHTML = 'Collapse All';
-	      CollapsibleLists.collapse(false); 
-      } else { 
-        element.innerHTML = 'Expand All';
-        CollapsibleLists.collapse(true);
-      }
-    };
-</script>
-
 </head>
 
 <body onload="startTime();CollapsibleLists.apply();">
-	
   <div class="container">
 	  
     <div id="headerDiv" class="header"></div>
@@ -57,7 +38,7 @@
       </div>
     </div>
 
-    <div class="footer">
+    <div id="footerDiv" class="footer">
       <div class="nav">
         <p id="dateTxt" class="c1Small"><script type=
         "text/javascript">
