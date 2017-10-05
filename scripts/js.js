@@ -59,6 +59,12 @@ function writeSimpleDate() {
 	return str;
 }
 
+			/*write footer div*/
+function writeFooterDivs() {
+	document.getElementById('sysTxt').innerHTML = "System: " + navigator.appName + "," + navigator.appVersion + "," + navigator.appCodeName + "," + navigator.platform + "," + navigator.cookieEnabled;
+	document.getElementById('sysTxt').innerHTML = "&copy;" + writeSimpleDate() + "&nbsp;OE,UK;";
+}
+
 			
 			/*
 			
