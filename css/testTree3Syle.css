@@ -23,14 +23,14 @@
 }
 
 li.expand {
-    background-image: url('../image/src/button.png');
+    background-image: url('../image/src/button-open.png');
 }
 .expand {
-    background-image: url('../image/src/button.png');
+    background-image: url('../image/src/button-open.png');
 }
 li.collapse {
-    background-image: url('../image/src/button.png');
+    background-image: url('../image/src/button-closed.png');
 }
 .collapse {
-    background-image: url('../image/src/button.png');
+    background-image: url('../image/src/button-closed.png');
 }
