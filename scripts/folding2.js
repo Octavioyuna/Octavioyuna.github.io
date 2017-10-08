@@ -1,4 +1,8 @@
-$('.dir').click(function(e) {
-    e.stopPropagation();
-    $(this).children().slideToggle();
+
+
+$(function (){
+    $('li').click(function(event) {
+        event.stopPropagation();
+    $(event.target).children('ul').slideToggle();
+    });
 });
