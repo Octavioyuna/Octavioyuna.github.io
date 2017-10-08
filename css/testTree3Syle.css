@@ -17,12 +17,12 @@
     background-image: url('../image/src/button-open.png');
 	    background-position: 0 1px;
     background-repeat: no-repeat;
-    padding-left: 20px;
+    padding-left: 12px;
 }
 
 .collapse {
     background-image: url('../image/src/button-closed.png');
 	    background-position: 0 1px;
     background-repeat: no-repeat;
-    padding-left: 20px;
+    padding-left: 12px;
 }
