@@ -7,6 +7,7 @@
 </head>
 <body>
 
+	 <div id="Accord1" class="accord">
 <h1>This is a Heading</h1>
 <p>This is a paragraph.</p>
 <ul>
@@ -29,6 +30,7 @@
   </li>
   <li>item 3</li>
 </ul>
+	</div>
     
     <div id="Accord" class="accord">
     <ul>
@@ -80,13 +82,13 @@
 		
 		// Change [ - ] with [ + ] and  'collapse' class with 'expand' and sliding content upward
 		$('.accord ul').on('click', 'li.collapse span ', function (e) {
-			$(this).text('[ + ]').parent().addClass('expand').removeClass('collapse').find('>ul').slideUp();
+			$(this).text('[ ┼ ]').parent().addClass('expand').removeClass('collapse').find('>ul').hide();
 			e.stopImmediatePropagation();
 		});
  
 		// Change [ + ] with [ - ] and 'expand' class with 'collapse' class and sliding content downward
 		$('.accord ul').on('click', 'li.expand span', function (e) {
-			$(this).text('[ - ]').parent().addClass('collapse').removeClass('expand').find('>ul').slideDown();
+			$(this).text('[ ─ ]').parent().addClass('collapse').removeClass('expand').find('>ul').show();
 			e.stopImmediatePropagation();
 		});
 		
