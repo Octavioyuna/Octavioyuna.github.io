@@ -1,0 +1,23 @@
+.accord ul, .accord ul li {
+	list-style-type: none;
+}
+ 
+.accord ul li a {
+	color: #6E440A;
+	text-decoration: none;
+}
+ 
+.accord ul li a:hover {
+	color: #523205;
+	text-decoration: underline;
+}
+ 
+.accord ul li span {
+	color: red;
+	margin-left: 10%; /* Modify this value to update distance of +/- sign */
+	cursor: pointer;	
+}
+ 
+.pl-20 {
+	padding-left: 3%;
+}
