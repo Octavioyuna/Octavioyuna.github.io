@@ -23,11 +23,7 @@
 			$(this).text('[ ─ ]').parent().addClass('collapse').removeClass('expand').find('>ul').show();
 			e.stopImmediatePropagation();
 		});
-		
-		// Preventing rest of handlers from being execute
-		$('.accord ul').on('click', 'li.collapse li:not(.collapse)', function (e) {
-			e.stopImmediatePropagation();
-		});		
+			
 	});
 </script>
 </head>
