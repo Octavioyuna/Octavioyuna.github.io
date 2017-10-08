@@ -12,11 +12,7 @@
 	text-decoration: underline;
 }
  
-.accord ul li span {
-	color: red;
-	margin-left: 10%; /* Modify this value to update distance of +/- sign */
-	cursor: pointer;	
-}
+
  
 .pl-20 {
 	padding-left: 3%;
