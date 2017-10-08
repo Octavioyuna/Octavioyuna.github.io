@@ -3,7 +3,7 @@
 $(function (){
     $('li').click(function(event) {
         event.stopPropagation();
-    $(event.target).children('ul').slideToggle();
+    $(event.target).children('ul').toggle();
     });
 });
 /*
