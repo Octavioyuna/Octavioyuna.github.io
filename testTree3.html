@@ -83,12 +83,14 @@
 		// Change [ - ] with [ + ] and  'collapse' class with 'expand' and sliding content upward
 		$('.accord ul').on('click', 'li.collapse span ', function (e) {
 			$(this).text('[ + ]').parent().addClass('expand').removeClass('collapse').find('>ul').hide();
+			$(this).text('[ + ]' + $(this).text());
 			e.stopImmediatePropagation();
 		});
  
 		// Change [ + ] with [ - ] and 'expand' class with 'collapse' class and sliding content downward
 		$('.accord ul').on('click', 'li.expand span', function (e) {
 			$(this).text('[ ─ ]').parent().addClass('collapse').removeClass('expand').find('>ul').show();
+			$(this).text('[ ─ ]' + $(this).text());
 			e.stopImmediatePropagation();
 		});
 		
