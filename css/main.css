@@ -231,18 +231,18 @@ padding: 0.1cm;
 /**************/
 /*collapsibleList*/
 .collapsibleList li{
-list-style-image:url('http://code.stephenmorley.org/javascript/collapsible-lists/button.png');
+list-style-image:url('../image/src/button.png');
 cursor:auto;
         margin:0;
         padding:0;
         list-style-position:inside;
 }
 li.collapsibleListOpen{
-list-style-image:url('http://code.stephenmorley.org/javascript/collapsible-lists/button-open.png');
+list-style-image:url('../image/src/button-open.png');
 cursor:pointer;
 }
 li.collapsibleListClosed{
-list-style-image:url('http://code.stephenmorley.org/javascript/collapsible-lists/button-closed.png');
+list-style-image:url('../image/src/button-closed.png');
 cursor:pointer;
 }
 .collapsibleList li { background: #dddddd; }
