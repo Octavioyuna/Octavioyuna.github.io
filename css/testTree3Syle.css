@@ -1,10 +1,6 @@
 .accord ul, .accord ul li {
 	list-style-type: none;
-	background-image: url('../image/src/button.png');
-	    background-position: 0 1px;
-    background-repeat: no-repeat;
-    padding-left: 12px;
-	
+
 }
  
 .accord ul li a {
