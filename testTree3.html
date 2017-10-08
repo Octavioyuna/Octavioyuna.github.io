@@ -4,6 +4,32 @@
 <title>Page Title</title>
     <link rel="stylesheet" type="text/css" href="./css/testTree3Syle.css" />
     <script type="text/javascript" src="./scripts/jquery.js"></script>
+	    <script type="text/javascript" src="http://fellowtuts.com/tryit/uploads/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function ($) {
+		// Add 'expand' class to 'li' tags having 'ul' tag inside them and initially hiding content 
+		$('.accord ul li:has(ul)').addClass('expand').find('ul').hide();
+		// Add '<span>[ + ]</span>' after anchor inside 'li' tags those have 'expand' class
+		$('.accord ul li.expand>a').before('<span>[ + ]</span>');
+		
+		// Change [ - ] with [ + ] and  'collapse' class with 'expand' and sliding content upward
+		$('.accord ul').on('click', 'li.collapse span ', function (e) {
+			$(this).text('[ + ]').parent().addClass('expand').removeClass('collapse').find('>ul').hide();
+			e.stopImmediatePropagation();
+		});
+ 
+		// Change [ + ] with [ - ] and 'expand' class with 'collapse' class and sliding content downward
+		$('.accord ul').on('click', 'li.expand span', function (e) {
+			$(this).text('[ ─ ]').parent().addClass('collapse').removeClass('expand').find('>ul').show();
+			e.stopImmediatePropagation();
+		});
+		
+		// Preventing rest of handlers from being execute
+		$('.accord ul').on('click', 'li.collapse li:not(.collapse)', function (e) {
+			e.stopImmediatePropagation();
+		});		
+	});
+</script>
 </head>
 <body>
 
@@ -72,31 +98,6 @@
     </ul>
 </div>
     
-    <script type="text/javascript" src="http://fellowtuts.com/tryit/uploads/js/jquery-1.11.1.min.js"></script>
-<script type="text/javascript">
-	jQuery(document).ready(function ($) {
-		// Add 'expand' class to 'li' tags having 'ul' tag inside them and initially hiding content 
-		$('.accord ul li:has(ul)').addClass('expand').find('ul').hide();
-		// Add '<span>[ + ]</span>' after anchor inside 'li' tags those have 'expand' class
-		$('.accord ul li.expand>a').before('<span>[ + ]</span>');
-		
-		// Change [ - ] with [ + ] and  'collapse' class with 'expand' and sliding content upward
-		$('.accord ul').on('click', 'li.collapse span ', function (e) {
-			$(this).text('[ + ]').parent().addClass('expand').removeClass('collapse').find('>ul').hide();
-			e.stopImmediatePropagation();
-		});
- 
-		// Change [ + ] with [ - ] and 'expand' class with 'collapse' class and sliding content downward
-		$('.accord ul').on('click', 'li.expand span', function (e) {
-			$(this).text('[ ─ ]').parent().addClass('collapse').removeClass('expand').find('>ul').show();
-			e.stopImmediatePropagation();
-		});
-		
-		// Preventing rest of handlers from being execute
-		$('.accord ul').on('click', 'li.collapse li:not(.collapse)', function (e) {
-			e.stopImmediatePropagation();
-		});		
-	});
-</script>
+
 </body>
 </html>
