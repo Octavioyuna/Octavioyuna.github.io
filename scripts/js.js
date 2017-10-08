@@ -30,7 +30,9 @@
 			    //all other
 			    m++;
 			
-			    document.getElementById('dateTxt').innerHTML = wd + " " + d + "." + m + "." + y + " " + hou + ":" + min + ":" + sec;
+			var str = wd + " " + d + "." + m + "." + y + " " + hou + ":" + min + ":" + sec;
+			
+			    document.getElementById('dateTxt').innerHTML = str;
 			
 			    t = setTimeout('startTime()', 500);
 			}
@@ -55,12 +57,13 @@ function writeSimpleDate() {
                                                     date = d.getYear();
                                                 }
                                                 var month = d.getUTCMonth();
-                                                str = month + "." + date;
+                                                var str = month + "." + date;
 	return str;
 }
 
 			/*write footer div*/
 function writeFooterDivs() {
+	startTime();
 	document.getElementById('sysTxt').innerHTML = "System: " + navigator.appName + "," + navigator.appVersion + "," + navigator.appCodeName + "," + navigator.platform + "," + navigator.cookieEnabled;
 	document.getElementById('copyTxt').innerHTML = "&copy;&nbsp;" + writeSimpleDate() + "&nbsp;OE,UK";
 }
