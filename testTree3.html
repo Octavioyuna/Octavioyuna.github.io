@@ -78,19 +78,17 @@
 		// Add 'expand' class to 'li' tags having 'ul' tag inside them and initially hiding content 
 		$('.accord ul li:has(ul)').addClass('expand').find('ul').hide();
 		// Add '<span>[ + ]</span>' after anchor inside 'li' tags those have 'expand' class
-		$('.accord ul li.expand>a').after('<span>[ + ]</span>');
+		$('.accord ul li.expand>a').before('<span>[ + ]</span>');
 		
 		// Change [ - ] with [ + ] and  'collapse' class with 'expand' and sliding content upward
 		$('.accord ul').on('click', 'li.collapse span ', function (e) {
 			$(this).text('[ + ]').parent().addClass('expand').removeClass('collapse').find('>ul').hide();
-			$(this).html('[ + ]' + $(this).text());
 			e.stopImmediatePropagation();
 		});
  
 		// Change [ + ] with [ - ] and 'expand' class with 'collapse' class and sliding content downward
 		$('.accord ul').on('click', 'li.expand span', function (e) {
 			$(this).text('[ ─ ]').parent().addClass('collapse').removeClass('expand').find('>ul').show();
-			$(this).html('[ ─ ]' + $(this).text());
 			e.stopImmediatePropagation();
 		});
 		
