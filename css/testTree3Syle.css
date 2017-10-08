@@ -24,13 +24,25 @@
 
 li.expand {
     background-image: url('../image/src/button-open.png');
+	    background-position: 0 1px;
+    background-repeat: no-repeat;
+    padding-left: 20px;
 }
 .expand {
     background-image: url('../image/src/button-open.png');
+	    background-position: 0 1px;
+    background-repeat: no-repeat;
+    padding-left: 20px;
 }
 li.collapse {
     background-image: url('../image/src/button-closed.png');
+	    background-position: 0 1px;
+    background-repeat: no-repeat;
+    padding-left: 20px;
 }
 .collapse {
     background-image: url('../image/src/button-closed.png');
+	    background-position: 0 1px;
+    background-repeat: no-repeat;
+    padding-left: 20px;
 }
