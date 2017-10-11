@@ -3,29 +3,28 @@
 <head>
 <title>Page Title</title>
     <link rel="stylesheet" type="text/css" href="./css/testTree3Syle.css" />
-    <script type="text/javascript" src="./scripts/jquery.js"></script>
-	    <script type="text/javascript" src="http://fellowtuts.com/tryit/uploads/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript">
 	jQuery(document).ready(function ($) {
+	$('.collapsible ul li').addClass('leaf');
 				// Add 'expand' class to 'li' tags having 'ul' tag inside them and initially hiding content 
-		$('.accord ul li:has(ul)').addClass('expand').find('ul').hide();
-		// Add '<span>[ + ]</span>' after anchor inside 'li' tags those have 'expand' class
-		//$('.accord ul li.expand>a').after('<span>[ + ]</span>');
+		$('.collapsible ul li:has(ul)').addClass('expand').removeClass('leaf').find('ul').hide();
+
 		
 		// Change [ - ] with [ + ] and  'collapse' class with 'expand' and sliding content upward
-		$('.accord ul').on('click', 'li.collapse a ', function (e) {
+		$('.collapsible ul').on('click', 'li.collapse a ', function (e) {
 			$(this).parent().addClass('expand').removeClass('collapse').find('>ul').hide();
 			e.stopImmediatePropagation();
 		});
 
 		// Change [ + ] with [ - ] and 'expand' class with 'collapse' class and sliding content downward
-		$('.accord ul').on('click', 'li.expand a', function (e) {
+		$('.collapsible ul').on('click', 'li.expand a', function (e) {
 			$(this).parent().addClass('collapse').removeClass('expand').find('>ul').show();
 			e.stopImmediatePropagation();
 		});
 		
 		// Preventing rest of handlers from being execute
-		$('.accord ul').on('click', 'li.collapse li:not(.collapse)', function (e) {
+		$('.collapsible ul').on('click', 'li.collapse li:not(.collapse)', function (e) {
 			e.stopImmediatePropagation();
 		});		
 			
@@ -34,7 +33,7 @@
 </head>
 <body>
 
-	 <div id="Accord1" class="accord">
+	 <div id="Accord1" class="collapsible">
 <h1>This is a Heading</h1>
 <p>This is a paragraph.</p>
 <ul class="sub">
@@ -59,16 +58,14 @@
 </ul>
 	</div>
     
-    <div id="Accord" class="accord">
+    <div id="Accord" class="collapsible">
     <ul>
         <li><a href="#">Example 1</a></li>
         <li><a href="#">Example 2</a>
             <ul class="sub">
                 <li>
                     <a href="#">Example 2.1</a>
-                    <p class="pl-20">
-                        It's an example of <b>Expand</b> | <b>Collapse</b>. You should place your content instead. 
-                    </p>                                            
+                                           
                 </li>
             </ul>
         </li>
@@ -87,9 +84,6 @@
                     <ul class="sub">
                         <li>
                             <a href="#">Example 3.2.1</a>
-                            <p class="pl-20">
-                                It's an example of <b>Expand</b> | <b>Collapse</b>. You should place your content instead. 
-                            </p>
                         </li>
                         <li><a href="#">Example 3.2.2</a></li>
                     </ul>	

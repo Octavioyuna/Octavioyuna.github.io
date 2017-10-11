@@ -227,26 +227,42 @@ padding: 0.1cm;
 }
 /**************/
 /*collapsibleList*/
-/*modified from:http://code.stephenmorley.org/javascript/collapsible-lists/*/
-/**************/
-/*collapsibleList*/
-.collapsibleList li{
-list-style-image:url('../image/src/button.png');
-cursor:auto;
-        margin:0;
-        padding:0;
-        list-style-position:inside;
+.collapsible ul, .collapsible ul li {
+	list-style-type: none;
+    padding-left: 20px;
 }
-li.collapsibleListOpen{
-list-style-image:url('../image/src/button-open.png');
-cursor:pointer;
+ 
+.collapsible ul li a {
+	color: #6E440A;
+	text-decoration: none;
 }
-li.collapsibleListClosed{
-list-style-image:url('../image/src/button-closed.png');
-cursor:pointer;
+ 
+.collapsible ul li a:hover {
+	color: #523205;
+	text-decoration: underline;
 }
-.collapsibleList li { background: #dddddd; }
-.collapsibleList li:nth-child(odd) { background: #eeeeee; }
+
+
+.expand {
+    background-image: url('../image/src/button-closed.png');
+	    background-position: 0 1px;
+    background-repeat: no-repeat;
+    padding-left: 11px;
+}
+
+.collapse {
+    background-image: url('../image/src/button-open.png');
+	    background-position: 0 1px;
+    background-repeat: no-repeat;
+    padding-left: 11px;
+}
+
+.leaf {
+    background-image: url('../image/src/button.png');
+	    background-position: 0 1px;
+    background-repeat: no-repeat;
+    padding-left: 11px;
+}
 
 .article-tabs{
     display:table;
