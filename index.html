@@ -25,6 +25,34 @@
   <script type="text/javascript" src="./js/js.js">
 </script>
 <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+
+<script type="text/javascript">
+	jQuery(document).ready(function ($) {
+	$('.collapsible ul li').addClass('leaf');
+				// Add 'expand' class to 'li' tags having 'ul' tag inside them and initially hiding content 
+		$('.collapsible ul li:has(ul)').addClass('expand').removeClass('leaf').find('ul').hide();
+
+		
+		// Change [ - ] with [ + ] and  'collapse' class with 'expand' and sliding content upward
+		$('.collapsible ul').on('click', 'li.collapse a ', function (e) {
+			$(this).parent().addClass('expand').removeClass('collapse').find('>ul').hide();
+			e.stopImmediatePropagation();
+		});
+
+		// Change [ + ] with [ - ] and 'expand' class with 'collapse' class and sliding content downward
+		$('.collapsible ul').on('click', 'li.expand a', function (e) {
+			$(this).parent().addClass('collapse').removeClass('expand').find('>ul').show();
+			e.stopImmediatePropagation();
+		});
+		
+		// Preventing rest of handlers from being execute
+		$('.collapsible ul').on('click', 'li.collapse li:not(.collapse)', function (e) {
+			e.stopImmediatePropagation();
+		});		
+			
+	});
+</script>
+
 </head>
 
 <body onload=
