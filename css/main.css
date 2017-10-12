@@ -117,6 +117,13 @@ margin:0.5%;
 clear:left;
 background-color:#ffffff;
 }
+.huchos {
+background-color: #ffffff;
+  background-image: url(../image/chuchos.jpg);
+  background-size: cover;
+  resize: both;
+padding:0.5%;
+}
 /**************/
 /*menu def;top or main menu*/
 /**************/
