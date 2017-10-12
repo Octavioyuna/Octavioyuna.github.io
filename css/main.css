@@ -67,6 +67,9 @@ width:25%;
 padding:0.5%;
 margin:0.5%;
 font-size:100%;
+}
+.navMenuContainerClass {
+background-color:#ffffff;
 overflow-x: scroll;
 }
 /*holds content text*/

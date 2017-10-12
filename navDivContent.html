@@ -1,4 +1,4 @@
-
+<!-- navDivContent.html -->
 <script type="text/javascript">
 	jQuery(document).ready(function ($) {
 	$('.collapsible ul li').addClass('leaf');
@@ -37,19 +37,23 @@
       }
     };
 </script>
+      <div id="navMenuContainer" class="navMenuContainerClass">
+
        <button id="listHeader" onClick="listExpansion()">Expand All</button>
 
-      <div id="Accord" class="collapsible">
+      <div id="navMenu" class="collapsible">
     <ul>
         <li><a href="#">World</a>
-            <ul class="sub">
+            <ul>
                 <li><a href="#">France</a>
-                    <ul class="sub">
-                        <li><a onClick="$('#contentDiv').load('./places/paris.html');">Paris</a></li>
+                    <ul>
+                        <li><a onClick="$('#contentDiv').load('./places/Paris.html');">Paris</a></li>
                     </ul>
                 </li>
-
+                <li><a  onClick="$('#contentDiv').load('./places/Bulgaria.html');">Bulgaria</a>
+                </li>
             </ul>
         </li>			
     </ul>
+</div>
 </div>
