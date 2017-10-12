@@ -67,3 +67,15 @@ function writeFooterDivs() {
 	document.getElementById('sysTxt').innerHTML = "System: " + navigator.appName + "," + navigator.appVersion + "," + navigator.appCodeName + "," + navigator.platform + "," + navigator.cookieEnabled;
 	document.getElementById('copyTxt').innerHTML = "&copy;&nbsp;" + writeSimpleDate() + "&nbsp;OE,UK";
 }
+	// Adding expand / collapse 
+    function listExpansion() {
+      var element = document.getElementById('listHeader');
+	   
+      if (element.innerText == 'Expand All') { 
+        element.innerHTML = 'Collapse All';
+	      $('.collapsible ul li').addClass('collapse').removeClass('expand').find('>ul').show();
+      } else { 
+        element.innerHTML = 'Expand All';
+        $('.collapsible ul li').addClass('expand').removeClass('collapse').find('>ul').hide();
+      }
+    };
