@@ -114,12 +114,7 @@ margin:0.5%;
 .footer {
 clear:left;
 }
-.chuchos {
-  background-image: url(../image/chuchosWide.jpg);
-  background-size: cover;
-  resize: both;
-padding:0.5%;
-}
+
 /**************/
 /*menu def;top or main menu*/
 /**************/
@@ -168,15 +163,15 @@ padding:0.5%;
 /**************/
 h1.c1 {
 text-align: left;
-font-size: 160%;
+font-size: 170%;
 color: #002147;
 }
 h2.c1 {
-font-size: 120%;
+font-size: 140%;
 color: #002147;
 }
 h3.c1 {
-font-size: 110%;
+font-size: 120%;
 color: #002147;
 }
 a.c1 {
@@ -350,14 +345,4 @@ padding: 0.1cm;
     margin-left:0;
     margin-bottom:.625rem
 }
-.author-list li{
-    float:left;
-    list-style-type:none;
-    position:relative;
-    margin-left:-3px
-}
-.author-list li.active a:hover{
-    text-decoration:none
-}.author-list li[data-js-toggle='toggle_trigger'] a{
-    color:#3c63af
-}
+
