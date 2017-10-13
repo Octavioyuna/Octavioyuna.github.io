@@ -267,6 +267,7 @@ padding: 0.1cm;
 	    background-position: 0 1px;
     background-repeat: no-repeat;
     padding-left: 11px;
+    cursor: pointer;
 }
 
 .article-tabs{
