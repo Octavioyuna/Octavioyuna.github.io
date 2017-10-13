@@ -190,10 +190,10 @@ p.c1 {
   font-size: 100%;
 }
 p.c1Small {
-font-size: 100%;
+font-size: 80%;
 }
 .c1Small2 {
-font-size: 100%;
+font-size: 80%;
 text-align: right;
 }
 table.c1 {
@@ -226,7 +226,7 @@ div.c1ImgContainer img {
 width:100%;
 }
 div.c1LogoImgContainer img {
-width: 70px;
+width: 112px;
 height: 70px;
 padding: 0.1cm;
 }
