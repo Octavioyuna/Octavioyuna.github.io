@@ -102,9 +102,9 @@ width:41%;
 padding:0.5%;
 margin:0.5%;
 }
-/*holds content img*/
+/**/
 .right {
-background-color: #eeeeee;
+background-color: #ffffff;
 float:left;
 width:15%;
 padding:0.5%;
@@ -174,20 +174,9 @@ h3.c1 {
 font-size: 120%;
 color: #002147;
 }
-a.c1 {
-border-style: solid;
-border-width: 1px;
-border-color: #D8D8D8;
-}
-a.c1:hover {
-color: #383838;
-background: #E8E8E8;
-border-style: solid;
-border-width: 1px;
-border-color: #3B6AA0;
-}
-p.c1 {
-  font-size: 100%;
+h4.c1 {
+font-size: 110%;
+color: #002147;
 }
 p.c1Small {
 font-size: 80%;
@@ -247,7 +236,6 @@ padding: 0.1cm;
 	color: #523205;
 	text-decoration: underline;
 }
-
 
 .expand {
     background-image: url('../image/src/button-closed.png');
