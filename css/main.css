@@ -232,6 +232,7 @@ padding: 0.1cm;
 }
 /**************/
 /*collapsibleList*/
+/**************/
 .collapsible ul, .collapsible ul li {
 	list-style-type: none;
     padding-left: 20px;
@@ -253,6 +254,7 @@ padding: 0.1cm;
 	    background-position: 0 1px;
     background-repeat: no-repeat;
     padding-left: 11px;
+	    cursor: pointer;
 }
 
 .collapse {
@@ -260,6 +262,7 @@ padding: 0.1cm;
 	    background-position: 0 1px;
     background-repeat: no-repeat;
     padding-left: 11px;
+	    cursor: pointer;
 }
 
 .leaf {
