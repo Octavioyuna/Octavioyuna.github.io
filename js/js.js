@@ -30,11 +30,11 @@
 			    //all other
 			    m++;
 			
-			var str = wd + " " + d + "." + m + "." + y + " " + hou + ":" + min + ":" + sec;
+			var str = wd + " " + d + "." + m + "." + y + " " + hou + ":" + min;
 			
 			    document.getElementById('dateTxt').innerHTML = str;
 			
-			    t = setTimeout('startTime()', 500);
+			    t = setTimeout('startTime()', 60000);
 			}
 			
 			function checkTime(i) {
