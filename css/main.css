@@ -114,7 +114,10 @@ margin:0.5%;
 .footer {
 clear:left;
 }
-
+/*defined for all, can also define per id*/
+.button {
+	    cursor: pointer;
+}
 /**************/
 /*menu def;top or main menu*/
 /**************/
