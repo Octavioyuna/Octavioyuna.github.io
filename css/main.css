@@ -118,6 +118,9 @@ clear:left;
 .button {
 	    cursor: pointer;
 }
+#listHeader {
+	    cursor: pointer;
+}
 /**************/
 /*menu def;top or main menu*/
 /**************/
