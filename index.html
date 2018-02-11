@@ -1,74 +1,158 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html lang="en-US" xml:lang="en-US" xmlns=
-"http://www.w3.org/1999/xhtml">
-<!-- Una and Octavio's Travel Website -->
-<!-- Chuchos Vagabundos -->
-<!-- OE, 2016 -->
-<!-- Octavioyuna a t t gmail.com -->
-<!-- js scripts are included in this file but should be separated. Several scripts are run when page is loaded. Originally this page was designed to be hosted by Googel docs. -->
-
+<!DOCTYPE html>
+<html>
 <head>
-  <meta name="generator" content=
-  "HTML Tidy for Linux (vers 25 March 2009), see www.w3.org" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Una and Octavio's Travel Website, Chuchos Vagabundos">
+  <meta name="keywords" content="travel, travel advice, website">
+  <meta name="author" content="OE, UK">
 
-  <title>Chuchos Vagabundos</title>
+  <!--From Google clickable marker API Pages-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <link rel="stylesheet" type="text/css" href="./css/main.css" />
+  <!--Original OE files-->
   <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="./js/js.js"></script>
+
+  <title>Chuchos Vagabundos | Home</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
-
-<body onload=
-"writeFooterDivs();">
-  <div class="container">
-    <div id="headerDiv" class="header"></div><script type=
-    "text/javascript">
-//<![CDATA[
-    $(function(){$("#headerDiv").load("./headerDivContent.html");});
-    //]]>
-    </script>
-
-    <div class="bodyMain">
-      <div id="navDiv" class="nav"></div><script type=
-      "text/javascript">
-//<![CDATA[
-      $(function(){$("#navDiv").load("./navDivContent.html");});
-      //]]>
-      </script>
-
-      <div id="contentDiv" class="content"></div><script type=
-      "text/javascript">
-//<![CDATA[
-      $(function(){$("#contentDiv").load("./contentDivContent.html");});
-      //]]>
-      </script>
-        
-      <div id="rightDiv" class="right">
+<body onload="writeFooterDivs();">
+  <header>
+    <div class="container">
+      <div class="logo">
+        <div class="LogoImgContainer"><img src="./img/logo2.jpg" alt="img" /></div>
       </div>
-
-      <div class="separator">
-        &nbsp;
+      <div id="branding">
+        <h1><span class="highlight">Chuchos</span> Vagabundos</h1>
       </div>
+      <nav>
+        <ul>
+          <li class="current"><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="links.html">Links</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <div id="footerDiv" class="footer">
-      <div class="nav">
-        <p id="dateTxt" class="c1Small"></p>
-      </div>
-
-      <div class="content">
-        <p id="sysTxt" class="c1Small"></p>
-      </div>
-
-      <div class="right">
-        <p id="copyTxt" class="right2"></p>
-      </div>
-            <div class="separator">
-        &nbsp;
-      </div>
+  <section id="showcase">
+    <div class="container">
+      <h1>Personal travel recommendations and tips</h1>
     </div>
-  </div>
+  </section>
+
+
+
+  <section id="main">
+    <div class="container">
+
+      <aside id="sidebar">
+        <div class="dark">
+
+          <div id="navDiv" class="nav"></div>
+          <script type=
+          "text/javascript">
+          //<![CDATA[
+          $(function(){$("#navDiv").load("./navDivContent.html");});
+          //]]>
+          </script>
+        </div>
+      </aside>
+
+
+      <article id="main-col">
+
+
+
+        <div id="map"></div>
+        <script>
+        function initMap() {
+          var mapCenter = {lat: 24, lng: 0};
+          var Paris = {lat: 48.856700, lng: 2.350800};
+          var Bulgaria = {lat: 42.683333, lng: 23.316667};
+          var Galapagos = {lat: -0.666667, lng: -90.550000};
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 2,
+            center: mapCenter
+          });
+          var ParisMarker = new google.maps.Marker({
+            position: Paris,
+            map: map
+          });
+          var BulgariaMarker = new google.maps.Marker({
+            position: Bulgaria,
+            map: map
+          });
+          var GalapagosMarker = new google.maps.Marker({
+            position: Galapagos,
+            map: map
+          });
+
+          ParisMarker.addListener('click', function() {
+            $('#mainContent').load('./places/Paris.html');
+          });
+          BulgariaMarker.addListener('click', function() {
+            $('#mainContent').load('./places/Bulgaria.html');
+          });
+          GalapagosMarker.addListener('click', function() {
+            $('#mainContent').load('./places/Galapagos.html');
+          });
+        }
+        </script>
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8w4BAWceAXf-o5Qy64qUuXq9vALVLmMg&callback=initMap">
+        </script>
+
+
+
+      </article>
+
+
+    </div>
+  </section>
+
+  <section id="boxes">
+    <div class="container">
+      <article id="mainContent">
+        <h2>Welcome!</h2>
+        <p>Select place of interest with the map or navigating with the side menu.</p>
+      </article>
+    </div>
+  </section>
+
+
+
+
+  <section id="newsletter">
+    <div class="container">
+
+      <form>
+        <input type="email" placeholder="Enter Email...">
+        <button type="submit" class="button_1">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+
+
+
+  <footer>
+    <section id="boxesFooter">
+      <div class="container">
+        <div class="box" id="dateTxt">
+        </div>
+        <div class="box" id="sysTxt">
+        </div>
+        <div class="box" id="copyTxt">
+        </div>
+      </div>
+    </section>
+
+
+  </footer>
 </body>
 </html>

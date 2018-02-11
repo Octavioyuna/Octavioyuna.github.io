@@ -1,110 +1,122 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html lang="en-US" xml:lang="en-US" xmlns=
-"http://www.w3.org/1999/xhtml">
-<!-- Una and Octavio's Travel Website -->
-<!-- Chuchos Vagabundos -->
-<!-- OE, 2016 -->
-<!-- Octavioyuna a t t gmail.com -->
-<!-- js scripts are included in this file but should be separated. Several scripts are run when page is loaded. Originally this page was designed to be hosted by Googel docs. -->
-
+<!DOCTYPE html>
+<html>
 <head>
-  <meta name="generator" content=
-  "HTML Tidy for Linux (vers 25 March 2009), see www.w3.org" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Una and Octavio's Travel Website, Chuchos Vagabundos">
+  <meta name="keywords" content="travel, travel advice, website">
+  <meta name="author" content="OE, UK">
 
-  <title>Chuchos Vagabundos</title><!-- jquery -->
+  <!--From Google clickable marker API Pages-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <script src=
-  "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"
-  type="text/javascript">
-</script><!-- external css -->
+  <!--Original OE files-->
   <link rel="stylesheet" type="text/css" href="./css/main.css" />
-  <!-- external js -->
+  <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="./js/js.js"></script>
 
-  <script type="text/javascript" src="./scripts/js.js">
-</script>
+  <title>Chuchos Vagabundos | Home</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
+<body onload="writeFooterDivs();">
+  <header>
+    <div class="container">
+      <div class="logo">
+        <div class="LogoImgContainer"><img src="./img/logo2.jpg" alt="img" /></div>
+      </div>
+      <div id="branding">
+        <h1><span class="highlight">Chuchos</span> Vagabundos</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="current"><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="links.html">Links</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<body onload=
-"startTime();CollapsibleLists.apply();writeFooterDivs();">
-  <div class="container">
-    <div id="headerDiv" class="header"></div><script type=
-    "text/javascript">
-//<![CDATA[
-    $(function(){$("#headerDiv").load("./headerDivContent.html");});
-    //]]>
-    </script>
+  <section id="showcase">
+    <div class="container">
+      <h1>Personal travel recommendations and tips</h1>
+    </div>
+  </section>
 
-    <div class="bodyMain">
 
-      <div id="contentDiv" class="content">
-        <h2 class="c1">About</h2>
+
+
+  <section id="boxes">
+    <div class="container">
+      <article id="mainContent">
+
+      <div class="box">
+<div class="contentItem">
+        <h2>About</h2>
 <p>Here you will find travel recommendations, tips and information we thought would be useful for prospective travelers. We are leisure travelers and this is our compilation of favourite spots.</p>
 <p>Our information is split into places and each has its own page. They were classified according to geographical ontology.</p> 
-
-    <div class="contentItem">
-
-          <div class="contentItemText">
-
-            <h3 class="c1">Octavio</h3>
-
-            <p>contributor, web-design</p>
-          </div>
-
-          <div class="contentItemImg">
-
-            <div class="c1ImgContainer"><img src=
-            "./image/contact/Octavio2015.jpg" alt="img" /></div>
-          </div>
-        </div>
-
-        <div class="contentItem">
-
-          <div class="contentItemText">
-
-            <h3 class="c1">Una</h3>
-
-            <p>contributor</p>
-          </div>
-
-          <div class="contentItemImg">
-
-            <div class="c1ImgContainer"><img src=
-            "./image/contact/Una2015.jpg" alt="img" /></div>
-          </div>
-        </div>
-<h3 class="c1">Disclaimer</h3>
-<p>We try to provide up to date information and we sometimes indicate the date on which we traveled to the places, but we recommend to obtain up to date information where possible.</p>
-<p>The material here is Selected License Attribution-NonCommercial-ShareAlike 4.0 International unless  stated  otherwise.</p>
-<p>Our opinions are our own.</p>
-
 </div>
+  </div>
 
-      <div class="separator">
-        &nbsp;
-      </div>
+
+<div class="box">
+  <div class="contentItem">
+    <h3>Octavio</h3>
+    <div class="contentItemText">
+      <p>contributor, web-design</p>
     </div>
 
-    <div id="footerDiv" class="footer">
-      <div class="nav">
-        <p id="dateTxt" class="c1Small"></p>
-      </div>
+    <div class="contentItemImg">
 
-      <div class="content">
-        <p id="sysTxt" class="c1Small"></p>
-      </div>
-
-      <div class="right">
-        <p id="copyTxt" class="right2"></p>
-      </div>
-
-      <div class="separator">
-        &nbsp;
+      <div class="contentItemImgContainer">
+        <img src="./img/contact/Octavio2015.jpg" alt="img" />
       </div>
     </div>
   </div>
+</div>
+
+<div class="box">
+  <div class="contentItem">
+    <h3>Una</h3>
+    <div class="contentItemText">
+      <p>contributor</p>
+    </div>
+
+    <div class="contentItemImg">
+
+      <div class="contentItemImgContainer">
+        <img src="./img/contact/Una2015.jpg" alt="img" />
+      </div>
+    </div>
+  </div>
+</div>
+      
+      </article>
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <footer>
+    <section id="boxesFooter">
+      <div class="container">
+        <div class="box" id="dateTxt">
+        </div>
+        <div class="box" id="sysTxt">
+        </div>
+        <div class="box" id="copyTxt">
+        </div>
+      </div>
+    </section>
+
+
+  </footer>
 </body>
 </html>
-
-
