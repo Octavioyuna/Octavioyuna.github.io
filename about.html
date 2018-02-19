@@ -13,9 +13,10 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <!--Original OE files-->
-  <link rel="stylesheet" type="text/css" href="./css/main.css" />
   <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="./js/js.js"></script>
+
+<!--comments Adapted from Traversy Media, 2017-->
 
   <title>Chuchos Vagabundos | Home</title>
   <link rel="stylesheet" href="./css/style.css">
@@ -23,29 +24,30 @@
 <body onload="writeFooterDivs();">
   <header>
     <div class="container">
-      <div class="logo">
-        <div class="LogoImgContainer"><img src="./img/logo2.jpg" alt="img" /></div>
+      <div class="headerFlex">
+        <div class="logo">
+          <div class="logoImgContainer"><img src="./img/logo.png" alt="img" /></div>
+        </div>
+        <div id="branding">
+          <h1><span class="highlight">Chuchos</span> Vagabundos</h1>
+        </div>
+        <nav>
+          <ul class="navFlex">
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="links.html">Links</a></li>
+          </ul>
+        </nav>
       </div>
-      <div id="branding">
-        <h1><span class="highlight">Chuchos</span> Vagabundos</h1>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li class="current"><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="links.html">Links</a></li>
-        </ul>
-      </nav>
     </div>
   </header>
 
   <section id="showcase">
     <div class="container">
-      <h1>Personal travel recommendations and tips</h1>
+      <h1>Travel recommendations and tips</h1>
     </div>
   </section>
-
 
 
 
@@ -53,47 +55,64 @@
     <div class="container">
       <article id="mainContent">
 
-      <div class="box">
-<div class="contentItem">
-        <h2>About</h2>
-<p>Here you will find travel recommendations, tips and information we thought would be useful for prospective travelers. We are leisure travelers and this is our compilation of favourite spots.</p>
-<p>Our information is split into places and each has its own page. They were classified according to geographical ontology.</p> 
-</div>
-  </div>
 
 
-<div class="box">
-  <div class="contentItem">
-    <h3>Octavio</h3>
-    <div class="contentItemText">
-      <p>contributor, web-design</p>
-    </div>
 
-    <div class="contentItemImg">
 
-      <div class="contentItemImgContainer">
-        <img src="./img/contact/Octavio2015.jpg" alt="img" />
-      </div>
-    </div>
-  </div>
-</div>
 
-<div class="box">
-  <div class="contentItem">
-    <h3>Una</h3>
-    <div class="contentItemText">
-      <p>contributor</p>
-    </div>
 
-    <div class="contentItemImg">
 
-      <div class="contentItemImgContainer">
-        <img src="./img/contact/Una2015.jpg" alt="img" />
-      </div>
-    </div>
-  </div>
-</div>
-      
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="box1">
+          <div class="boxes2">
+            <div class="box2">
+              <h2>About</h2>
+      <p>Here you will find travel recommendations, tips and information we thought would be useful for prospective travelers. We are leisure travelers and this is our compilation of favourite spots.</p>
+      <p>Our information is split into places and each has its own page. They were classified according to geographical ontology.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="box1">
+          <div class="boxes2">
+            <div class="box2">
+              <h3>Octavio</h3>
+                <p>contributor, web-design</p>
+            </div>
+            <div class="box2">
+              <div class="contentItemImgContainer">
+                <img src="./img/contact/Octavio2015.jpg" alt="img" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box1">
+          <div class="boxes2">
+            <div class="box2">
+              <h3>Una</h3>
+                <p>contributor</p>
+            </div>
+            <div class="box2">
+              <div class="contentItemImgContainer">
+                <img src="./img/contact/Una2015.jpg" alt="img" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+
       </article>
     </div>
   </section>
@@ -101,22 +120,19 @@
 
 
 
-
-
-
-  <footer>
-    <section id="boxesFooter">
-      <div class="container">
-        <div class="box" id="dateTxt">
+    <footer>
+      <section id="boxesFooter">
+        <div class="container">
+          <div class="headerFlex">
+          <div class="box" id="dateTxt">
+          </div>
+          <div class="box" id="sysTxt">
+          </div>
+          <div class="box" id="copyTxt">
+          </div>
+          </div>
         </div>
-        <div class="box" id="sysTxt">
-        </div>
-        <div class="box" id="copyTxt">
-        </div>
-      </div>
-    </section>
-
-
-  </footer>
-</body>
-</html>
+      </section>
+    </footer>
+  </body>
+  </html>
