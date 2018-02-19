@@ -16,106 +16,100 @@
   <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="./js/js.js"></script>
 
+<!--comments Adapted from Traversy Media, 2017-->
+
   <title>Chuchos Vagabundos | Home</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body onload="writeFooterDivs();">
   <header>
     <div class="container">
-      <div class="logo">
-        <div class="LogoImgContainer"><img src="./img/logo2.jpg" alt="img" /></div>
+      <div class="headerFlex">
+        <div class="logo">
+          <div class="logoImgContainer"><img src="./img/logo.png" alt="img" /></div>
+        </div>
+        <div id="branding">
+          <h1><span class="highlight">Chuchos</span> Vagabundos</h1>
+        </div>
+        <nav>
+          <ul class="navFlex">
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="links.html">Links</a></li>
+          </ul>
+        </nav>
       </div>
-      <div id="branding">
-        <h1><span class="highlight">Chuchos</span> Vagabundos</h1>
-      </div>
-      <nav>
-        <ul>
-          <li class="current"><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="links.html">Links</a></li>
-        </ul>
-      </nav>
     </div>
   </header>
 
   <section id="showcase">
     <div class="container">
-      <h1>Personal travel recommendations and tips</h1>
+      <h1>Travel recommendations and tips</h1>
     </div>
   </section>
 
-
-
-  <section id="main">
+  <section id="navListAndMap">
     <div class="container">
+      <div class="navListAndMapDiv">
+        <aside id="sidebar">
 
-      <aside id="sidebar">
-        <div class="dark">
-
-          <div id="navDiv" class="nav"></div>
+          <div id="navDiv"></div>
           <script type=
           "text/javascript">
           //<![CDATA[
           $(function(){$("#navDiv").load("./navDivContent.html");});
           //]]>
           </script>
-        </div>
-      </aside>
+        </aside>
 
+        <article id="main-col">
 
-      <article id="main-col">
+          <div id="map"></div>
+          <script>
+          function initMap() {
+            var mapCenter = {lat: 24, lng: 0};
+            var Paris = {lat: 48.856700, lng: 2.350800};
+            var Bulgaria = {lat: 42.683333, lng: 23.316667};
+            var Galapagos = {lat: -0.666667, lng: -90.550000};
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 2,
+              center: mapCenter
+            });
+            var ParisMarker = new google.maps.Marker({
+              position: Paris,
+              map: map
+            });
+            var BulgariaMarker = new google.maps.Marker({
+              position: Bulgaria,
+              map: map
+            });
+            var GalapagosMarker = new google.maps.Marker({
+              position: Galapagos,
+              map: map
+            });
 
+            ParisMarker.addListener('click', function() {
+              $('#mainContent').load('./places/Paris.html');
+            });
+            BulgariaMarker.addListener('click', function() {
+              $('#mainContent').load('./places/Bulgaria.html');
+            });
+            GalapagosMarker.addListener('click', function() {
+              $('#mainContent').load('./places/Galapagos.html');
+            });
+          }
+          </script>
+          <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8w4BAWceAXf-o5Qy64qUuXq9vALVLmMg&callback=initMap">
+          </script>
 
-
-        <div id="map"></div>
-        <script>
-        function initMap() {
-          var mapCenter = {lat: 24, lng: 0};
-          var Paris = {lat: 48.856700, lng: 2.350800};
-          var Bulgaria = {lat: 42.683333, lng: 23.316667};
-          var Galapagos = {lat: -0.666667, lng: -90.550000};
-          var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 2,
-            center: mapCenter
-          });
-          var ParisMarker = new google.maps.Marker({
-            position: Paris,
-            map: map
-          });
-          var BulgariaMarker = new google.maps.Marker({
-            position: Bulgaria,
-            map: map
-          });
-          var GalapagosMarker = new google.maps.Marker({
-            position: Galapagos,
-            map: map
-          });
-
-          ParisMarker.addListener('click', function() {
-            $('#mainContent').load('./places/Paris.html');
-          });
-          BulgariaMarker.addListener('click', function() {
-            $('#mainContent').load('./places/Bulgaria.html');
-          });
-          GalapagosMarker.addListener('click', function() {
-            $('#mainContent').load('./places/Galapagos.html');
-          });
-        }
-        </script>
-        <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8w4BAWceAXf-o5Qy64qUuXq9vALVLmMg&callback=initMap">
-        </script>
-
-
-
-      </article>
-
-
+        </article>
+      </div>
     </div>
   </section>
 
-  <section id="boxes">
+  <section class="boxes">
     <div class="container">
       <article id="mainContent">
         <h2>Welcome!</h2>
@@ -124,35 +118,28 @@
     </div>
   </section>
 
-
-
-
   <section id="newsletter">
     <div class="container">
-
       <form>
-        <input type="email" placeholder="Enter Email...">
-        <button type="submit" class="button_1">Subscribe</button>
+        <input type="email" placeholder="Comments/questions...">
+        <button type="submit" class="button_1">Send</button>
       </form>
     </div>
   </section>
 
-
-
-
   <footer>
     <section id="boxesFooter">
       <div class="container">
+        <div class="headerFlex">
         <div class="box" id="dateTxt">
         </div>
         <div class="box" id="sysTxt">
         </div>
         <div class="box" id="copyTxt">
         </div>
+        </div>
       </div>
     </section>
-
-
   </footer>
 </body>
 </html>
