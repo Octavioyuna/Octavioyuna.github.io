@@ -369,20 +369,17 @@ list-style-type: none;
   }
 
   .boxes,
-  .box1,
   .boxes2,
-  .box2,
   .boxesFooter .box1,
   article#main-col,
   article#mainContent,
   aside#sidebar,
   .navDiv,
   .navMenu{
-grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    display:flex;
     float:none;
+    text-align:center;
     width:100%;
-    grid-auto-flow: dense;
   }
 
   #newsletter button, .quote button{
