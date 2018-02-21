@@ -376,7 +376,7 @@ list-style-type: none;
   article#main-col,
   article#mainContent,
   aside#sidebar{
-    display:block;
+grid-template-columns: 1fr 3fr;
     float:none;
     width:100%;
   }
