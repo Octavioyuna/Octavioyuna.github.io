@@ -379,6 +379,7 @@ list-style-type: none;
 grid-template-columns: 1fr;
     float:none;
     width:100%;
+    grid-auto-flow: dense;
   }
 
   #newsletter button, .quote button{
