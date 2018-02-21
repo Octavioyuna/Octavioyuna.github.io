@@ -376,8 +376,8 @@ list-style-type: none;
   article#main-col,
   article#mainContent,
   aside#sidebar,
-  navDiv,
-  navMenu{
+  .navDiv,
+  .navMenu{
 grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     float:none;
