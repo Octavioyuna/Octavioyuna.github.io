@@ -1,3 +1,5 @@
+/* Main style for CV, OE 2018 */
+/* Parts adapted from Traversy Media, 2017 */
 /* CSS Variables */
 :root {
   --primary: #ddd;
@@ -186,7 +188,7 @@ header .logoImgContainer img{
   padding-top:5px;
   padding-bottom:5px;
   display:grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 4fr 6fr;
   grid-gap:1em;
 }
 
@@ -200,17 +202,14 @@ article#main-col{
 #map {
   height: 340px;
   width: 100%;
+    border-radius:5px;
 }
 
 /* Sidebar */
 aside#sidebar{
   background: var(--backgroundColor);
   padding: 5px 10px 5px 10px;
-}
 
-aside#sidebar .quote input, aside#sidebar .quote textarea{
-  width:90%;
-  padding:5px;
 }
 
 #navDiv{
@@ -348,7 +347,6 @@ list-style-type: none;
   .headerFlex {
     flex-wrap: wrap;
   }
-
   .headerFlex > div {
     flex-basis: 100%;
   }
@@ -367,19 +365,8 @@ list-style-type: none;
     text-align:center;
     width:100%;
   }
-
-  .boxes,
-  .boxes2,
-  .boxesFooter .box1,
-  article#main-col,
-  article#mainContent,
-  aside#sidebar,
-  .navDiv,
-  .navMenu{
-    display:flex;
-    float:none;
-    text-align:center;
-    width:100%;
+  article#mainContent{
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
   #newsletter button, .quote button{
