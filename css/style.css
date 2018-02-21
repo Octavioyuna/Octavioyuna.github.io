@@ -376,6 +376,7 @@ list-style-type: none;
   article#main-col,
   article#mainContent,
   aside#sidebar{
+    display:block;
     float:none;
     width:100%;
   }
