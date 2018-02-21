@@ -371,6 +371,7 @@ list-style-type: none;
   #boxes .box1,
   #boxesFooter .box1,
   article#main-col,
+  article#mainContent,
   aside#sidebar{
     float:none;
     width:100%;
