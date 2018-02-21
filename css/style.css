@@ -376,7 +376,7 @@ list-style-type: none;
   article#main-col,
   article#mainContent,
   aside#sidebar,
-  map{
+  navDiv{
 grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     float:none;
