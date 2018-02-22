@@ -73,6 +73,7 @@
             var Paris = {lat: 48.856700, lng: 2.350800};
             var Bulgaria = {lat: 42.683333, lng: 23.316667};
             var Galapagos = {lat: -0.666667, lng: -90.550000};
+            var Quito = {lat: -0.233333, lng: -78.516667};
             var map = new google.maps.Map(document.getElementById('map'), {
               zoom: 2,
               center: mapCenter
@@ -89,6 +90,10 @@
               position: Galapagos,
               map: map
             });
+            var QuitoMarker = new google.maps.Marker({
+              position: Quito,
+              map: map
+            });
 
             ParisMarker.addListener('click', function() {
               $('#mainContent').load('./places/Paris.html');
@@ -98,6 +103,9 @@
             });
             GalapagosMarker.addListener('click', function() {
               $('#mainContent').load('./places/Galapagos.html');
+            });
+            QuitoMarker.addListener('click', function() {
+              $('#mainContent').load('./places/Quito.html');
             });
           }
           </script>
