@@ -15,17 +15,25 @@
 }
 html {
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  
   color: var(--side);
 }
 
 body{
-  font: 15px/1.5 Arial, Helvetica,sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: "PT Sans",'Helvetica Neue',Arial,Helvetica,sans-serif;
+  font-family: Ubuntu, sans-serif;
+  
   padding:0;
   margin:0;
   background-color:var(--backgroundColor);
 }
 
+/*
+p{
+  font-family: "Lora";
+}
+*/
 /* Global */
 .container{
   width:80%;
@@ -68,6 +76,11 @@ h4 {
   margin-left: auto;
   flex-wrap: wrap;
 }
+.headerFlex > * {
+  padding:5px;
+  
+  vertical-align: bottom;
+}
 .navFlex {
   display: flex;
   flex-wrap: wrap;
@@ -87,7 +100,6 @@ h4 {
   cursor: pointer;
 }
 
-
 #navMenu{
   padding-top:5px;
   padding-bottom:5px;
@@ -105,8 +117,8 @@ a:visited {
 header{
   background-color:var(--backgroundColor);
   color:var(--textColor1);
-  padding-top:20px;
-  padding-bottom:20px;
+  padding-top:10px;
+  padding-bottom:10px;
   border-bottom:var(--textColor2) 3px solid;
 }
 
@@ -115,7 +127,7 @@ header a{
   text-decoration:none;
   text-transform: uppercase;
   font-size:16px;
-  font-weight:bold;
+  font-weight:normal;
 }
 
 header li{
@@ -134,7 +146,6 @@ header #branding h1{
 
 header nav{
   float:right;
-  margin-top:10px;
 }
 
 header .highlight, header .current a{
@@ -148,7 +159,6 @@ header a:hover{
 header .logoImgContainer img{
   height: 50px;
   width: auto;
-  padding: 0.2cm;
 }
 
 /* Showcase */
@@ -209,7 +219,6 @@ article#main-col{
 aside#sidebar{
   background: var(--backgroundColor);
   padding: 5px 10px 5px 10px;
-
 }
 
 #navDiv{
