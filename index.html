@@ -16,7 +16,8 @@
   <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="./js/js.js"></script>
 
-<!--Una and Octavio's Travel Website, Chuchos Vagabundos, 2017-->
+<!--Una and Octavio's Travel Website, Chuchos Vagabundos-->
+<!--OE,2017-->
 <!--Parts adapted from Traversy Media, 2017-->
 
   <title>Chuchos Vagabundos | Home</title>
@@ -56,11 +57,8 @@
         <aside id="sidebar">
 
           <div id="navDiv"></div>
-          <script type=
-          "text/javascript">
-          //<![CDATA[
+          <script type="text/javascript">
           $(function(){$("#navDiv").load("./navDivContent.html");});
-          //]]>
           </script>
         </aside>
 
@@ -80,19 +78,23 @@
             });
             var ParisMarker = new google.maps.Marker({
               position: Paris,
-              map: map
+              map: map,
+              title:"Paris"
             });
             var BulgariaMarker = new google.maps.Marker({
               position: Bulgaria,
-              map: map
+              map: map,
+              title:"Bulgaria"
             });
             var GalapagosMarker = new google.maps.Marker({
               position: Galapagos,
-              map: map
+              map: map,
+              title:"Galapagos"
             });
             var QuitoMarker = new google.maps.Marker({
               position: Quito,
-              map: map
+              map: map,
+              title:"Quito"
             });
 
             ParisMarker.addListener('click', function() {
