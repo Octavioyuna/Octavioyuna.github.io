@@ -16,9 +16,9 @@
   <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="./js/js.js"></script>
 
-<!--Una and Octavio's Travel Website, Chuchos Vagabundos-->
-<!--OE,2017-->
-<!--Parts adapted from Traversy Media, 2017-->
+  <!--Una and Octavio's Travel Website, Chuchos Vagabundos-->
+  <!--OE,2017-->
+  <!--Parts adapted from Traversy Media, 2017-->
 
   <title>Chuchos Vagabundos | Home</title>
   <link rel="stylesheet" href="./css/style.css">
@@ -51,18 +51,18 @@
     </div>
   </section>
 
-  <section id="navListAndMap">
+  <section>
     <div class="container">
-      <div class="navListAndMapDiv">
-        <aside id="sidebar">
-
-          <div id="navDiv"></div>
+      <article id="navListAndMapDiv">
+        <div class="box1">
+          <aside id="sidebar">
+          </aside>
           <script type="text/javascript">
-          $(function(){$("#navDiv").load("./navDivContent.html");});
+          $(function(){$("#sidebar").load("./navDivContent.html");});
           </script>
-        </aside>
+        </div>
 
-        <article id="main-col">
+        <div class="box1">
 
           <div id="map"></div>
           <script>
@@ -115,12 +115,12 @@
           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8w4BAWceAXf-o5Qy64qUuXq9vALVLmMg&callback=initMap">
           </script>
 
-        </article>
-      </div>
+        </div>
+      </article>
     </div>
   </section>
 
-  <section class="boxes">
+  <section>
     <div class="container">
       <article id="mainContent">
         <div class="box1">
@@ -128,7 +128,7 @@
             <div class="box2">
               <h2>Welcome!</h2>
               <p>Select place of interest with the map or navigating with the side menu.</p>
-          </div>
+            </div>
           </div>
         </div>
       </article>
@@ -148,12 +148,12 @@
     <section id="boxesFooter">
       <div class="container">
         <div class="headerFlex">
-        <div class="box" id="dateTxt">
-        </div>
-        <div class="box" id="sysTxt">
-        </div>
-        <div class="box" id="copyTxt">
-        </div>
+          <div id="dateTxt">
+          </div>
+          <div id="sysTxt">
+          </div>
+          <div id="copyTxt">
+          </div>
         </div>
       </div>
     </section>
