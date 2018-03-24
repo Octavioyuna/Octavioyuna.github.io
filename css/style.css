@@ -12,6 +12,7 @@
   --textColor2:#347c98;
   --textColorHeading1:#002147;
   --secondary:#999;
+  --hover:#cccccc;
 }
 
 body{
@@ -61,7 +62,7 @@ h4 {
 
 .headerFlex {
   display: flex;
-align-items: flex-end;
+  align-items: flex-end;
 }
 .headerFlex > nav {
   margin-left: auto;
@@ -84,7 +85,7 @@ align-items: flex-end;
   padding-right:20px;
   color:var(--textColor1);
   cursor: pointer;
-    float:right;
+  float:right;
 }
 
 #navMenu{
@@ -109,7 +110,7 @@ header a{
 
 header li{
   float:left;
-  display:inline;
+  list-style-type: none;
   padding: 0 20px 0 20px;
 }
 
@@ -130,7 +131,7 @@ header .highlight, header .current a{
 }
 
 header a:hover{
-  color:#cccccc;
+  color: var(--hover);
 }
 
 header .logoImgContainer img{
@@ -149,7 +150,7 @@ header .logoImgContainer img{
 }
 
 #showcase h1{
-  font-size:180%;
+  font-size:155%;
   margin:0;
 }
 
@@ -163,9 +164,8 @@ header .logoImgContainer img{
 }
 .form_1 > * {
   padding:5px;
-  vertical-align: bottom;
-    display:inline-block;
-    overflow:hidden;
+  display:inline-block;
+  overflow:hidden;
 }
 #newsletter{
   padding:15px;
@@ -185,14 +185,14 @@ header .logoImgContainer img{
 }
 
 /* navListAndMapDiv */
-article#navListAndMapDiv{
+#navListAndMapDiv{
   padding:5px;
   display:grid;
   grid-template-columns: 4fr 6fr;
   grid-gap:5px;
 }
 
-article#navListAndMapDiv > div {
+#navListAndMapDiv > div {
   background: var(--backgroundColor);
   width:100%;
   padding:5px;
@@ -207,14 +207,14 @@ article#navListAndMapDiv > div {
 }
 
 /* Sidebar */
-aside#sidebar{
+#sidebar{
   padding:10px;
   background: var(--primary);
   border-radius: 5px;
 }
 
 /* mainContent added to contain all the main box */
-article#mainContent {
+#mainContent {
   display: grid;
   grid-gap: 5px;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -222,7 +222,7 @@ article#mainContent {
   padding:5px;
 
 }
-article#mainContent > div {
+#mainContent > div {
   background: var(--backgroundColor);
   width:100%;
   padding:5px;
@@ -242,6 +242,10 @@ article#mainContent > div {
 
 }
 
+.box2 ul{
+  list-style-type: none;
+}
+
 
 /* BoxesFooter */
 
@@ -250,28 +254,19 @@ footer{
   padding-bottom:20px;
   color:var(--textColor1);
   background-color:var(--backgroundColor);
+  font-size: 80%;
 }
 
-footer .dateTxt {
-  float:left;
-}
-footer .copyTxt {
-  text-align:right;
-  float:right;
+footer .headerFlex {
+  justify-content: space-between;
+
 }
 
 footer .headerFlex > div {
-  margin-left: auto;
-  flex-wrap: wrap;
-  display:inline;
-  float:left;
   padding: 0 20px 0 20px;
+  flex-wrap: wrap;
 }
 
-
-.box2 ul{
-  list-style-type: none;
-}
 
 
 /**************//**************//**************//**************/
@@ -296,42 +291,28 @@ footer .headerFlex > div {
 /**************/
 .collapsible ul, .collapsible ul li {
   list-style-type: none;
-  padding-left: 20px;
 }
 
 .collapsible ul li a {
-  color: #6E440A;
+  color: var(--textColor2);
   text-decoration: none;
+  padding-left: 0.4em;
 }
 
 .collapsible ul li a:hover {
-  color: #523205;
-  text-decoration: underline;
+  color: var(--backgroundColor);
+  text-decoration: none;
 }
 
-.expand {
-  background-image: url('../img/src/button-closed.png');
-  background-position: 0 1px;
-  background-repeat: no-repeat;
-  padding-left: 11px;
+.expand, .collapse, .leaf {
+  padding-left: 1.6em;
   cursor: pointer;
 }
 
-.collapse {
-  background-image: url('../img/src/button-open.png');
-  background-position: 0 1px;
-  background-repeat: no-repeat;
-  padding-left: 11px;
-  cursor: pointer;
+.collapsible li.leaf>span {
+  color:var(--primary);
 }
 
-.leaf {
-  background-image: url('../img/src/button.png');
-  background-position: 0 1px;
-  background-repeat: no-repeat;
-  padding-left: 11px;
-  cursor: pointer;
-}
 
 /**************//**************//**************//**************/
 
@@ -360,7 +341,7 @@ footer .headerFlex > div {
     text-align:center;
     width:100%;
   }
-  article#mainContent{
+  #mainContent{
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
@@ -373,14 +354,14 @@ footer .headerFlex > div {
     width:100%;
     margin-bottom:5px;
   }
-    .form_1 {
+  .form_1 {
     flex-wrap: wrap;
   }
   .form_1 > * {
     flex-basis: 100%;
   }
 
-  article#navListAndMapDiv {
+  #navListAndMapDiv {
     grid-template-columns: 1fr;
   }
 }
