@@ -74,6 +74,7 @@
             var Bulgaria = {lat: 42.683333, lng: 23.316667};
             var Galapagos = {lat: -0.666667, lng: -90.550000};
             var Quito = {lat: -0.233333, lng: -78.516667};
+            var Costa_Rica = {lat: 10.000000, lng:  -84.000000};
             var map = new google.maps.Map(document.getElementById('map'), {
               zoom: 2,
               center: mapCenter
@@ -98,6 +99,11 @@
               map: map,
               title:"Quito"
             });
+                        var Costa_RicaMarker = new google.maps.Marker({
+              position: Costa_Rica,
+              map: map,
+              title:"Costa_Rica"
+            });
 
             ParisMarker.addListener('click', function() {
               $('#mainContent').load('./places/Paris.html');
@@ -110,6 +116,9 @@
             });
             QuitoMarker.addListener('click', function() {
               $('#mainContent').load('./places/Quito.html');
+            });
+                        Costa_RicaMarker.addListener('click', function() {
+              $('#mainContent').load('./places/Costa_Rica.html');
             });
           }
           </script>
