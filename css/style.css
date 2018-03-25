@@ -217,7 +217,7 @@ header .logoImgContainer img{
 #mainContent {
   display: grid;
   grid-gap: 5px;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
   background: var(--backgroundColor);
   padding:5px;
 
