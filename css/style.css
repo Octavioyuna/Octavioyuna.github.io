@@ -126,7 +126,8 @@ header nav{
   float:right;
 }
 
-header .highlight, header .current a{
+header .highlight,
+header .current a{
   color: var(--textColor2);
 }
 
@@ -173,14 +174,11 @@ header .logoImgContainer img{
   background:var(--backgroundColor2);
   overflow:hidden;
 }
-
 #newsletter form {
   float:right;
 }
-
 #newsletter input[type="email"]{
   padding:4px;
-
   width:250px;
 }
 
@@ -190,13 +188,6 @@ header .logoImgContainer img{
   display:grid;
   grid-template-columns: 4fr 6fr;
   grid-gap:5px;
-}
-
-#navListAndMapDiv > div {
-  background: var(--backgroundColor);
-  width:100%;
-  padding:5px;
-  border: var(--backgroundColor) solid 1px;
 }
 
 /* google maps markers */
@@ -222,9 +213,9 @@ header .logoImgContainer img{
   padding:5px;
 
 }
+#navListAndMapDiv > div,
 #mainContent > div {
   background: var(--backgroundColor);
-  width:100%;
   padding:5px;
   border: var(--backgroundColor) solid 1px;
 }
@@ -239,7 +230,6 @@ header .logoImgContainer img{
 .boxes2 > div {
   background: var(--primary);
   padding:5px;
-
 }
 
 .box2 ul{
@@ -259,7 +249,6 @@ footer{
 
 footer .headerFlex {
   justify-content: space-between;
-
 }
 
 footer .headerFlex > div {
@@ -362,6 +351,10 @@ footer .headerFlex > div {
   }
 
   #navListAndMapDiv {
+    grid-template-columns: 1fr;
+  }
+
+  .boxes2 {
     grid-template-columns: 1fr;
   }
 }
