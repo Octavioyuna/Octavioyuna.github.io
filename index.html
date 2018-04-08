@@ -75,6 +75,7 @@
             var Galapagos = {lat: -0.666667, lng: -90.550000};
             var Quito = {lat: -0.233333, lng: -78.516667};
             var Costa_Rica = {lat: 10.000000, lng:  -84.000000};
+            var Bolivia = {lat: -16.712000, lng:  -64.666000};
             var map = new google.maps.Map(document.getElementById('map'), {
               zoom: 2,
               center: mapCenter
@@ -99,10 +100,15 @@
               map: map,
               title:"Quito"
             });
-                        var Costa_RicaMarker = new google.maps.Marker({
+            var Costa_RicaMarker = new google.maps.Marker({
               position: Costa_Rica,
               map: map,
               title:"Costa_Rica"
+            });
+            var BoliviaMarker = new google.maps.Marker({
+              position: Bolivia,
+              map: map,
+              title:"Bolivia"
             });
 
             ParisMarker.addListener('click', function() {
@@ -119,6 +125,9 @@
             });
                         Costa_RicaMarker.addListener('click', function() {
               $('#mainContent').load('./places/Costa_Rica.html');
+            });
+            BoliviaMarker.addListener('click', function() {
+              $('#mainContent').load('./places/Bolivia.html');
             });
           }
           </script>
