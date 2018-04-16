@@ -206,9 +206,8 @@ header .logoImgContainer img{
 
 /* mainContent added to contain all the main box */
 #mainContent {
-  display: grid;
-  grid-gap: 5px;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction:column;
   background: var(--backgroundColor);
   padding:5px;
 
@@ -220,9 +219,9 @@ header .logoImgContainer img{
   border: var(--backgroundColor) solid 1px;
 }
 .boxes2 {
-  display: grid;
+    display: grid;
   grid-gap: 5px;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   background: var(--primary);
   padding:5px;
   border-radius: 5px;
