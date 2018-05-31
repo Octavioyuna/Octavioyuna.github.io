@@ -76,6 +76,8 @@
             var Quito = {lat: -0.233333, lng: -78.516667};
             var Costa_Rica = {lat: 10.000000, lng:  -84.000000};
             var Bolivia = {lat: -16.712000, lng:  -64.666000};
+            var Madagascar = {lat: -20.000000, lng:   47.000000};
+            var Seychelles = {lat: -4.583333, lng:  55.666667};
             var map = new google.maps.Map(document.getElementById('map'), {
               zoom: 2,
               center: mapCenter
@@ -110,6 +112,16 @@
               map: map,
               title:"Bolivia"
             });
+            var MadagascarMarker = new google.maps.Marker({
+              position: Madagascar,
+              map: map,
+              title:"Madagascar"
+            });
+            var SeychellesMarker = new google.maps.Marker({
+              position: Seychelles,
+              map: map,
+              title:"Seychelles"
+            });
 
             ParisMarker.addListener('click', function() {
               $('#mainContent').load('./places/Paris.html');
@@ -128,6 +140,12 @@
             });
             BoliviaMarker.addListener('click', function() {
               $('#mainContent').load('./places/Bolivia.html');
+            });
+            MadagascarMarker.addListener('click', function() {
+              $('#mainContent').load('./places/Madagascar.html');
+            });
+            SeychellesMarker.addListener('click', function() {
+              $('#mainContent').load('./places/Seychelles.html');
             });
           }
           </script>
