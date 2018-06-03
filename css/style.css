@@ -67,10 +67,12 @@ h4 {
 .headerFlex {
   display: flex;
   align-items: flex-end;
+    -ms-flex-wrap:wrap;
 }
 .headerFlex > nav {
   margin-left: auto;
   flex-wrap: wrap;
+-ms-flex-preferred-size: 100%;
 }
 .headerFlex > * {
   padding:5px;
@@ -78,6 +80,7 @@ h4 {
 .navFlex {
   display: flex;
   flex-wrap: wrap;
+  -ms-flex-wrap:wrap;
 }
 .navFlex > li {
   flex: 1;
