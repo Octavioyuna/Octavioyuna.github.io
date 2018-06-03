@@ -202,10 +202,8 @@ header .logoImgContainer img{
 /* navListAndMapDiv */
 #navListAndMapDiv{
   padding:5px;
-  display:-ms-grid;
   display:grid;
-  -ms-grid-columns: 4fr 6fr;
-      grid-template-columns: 4fr 6fr;
+  grid-template-columns: 4fr 6fr;
   grid-gap:5px;
 }
 
@@ -226,13 +224,8 @@ header .logoImgContainer img{
 
 /* mainContent added to contain all the main box */
 #mainContent {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient:vertical;
-  -webkit-box-direction:normal;
-      -ms-flex-direction:column;
-          flex-direction:column;
+  flex-direction:column;
   background:#002147;
   background: var(--backgroundColor);
   padding:5px;
@@ -247,11 +240,9 @@ header .logoImgContainer img{
   border: var(--backgroundColor) solid 1px;
 }
 .boxes2 {
-    display: -ms-grid;
     display: grid;
   grid-gap: 5px;
-  -ms-grid-columns: (minmax(400px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   background: #ddd;
   background: var(--primary);
   padding:5px;
