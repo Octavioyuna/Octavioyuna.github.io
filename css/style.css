@@ -248,6 +248,12 @@ header .logoImgContainer img{
   padding:5px;
   border-radius: 5px;
 }
+.boxes2span {
+  background: #ddd;
+  background: var(--primary);
+  padding:5px;
+  border-radius: 5px;
+}
 .boxes2 > div {
   background: #ddd;
   background: var(--primary);
