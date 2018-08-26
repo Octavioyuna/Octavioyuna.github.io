@@ -235,7 +235,7 @@ header .logoImgContainer img{
 #mainContent > div {
   background:#002147;
   background: var(--backgroundColor);
-  padding:5px;
+  padding:10px;
   border:#002147 solid 1px;
   border: var(--backgroundColor) solid 1px;
 }
@@ -251,13 +251,13 @@ header .logoImgContainer img{
 .boxes2span {
   background: #ddd;
   background: var(--primary);
-  padding:5px;
+  padding:10px;
   border-radius: 5px;
 }
 .boxes2 > div {
   background: #ddd;
   background: var(--primary);
-  padding:5px;
+  padding:10px;
 }
 
 .box2 ul{
