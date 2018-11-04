@@ -295,6 +295,7 @@ footer .headerFlex > div {
 .contentItemImgContainer {
   text-align: center;
   padding:5px;
+  overflow: hidden;
 }
 .contentItemImgContainer img {
   width:100%;
