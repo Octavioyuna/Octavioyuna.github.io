@@ -41,20 +41,18 @@ ul{
   padding:0;
 }
 
-/*
+
 h1 {
-text-align: left;
-font-size: 170%;
-color: #002147;
+font-size: 165%;
 }
-*/
+
 h2 {
-  font-size: 145%;
+  font-size: 150%;
   color: #002147;
   color: var(--textColorHeading1);
 }
 h3 {
-  font-size: 125%;
+  font-size: 135%;
   color:  #002147;
   color:  var(--textColorHeading1);
 }
