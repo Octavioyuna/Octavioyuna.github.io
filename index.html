@@ -79,6 +79,7 @@
             var Madagascar = {lat: -20.000000, lng:   47.000000};
             var Seychelles = {lat: -4.583333, lng:  55.666667};
             var Rajasthan = {lat: 26.600000, lng:  73.800000};
+            var New_Delhi = {lat: 28.613889, lng:  77.208889};
             var map = new google.maps.Map(document.getElementById('map'), {
               zoom: 2,
               center: mapCenter
@@ -128,6 +129,11 @@
               map: map,
               title:"Rajasthan"
             });
+            var New_DelhiMarker = new google.maps.Marker({
+              position: New_Delhi,
+              map: map,
+              title:"New_Delhi"
+            });
 
             ParisMarker.addListener('click', function() {
               $('#mainContent').load('./places/Paris.html');
@@ -141,7 +147,7 @@
             QuitoMarker.addListener('click', function() {
               $('#mainContent').load('./places/Quito.html');
             });
-                        Costa_RicaMarker.addListener('click', function() {
+            Costa_RicaMarker.addListener('click', function() {
               $('#mainContent').load('./places/Costa_Rica.html');
             });
             BoliviaMarker.addListener('click', function() {
@@ -155,6 +161,9 @@
             });
             RajasthanMarker.addListener('click', function() {
               $('#mainContent').load('./places/Rajasthan.html');
+            });
+            New_DelhiMarker.addListener('click', function() {
+              $('#mainContent').load('./places/New_Delhi.html');
             });
           }
           </script>
