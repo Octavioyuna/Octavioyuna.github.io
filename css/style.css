@@ -1,5 +1,7 @@
-/* Main style for CV, OE 2018 */
+/* Main style for Travel website : CV, OE 2018 */
 /* Parts adapted from Traversy Media, 2017 */
+/* background occasionally repeated for old browsers */
+
 /* CSS Variables */
 :root {
   --primary: #ddd;
@@ -43,21 +45,21 @@ ul{
 
 
 h1 {
-font-size: 165%;
+font-size: 180%;
 }
 
 h2 {
-  font-size: 150%;
+  font-size: 160%;
   color: #002147;
   color: var(--textColorHeading1);
 }
 h3 {
-  font-size: 135%;
+  font-size: 140%;
   color:  #002147;
   color:  var(--textColorHeading1);
 }
 h4 {
-  font-size: 115%;
+  font-size: 120%;
   color:  #002147;
   color:  var(--textColorHeading1);
 }
@@ -199,10 +201,14 @@ header .logoImgContainer img{
 
 /* navListAndMapDiv */
 #navListAndMapDiv{
-  padding:5px;
   display:grid;
   grid-template-columns: 4fr 6fr;
-  grid-gap:5px;
+  padding:5px;
+}
+#navListAndMapDiv > div {
+  background:#002147;
+  background: var(--backgroundColor);
+  margin:5px;
 }
 
 /* google maps markers */
@@ -229,36 +235,32 @@ header .logoImgContainer img{
   padding:5px;
 
 }
-#navListAndMapDiv > div,
+
 #mainContent > div {
-  background:#002147;
-  background: var(--backgroundColor);
+  background: #ddd;
+  background: var(--primary);
+  margin:5px;
+  border-radius: 5px;
   padding:10px;
-  border:#002147 solid 1px;
-  border: var(--backgroundColor) solid 1px;
 }
-.boxes2 {
-    display: grid;
+.boxes {
+   display: grid;
   grid-gap: 5px;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  background: #ddd;
-  background: var(--primary);
-  padding:10px;
+  padding:0px;
+}
+.boxes_span {
+
+  padding:0px;
   border-radius: 5px;
 }
-.boxes2span {
+.boxes > div {
   background: #ddd;
   background: var(--primary);
-  padding:10px;
-  border-radius: 5px;
-}
-.boxes2 > div {
-  background: #ddd;
-  background: var(--primary);
-  padding:10px;
+  padding:0px;
 }
 
-.box2 ul{
+.box ul{
   list-style-type: none;
 }
 
@@ -386,7 +388,7 @@ footer .headerFlex > div {
     grid-template-columns: 1fr;
   }
 
-  .boxes2 {
+  .boxes {
     grid-template-columns: 1fr;
   }
   .container{
