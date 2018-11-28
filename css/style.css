@@ -241,23 +241,28 @@ header .logoImgContainer img{
   background: var(--primary);
   margin:5px;
   border-radius: 5px;
-  padding:10px;
+  padding:5px;
 }
 .boxes {
-   display: grid;
+  display: grid;
   grid-gap: 5px;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   padding:0px;
 }
 .boxes_span {
-
   padding:0px;
   border-radius: 5px;
 }
-.boxes > div {
+.box {
   background: #ddd;
   background: var(--primary);
-  padding:0px;
+  padding:5px;
+}
+#mainContent > div > h3 {
+  padding:5px;
+}
+#mainContent > div > h2 {
+  padding:5px;
 }
 
 .box ul{
