@@ -83,6 +83,7 @@
             var Agra = {lat: 27.180000, lng:  78.020000};
             var Aurangabad = {lat: 19.880000, lng:  75.320000};
             var Varanasi = {lat: 25.280000, lng:  82.960000};
+            var Ethiopia = {lat: 8.000000, lng:  38.000000};
             var map = new google.maps.Map(document.getElementById('map'), {
               zoom: 2,
               center: mapCenter
@@ -146,10 +147,16 @@
               position: Aurangabad,
               map: map,
               title:"Aurangabad"
-            });var VaranasiMarker = new google.maps.Marker({
+            });
+            var VaranasiMarker = new google.maps.Marker({
               position: Varanasi,
               map: map,
               title:"Varanasi"
+            });
+            var EthiopiaMarker = new google.maps.Marker({
+              position: Ethiopia,
+              map: map,
+              title:"Ethiopia"
             });
 
 
@@ -191,6 +198,9 @@
             });
             VaranasiMarker.addListener('click', function() {
               $('#mainContent').load('./places/Varanasi.html');
+            });
+            EthiopiaMarker.addListener('click', function() {
+              $('#mainContent').load('./places/Ethiopia.html');
             });
           }
           </script>
