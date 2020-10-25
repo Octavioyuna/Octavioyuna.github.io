@@ -69,7 +69,7 @@
           <div id="map"></div>
           <script>
           function initMap() {
-            var mapCenter = {lat: 27, lng: 2};
+            var mapCenter = {lat: 27, lng: 5};
             var Paris = {lat: 48.856700, lng: 2.350800};
             var Bulgaria = {lat: 42.683333, lng: 23.316667};
             var Galapagos = {lat: -0.666667, lng: -90.550000};
@@ -85,10 +85,12 @@
             var Varanasi = {lat: 25.280000, lng:  82.960000};
             var Ethiopia = {lat: 8.000000, lng:  38.000000};
             var Norway = {lat: 61.000000, lng:   8.000000};
+            
             var map = new google.maps.Map(document.getElementById('map'), {
-              zoom: 2.1,
+              zoom: 2.2,
               center: mapCenter
             });
+            
             var ParisMarker = new google.maps.Marker({
               position: Paris,
               map: map,
