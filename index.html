@@ -84,6 +84,7 @@
             var Aurangabad = {lat: 19.880000, lng:  75.320000};
             var Varanasi = {lat: 25.280000, lng:  82.960000};
             var Ethiopia = {lat: 8.000000, lng:  38.000000};
+            var Norway = {lat: 61.000000, lng:   8.000000};
             var map = new google.maps.Map(document.getElementById('map'), {
               zoom: 2,
               center: mapCenter
@@ -158,6 +159,11 @@
               map: map,
               title:"Ethiopia"
             });
+            var NorwayMarker = new google.maps.Marker({
+              position: Norway,
+              map: map,
+              title:"Norway"
+            });
 
 
             ParisMarker.addListener('click', function() {
@@ -201,6 +207,9 @@
             });
             EthiopiaMarker.addListener('click', function() {
               $('#mainContent').load('./places/Ethiopia.html');
+            });
+            NorwayMarker.addListener('click', function() {
+              $('#mainContent').load('./places/Norway.html');
             });
           }
           </script>
