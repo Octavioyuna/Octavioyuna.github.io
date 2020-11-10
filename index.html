@@ -86,6 +86,8 @@
             var Varanasi = {lat: 25.280000, lng:  82.960000};
             var Ethiopia = {lat: 8.000000, lng:  38.000000};
             var Norway = {lat: 61.000000, lng:   8.000000};
+            var Quintana_Roo = {lat: 19.600000, lng:  -87.920000};
+            var Yucatan = {lat: 20.833333, lng:   -89.000000};
             
             var map = new google.maps.Map(document.getElementById('map'), {
               zoom: 1.9,
@@ -167,6 +169,16 @@
               map: map,
               title:"Norway"
             });
+            var Quintana_RooMarker = new google.maps.Marker({
+              position: Quintana_Roo,
+              map: map,
+              title:"Quintana_Roo"
+            });
+            var YucatanMarker = new google.maps.Marker({
+              position: Yucatan,
+              map: map,
+              title:"Yucatan"
+            });
 
 
             ParisMarker.addListener('click', function() {
@@ -213,6 +225,12 @@
             });
             NorwayMarker.addListener('click', function() {
               $('#mainContent').load('./places/Norway.html');
+            });
+            Quintana_RooMarker.addListener('click', function() {
+              $('#mainContent').load('./places/Quintana_Roo.html');
+            });
+            YucatanMarker.addListener('click', function() {
+              $('#mainContent').load('./places/Yucatan.html');
             });
           }
           </script>
