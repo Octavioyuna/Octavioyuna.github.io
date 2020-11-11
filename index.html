@@ -88,6 +88,7 @@
             var Norway = {lat: 61.000000, lng:   8.000000};
             var Quintana_Roo = {lat: 19.600000, lng:  -87.920000};
             var Yucatan = {lat: 20.833333, lng:   -89.000000};
+            var Chile = {lat: -34.000000, lng:   -71.000000};
             
             var map = new google.maps.Map(document.getElementById('map'), {
               zoom: 1.9,
@@ -179,6 +180,11 @@
               map: map,
               title:"Yucatan"
             });
+            var ChileMarker = new google.maps.Marker({
+              position: Chile,
+              map: map,
+              title:"Chile"
+            });
 
 
             ParisMarker.addListener('click', function() {
@@ -232,6 +238,10 @@
             YucatanMarker.addListener('click', function() {
               $('#mainContent').load('./places/Yucatan.html');
             });
+            ChileMarker.addListener('click', function() {
+              $('#mainContent').load('./places/Chile.html');
+            });
+            
           }
           </script>
           <script async defer
