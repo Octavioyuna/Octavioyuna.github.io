@@ -301,6 +301,7 @@ footer .headerFlex > div {
   text-align: center;
   padding:5px;
   overflow: hidden;
+  max-height: 400px;
   
 }
 .contentItemImgContainer img {
