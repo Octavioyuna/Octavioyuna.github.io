@@ -94,7 +94,6 @@ h4 {
   color:#f4f4f4;
   color:var(--textColor1);
   cursor: pointer;
-  float:left;
 }
 
 #navMenu{
