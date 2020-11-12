@@ -51,7 +51,7 @@ function writeSimpleDate() {
   } else {
     date = d.getYear();
   }
-  var month = d.getMonth();
+  var month = d.getMonth() + 1;
   var str = month + "." + date;
   return str;
 }
