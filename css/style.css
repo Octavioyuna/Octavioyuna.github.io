@@ -97,6 +97,17 @@ h4 {
   float:right;
 }
 
+.goToTopBtn{
+  background:#347c98;
+  background:var(--textColor2);
+  padding-left: 20px;
+  padding-right:20px;
+  color:#f4f4f4;
+  color:var(--textColor1);
+  cursor: pointer;
+  float:right;
+}
+
 #navMenu{
   padding:5px;
 }
