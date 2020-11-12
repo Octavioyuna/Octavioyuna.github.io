@@ -303,6 +303,7 @@ footer .headerFlex > div {
 }
 .contentItemImgContainer img {
   width:100%;
+  height: 600px;
 }
 
 
