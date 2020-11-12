@@ -256,6 +256,7 @@ header .logoImgContainer img{
   background: #ddd;
   background: var(--primary);
   padding:5px;
+  max-height: 400px;
 }
 #mainContent > div > h3 {
   padding:5px;
@@ -300,10 +301,10 @@ footer .headerFlex > div {
   text-align: center;
   padding:5px;
   overflow: hidden;
-  max-height: 400px;
+  
 }
 .contentItemImgContainer img {
-  height:100%;
+  width:100%;
 }
 
 
