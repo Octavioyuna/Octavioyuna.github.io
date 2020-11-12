@@ -256,7 +256,6 @@ header .logoImgContainer img{
   background: #ddd;
   background: var(--primary);
   padding:5px;
- 
 }
 #mainContent > div > h3 {
   padding:5px;
@@ -301,14 +300,10 @@ footer .headerFlex > div {
   text-align: center;
   padding:5px;
   overflow: hidden;
-  max-height: 400px;
-  
 }
 .contentItemImgContainer img {
-  max-width:100%;
-  height:auto;
+  width:100%;
 }
-
 
 #listHeader {
   cursor: pointer;
