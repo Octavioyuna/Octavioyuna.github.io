@@ -303,7 +303,7 @@ footer .headerFlex > div {
   max-height: 400px;
 }
 .contentItemImgContainer img {
-
+  height:100%;
 }
 
 
