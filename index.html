@@ -91,6 +91,8 @@
             var Chile = {lat: -34.000000, lng: -71.000000};
             var Sarajevo = {lat: 43.866667, lng: 18.416667};
             var Santorini = {lat: 36.416667, lng: 25.433333};
+            var Crete = {lat: 35.210000, lng: 24.910000};
+
             
             var map = new google.maps.Map(document.getElementById('map'), {
               zoom: 1.9,
@@ -197,6 +199,11 @@
               map: map,
               title:"Santorini"
             });
+            var CreteMarker = new google.maps.Marker({
+              position: Crete,
+              map: map,
+              title:"Crete"
+            });
 
 
             ParisMarker.addListener('click', function() {
@@ -258,6 +265,9 @@
             });
             SantoriniMarker.addListener('click', function() {
               $('#mainContent').load('./places/Santorini.html');
+            });
+            CreteMarker.addListener('click', function() {
+              $('#mainContent').load('./places/Crete.html');
             });
             
           }
