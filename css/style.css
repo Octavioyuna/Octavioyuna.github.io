@@ -131,6 +131,7 @@ header #branding{
 
 header #branding h1{
   margin:0;
+  font-family: 'Cabin Sketch', cursive;
 }
 
 header nav{
@@ -165,7 +166,11 @@ header .logoImgContainer img{
 }
 
 #showcase h1{
-  font-size:155%;
+  font-family: Cabin Sketch;
+font-weight: bold;
+font-family: 'Cabin Sketch', cursive;
+font-size: 48px;
+  text-shadow: 4px 4px 4px;
   margin:0;
 }
 
