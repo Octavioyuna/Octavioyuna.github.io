@@ -261,11 +261,17 @@ font-family: 'Cabin Sketch', cursive;
   background: var(--primary);
   padding:5px;
 }
-#mainContent > div > h3 {
-  padding:5px;
-}
+
 #mainContent > div > h2 {
   padding:5px;
+  margin:0px;
+}
+#mainContent > div > h3 {
+  padding:5px;
+  margin:0px;
+}
+#mainContent > div > h4 {
+  margin:0px;
 }
 
 .box ul{
