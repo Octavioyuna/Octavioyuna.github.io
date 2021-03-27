@@ -86,6 +86,11 @@ h4 {
   flex: 1;
 }
 
+
+.navFlex > li > a{
+  white-space: nowrap;
+}
+
 .button_1{
   background:#347c98;
   background:var(--textColor2);
