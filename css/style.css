@@ -163,7 +163,11 @@ header .logoImgContainer img{
 #showcase{
   padding-top:5px;
   padding-bottom:5px;
-  background:url('../img/chuchosVagabundosBannerSmall_10.jpg') no-repeat center center;
+  
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../img/chuchosVagabundosBannerSmall_10.jpg') no-repeat center center;
+   background: -moz-linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.1)), url('../img/chuchosVagabundosBannerSmall_10.jpg') no-repeat center center;
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.1)), url('../img/chuchosVagabundosBannerSmall_10.jpg') no-repeat center center;
+
   text-align:center;
   color:#f4f4f4;
   color:var(--textColor1);
