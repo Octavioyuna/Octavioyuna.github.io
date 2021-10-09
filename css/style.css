@@ -199,8 +199,7 @@ font-family: 'Cabin Sketch', cursive;
   padding:15px;
   color:#f4f4f4;
   color:var(--textColor1);
-  background:#35424a;
-  background:var(--backgroundColor2);
+  background: #35424a url('../img/CVArt3.jpg') repeat center center;
   overflow:hidden;
 }
 #newsletter form {
