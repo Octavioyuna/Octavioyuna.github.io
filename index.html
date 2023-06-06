@@ -102,6 +102,7 @@
             var Sarajevo = {lat: 43.866667, lng: 18.416667};
             var Santorini = {lat: 36.416667, lng: 25.433333};
             var Crete = {lat: 35.210000, lng: 24.910000};
+            var Sardinia = {lat: 40.000000, lng: 9.000000};
 
             
             var map = new google.maps.Map(document.getElementById('map'), {
@@ -214,6 +215,11 @@
               map: map,
               title:"Crete"
             });
+            var SardiniaMarker = new google.maps.Marker({
+              position: Sardinia,
+              map: map,
+              title:"Sardinia"
+            });
 
 
             ParisMarker.addListener('click', function() {
@@ -278,6 +284,9 @@
             });
             CreteMarker.addListener('click', function() {
               $('#mainContent').load('./places/Crete.html');
+            });
+            SardiniaMarker.addListener('click', function() {
+              $('#mainContent').load('./places/Sardinia.html');
             });
             
           }
