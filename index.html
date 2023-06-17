@@ -103,6 +103,7 @@
             var Santorini = {lat: 36.416667, lng: 25.433333};
             var Crete = {lat: 35.210000, lng: 24.910000};
             var Sardinia = {lat: 40.000000, lng: 9.000000};
+            var Madrid = {lat: 40.416944, lng: -3.703333};
 
             
             var map = new google.maps.Map(document.getElementById('map'), {
@@ -220,6 +221,11 @@
               map: map,
               title:"Sardinia"
             });
+            var MadridMarker = new google.maps.Marker({
+              position: Madrid,
+              map: map,
+              title:"Madrid"
+            });
 
 
             ParisMarker.addListener('click', function() {
@@ -287,6 +293,9 @@
             });
             SardiniaMarker.addListener('click', function() {
               $('#mainContent').load('./places/Sardinia.html');
+            });
+            MadridMarker.addListener('click', function() {
+              $('#mainContent').load('./places/Madrid.html');
             });
             
           }
