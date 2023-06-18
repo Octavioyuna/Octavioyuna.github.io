@@ -104,6 +104,7 @@
             var Crete = {lat: 35.210000, lng: 24.910000};
             var Sardinia = {lat: 40.000000, lng: 9.000000};
             var Madrid = {lat: 40.416944, lng: -3.703333};
+            var Jordan = {lat: 31.240000, lng: 36.510000};
 
             
             var map = new google.maps.Map(document.getElementById('map'), {
@@ -226,6 +227,11 @@
               map: map,
               title:"Madrid"
             });
+            var JordanMarker = new google.maps.Marker({
+              position: Jordan,
+              map: map,
+              title:"Madrid"
+            });
 
 
             ParisMarker.addListener('click', function() {
@@ -296,6 +302,9 @@
             });
             MadridMarker.addListener('click', function() {
               $('#mainContent').load('./places/Madrid.html');
+            });
+            JordanMarker.addListener('click', function() {
+              $('#mainContent').load('./places/Jordan.html');
             });
             
           }
