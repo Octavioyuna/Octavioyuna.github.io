@@ -105,6 +105,8 @@
             var Sardinia = {lat: 40.000000, lng: 9.000000};
             var Madrid = {lat: 40.416944, lng: -3.703333};
             var Jordan = {lat: 31.240000, lng: 36.510000};
+            var Azores = {lat: 38.660000, lng: -28.070000};
+            var Madeira = {lat: 32.650000, lng: -16.916667};
 
             
             var map = new google.maps.Map(document.getElementById('map'), {
@@ -230,7 +232,17 @@
             var JordanMarker = new google.maps.Marker({
               position: Jordan,
               map: map,
-              title:"Madrid"
+              title:"Jordan"
+            });
+            var AzoresMarker = new google.maps.Marker({
+              position: Azores,
+              map: map,
+              title:"Azores"
+            });
+            var MadeiraMarker = new google.maps.Marker({
+              position: Madeira,
+              map: map,
+              title:"Madeira"
             });
 
 
@@ -305,6 +317,12 @@
             });
             JordanMarker.addListener('click', function() {
               $('#mainContent').load('./places/Jordan.html');
+            });
+            AzoresMarker.addListener('click', function() {
+              $('#mainContent').load('./places/Azores.html');
+            });
+            MadeiraMarker.addListener('click', function() {
+              $('#mainContent').load('./places/Madeira.html');
             });
             
           }
