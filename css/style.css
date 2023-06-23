@@ -62,7 +62,8 @@ h4 {
   font-size: 120%;
   color:  #002147;
   color:  var(--textColorHeading1);
-  margin: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .headerFlex {
