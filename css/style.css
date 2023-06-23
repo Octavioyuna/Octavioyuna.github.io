@@ -62,6 +62,7 @@ h4 {
   font-size: 120%;
   color:  #002147;
   color:  var(--textColorHeading1);
+  margin: 5px;
 }
 
 .headerFlex {
@@ -175,10 +176,11 @@ header .logoImgContainer img{
 }
 
 #showcase h1{
+  font-size: 200%;
   font-family: Cabin Sketch;
 font-weight: bold;
 font-family: 'Cabin Sketch', cursive;
-  text-shadow: 4px 4px 4px;
+  text-shadow: 4px 4px 4px #333;
   margin:0;
 }
 
