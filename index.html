@@ -107,7 +107,7 @@
             var Jordan = {lat: 31.240000, lng: 36.510000};
             var Azores = {lat: 38.660000, lng: -28.070000};
             var Madeira = {lat: 32.650000, lng: -16.916667};
-
+            var Moscow = {lat: 55.755833, lng: 37.617222};
             
             var map = new google.maps.Map(document.getElementById('map'), {
               zoom: 1.9,
@@ -137,7 +137,7 @@
             var Costa_RicaMarker = new google.maps.Marker({
               position: Costa_Rica,
               map: map,
-              title:"Costa_Rica"
+              title:"Costa Rica"
             });
             var BoliviaMarker = new google.maps.Marker({
               position: Bolivia,
@@ -162,7 +162,7 @@
             var New_DelhiMarker = new google.maps.Marker({
               position: New_Delhi,
               map: map,
-              title:"New_Delhi"
+              title:"New Delhi"
             });
             var AgraMarker = new google.maps.Marker({
               position: Agra,
@@ -192,7 +192,7 @@
             var Quintana_RooMarker = new google.maps.Marker({
               position: Quintana_Roo,
               map: map,
-              title:"Quintana_Roo"
+              title:"Quintana Roo"
             });
             var YucatanMarker = new google.maps.Marker({
               position: Yucatan,
@@ -243,6 +243,11 @@
               position: Madeira,
               map: map,
               title:"Madeira"
+            });
+            var MoscowMarker = new google.maps.Marker({
+              position: Moscow,
+              map: map,
+              title:"Moscow"
             });
 
 
@@ -323,6 +328,9 @@
             });
             MadeiraMarker.addListener('click', function() {
               $('#mainContent').load('./places/Madeira.html');
+            });
+            MoscowMarker.addListener('click', function() {
+              $('#mainContent').load('./places/Moscow.html');
             });
             
           }
