@@ -108,6 +108,7 @@
             var Azores = {lat: 38.660000, lng: -28.070000};
             var Madeira = {lat: 32.650000, lng: -16.916667};
             var Moscow = {lat: 55.755833, lng: 37.617222};
+            var Dublin = {lat: 53.350000, lng: -6.260278};
             
             var map = new google.maps.Map(document.getElementById('map'), {
               zoom: 1.9,
@@ -249,6 +250,11 @@
               map: map,
               title:"Moscow"
             });
+            var DublinMarker = new google.maps.Marker({
+              position: Dublin,
+              map: map,
+              title:"Dublin"
+            });
 
 
             ParisMarker.addListener('click', function() {
@@ -331,6 +337,9 @@
             });
             MoscowMarker.addListener('click', function() {
               $('#mainContent').load('./places/Moscow.html');
+            });
+            DublinMarker.addListener('click', function() {
+              $('#mainContent').load('./places/Dublin.html');
             });
             
           }
