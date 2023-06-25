@@ -8,3 +8,7 @@ This is a website for informal travel recommendations, tips and information we t
 Our information is split into places and each has its own page with a list of sub-places we recommend or comment on. We chose these divisions somewhat arbitrarily, but in general sub-places represent self-contained sites within the main place.
 
 https://octavioyuna.github.io/
+
+### History
+
+Version 1: September 2017
