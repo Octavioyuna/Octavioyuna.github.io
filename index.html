@@ -109,6 +109,9 @@
             var Madeira = {lat: 32.650000, lng: -16.916667};
             var Moscow = {lat: 55.755833, lng: 37.617222};
             var Dublin = {lat: 53.350000, lng: -6.260278};
+            var Budapest = {lat: 47.492500, lng: 19.051389};
+            var Sicily = {lat: 37.500000, lng: 14.000000};
+            var Zaragoza = {lat: 41.650000, lng: -0.883333};
             
             var map = new google.maps.Map(document.getElementById('map'), {
               zoom: 1.9,
@@ -255,6 +258,21 @@
               map: map,
               title:"Dublin"
             });
+            var BudapestMarker = new google.maps.Marker({
+              position: Budapest,
+              map: map,
+              title:"Budapest"
+            });
+            var SicilyMarker = new google.maps.Marker({
+              position: Sicily,
+              map: map,
+              title:"Sicily"
+            });
+            var ZaragozaMarker = new google.maps.Marker({
+              position: Zaragoza,
+              map: map,
+              title:"Zaragoza"
+            });
 
 
             ParisMarker.addListener('click', function() {
@@ -340,6 +358,15 @@
             });
             DublinMarker.addListener('click', function() {
               $('#mainContent').load('./places/Dublin.html');
+            });
+            BudapestMarker.addListener('click', function() {
+              $('#mainContent').load('./places/Budapest.html');
+            });
+            SicilyMarker.addListener('click', function() {
+              $('#mainContent').load('./places/Sicily.html');
+            });
+            ZaragozaMarker.addListener('click', function() {
+              $('#mainContent').load('./places/Zaragoza.html');
             });
             
           }
