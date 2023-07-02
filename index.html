@@ -113,6 +113,9 @@
             var Sicily = {lat: 37.500000, lng: 14.000000};
             var Zaragoza = {lat: 41.650000, lng: -0.883333};
             var Geneva = {lat: 46.201667, lng: 6.146944};
+            var South_Tyrol = {lat: 46.500000, lng: 11.350000};
+            var Frankfurt = {lat: 50.110556, lng: 8.682222};
+            var Valais = {lat: 46.066667, lng: 7.600000};
             
             var map = new google.maps.Map(document.getElementById('map'), {
               zoom: 1.9,
@@ -279,6 +282,21 @@
               map: map,
               title:"Geneva"
             });
+            var South_TyrolMarker = new google.maps.Marker({
+              position: South_Tyrol,
+              map: map,
+              title:"South Tyrol"
+            });
+            var FrankfurtMarker = new google.maps.Marker({
+              position: Frankfurt,
+              map: map,
+              title:"Frankfurt"
+            });
+            var ValaisMarker = new google.maps.Marker({
+              position: Valais,
+              map: map,
+              title:"Valais"
+            });
 
 
             ParisMarker.addListener('click', function() {
@@ -376,6 +394,15 @@
             });
             GenevaMarker.addListener('click', function() {
               $('#mainContent').load('./places/Geneva.html');
+            });
+            South_TyrolMarker.addListener('click', function() {
+              $('#mainContent').load('./places/South_Tyrol.html');
+            });
+             FrankfurtMarker.addListener('click', function() {
+              $('#mainContent').load('./places/Frankfurt.html');
+            });
+             ValaisMarker.addListener('click', function() {
+              $('#mainContent').load('./places/Valais.html');
             });
             
           }
