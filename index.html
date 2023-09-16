@@ -117,6 +117,7 @@
             var Frankfurt = {lat: 50.110556, lng: 8.682222};
             var Valais = {lat: 46.066667, lng: 7.600000};
             var Aosta_Valley = {lat: 45.746944, lng: 7.439167};
+            var Lisbon = {lat: 38.725278, lng: -9.150000}
             
             var map = new google.maps.Map(document.getElementById('map'), {
               zoom: 1.9,
@@ -303,6 +304,11 @@
               map: map,
               title:"Aosta Valley"
             });
+            var LisbonMarker = new google.maps.Marker({
+              position: Lisbon,
+              map: map,
+              title:"Lisbon"
+            });
 
 
             ParisMarker.addListener('click', function() {
@@ -412,6 +418,9 @@
             });
             Aosta_ValleyMarker.addListener('click', function() {
               $('#mainContent').load('./places/Aosta_Valley.html');
+            });
+            LisbonMarker.addListener('click', function() {
+              $('#mainContent').load('./places/Lisbon.html');
             });
             
           }
