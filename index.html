@@ -116,6 +116,7 @@
             var South_Tyrol = {lat: 46.500000, lng: 11.350000};
             var Frankfurt = {lat: 50.110556, lng: 8.682222};
             var Valais = {lat: 46.066667, lng: 7.600000};
+            var Aosta_Valley = {lat: 45.746944, lng: 7.439167};
             
             var map = new google.maps.Map(document.getElementById('map'), {
               zoom: 1.9,
@@ -297,6 +298,11 @@
               map: map,
               title:"Valais"
             });
+            var Aosta_ValleyMarker = new google.maps.Marker({
+              position: Aosta_Valley,
+              map: map,
+              title:"Aosta Valley"
+            });
 
 
             ParisMarker.addListener('click', function() {
@@ -403,6 +409,9 @@
             });
              ValaisMarker.addListener('click', function() {
               $('#mainContent').load('./places/Valais.html');
+            });
+            Aosta_ValleyMarker.addListener('click', function() {
+              $('#mainContent').load('./places/Aosta_Valley.html');
             });
             
           }
