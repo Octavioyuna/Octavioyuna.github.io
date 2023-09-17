@@ -119,6 +119,8 @@
             var Aosta_Valley = {lat: 45.746944, lng: 7.439167};
             var Lisbon = {lat: 38.725278, lng: -9.150000};
             var Egypt = {lat: 26.000000, lng: 30.000000};
+            var Athens = {lat: 37.984167, lng: 23.728056};
+            var Ephesus = {lat: 37.941111, lng: 27.341944};
             
             var map = new google.maps.Map(document.getElementById('map'), {
               zoom: 1.9,
@@ -315,6 +317,16 @@
               map: map,
               title:"Egypt"
             });
+            var AthensMarker = new google.maps.Marker({
+              position: Athens,
+              map: map,
+              title:"Athens"
+            });
+            var EphesusMarker = new google.maps.Marker({
+              position: Ephesus,
+              map: map,
+              title:"Ephesus"
+            });
 
 
             ParisMarker.addListener('click', function() {
@@ -430,6 +442,12 @@
             });
             EgyptMarker.addListener('click', function() {
               $('#mainContent').load('./places/Egypt.html');
+            });
+            AthensMarker.addListener('click', function() {
+              $('#mainContent').load('./places/Athens.html');
+            });
+            EphesusMarker.addListener('click', function() {
+              $('#mainContent').load('./places/Ephesus.html');
             });
             
           }
