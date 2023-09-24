@@ -18,6 +18,7 @@ https://octavioyuna.github.io/
 ### Authors
 
 Octavio: Contributor, Web-design
+
 Una: Contributor
 
 ### Browser compatibility
@@ -27,12 +28,12 @@ This site was developed for Google Chrome and Mozilla Firefox.
 For browsers with limited compatibility, the page can display but some original formatting may be lacking.
 
 * Compatible
-Google Chrome
-Mozilla Firefox
-Safari
+  + Google Chrome
+  + Mozilla Firefox
+  + Safari
 
 * Limited compatibility
-Microsoft Explorer
+  + Microsoft Explorer
 
 ### History
 
