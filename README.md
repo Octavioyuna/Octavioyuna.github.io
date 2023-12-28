@@ -40,4 +40,4 @@ For browsers with limited compatibility, the page can display but some original 
 #### Versions
 
 * Version 1.0.0: September 2017
-* Last update: Version 1.0.3: September 2023
+* Last update: Version 1.0.4: Dec. 2023
