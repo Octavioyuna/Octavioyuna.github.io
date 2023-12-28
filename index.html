@@ -122,6 +122,7 @@
             var Athens = {lat: 37.984167, lng: 23.728056};
             var Ephesus = {lat: 37.941111, lng: 27.341944};
             var Cape_Verde = {lat: 15.300000, lng: -23.700000};
+            var La_Palma = {lat: 28.666667, lng: -17.866667};
             
             var map = new google.maps.Map(document.getElementById('map'), {
               zoom: 1.9,
@@ -333,6 +334,11 @@
               map: map,
               title:"Cape Verde"
             });
+            var La_PalmaMarker = new google.maps.Marker({
+              position: La_Palma,
+              map: map,
+              title:"La Palma"
+            });
 
 
             ParisMarker.addListener('click', function() {
@@ -457,6 +463,9 @@
             });
             Cape_VerdeMarker.addListener('click', function() {
               $('#mainContent').load('./places/Cape_Verde.html');
+            });
+            La_PalmaMarker.addListener('click', function() {
+              $('#mainContent').load('./places/La_Palma.html');
             });
             
           }
