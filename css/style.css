@@ -18,20 +18,12 @@
 }
 
 body{
-  font-family: Arial, Helvetica, sans-serif;
-  font-family: "PT Sans",'Helvetica Neue',Arial,Helvetica,sans-serif;
   font-family: Ubuntu, sans-serif;
   padding:0;
   margin:0;
-  background-color:#002147;
   background-color:var(--backgroundColor);
 }
 
-/*
-p{
-font-family: "Lora";
-}
-*/
 /* Global */
 .container{
   width:80%;
@@ -50,17 +42,14 @@ font-size: 180%;
 
 h2 {
   font-size: 160%;
-  color: #002147;
   color: var(--textColorHeading1);
 }
 h3 {
   font-size: 140%;
-  color:  #002147;
   color:  var(--textColorHeading1);
 }
 h4 {
   font-size: 120%;
-  color:  #002147;
   color:  var(--textColorHeading1);
   margin-top: 5px;
   margin-bottom: 5px;
@@ -94,11 +83,9 @@ h4 {
 }
 
 .button_1{
-  background:#347c98;
   background:var(--textColor2);
   padding-left: 20px;
   padding-right:20px;
-  color:#f4f4f4;
   color:var(--textColor1);
   cursor: pointer;
 }
@@ -109,16 +96,13 @@ h4 {
 
 /* Header **/
 header{
-  color:#f4f4f4;
   color:var(--textColor1);
   padding-top:10px;
   padding-bottom:10px;
-  border-bottom:#347c98 3px solid;
   border-bottom:var(--textColor2) 3px solid;
 }
 
 header a{
-  color:#f4f4f4;
   color:var(--textColor1);
   text-decoration:none;
   text-transform: uppercase;
@@ -138,7 +122,7 @@ header #branding{
 
 header #branding h1{
   margin:0;
-  font-family: 'Cabin Sketch', cursive;
+  font-family: 'Cabin Sketch';
 }
 
 header nav{
@@ -147,12 +131,10 @@ header nav{
 
 header .highlight,
 header .current a{
-  color: #347c98;
   color: var(--textColor2);
 }
 
 header a:hover{
-  color: #cccccc;
   color: var(--hover);
 }
 
@@ -171,7 +153,6 @@ header .logoImgContainer img{
     background: -webkit-linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.1)), url('../img/chuchosVagabundosBannerSmall_10.jpg') no-repeat center center;
 
   text-align:center;
-  color:#f4f4f4;
   color:var(--textColor1);
   background-size:cover;
 }
@@ -180,7 +161,6 @@ header .logoImgContainer img{
   font-size: 200%;
   font-family: Cabin Sketch;
 font-weight: bold;
-font-family: 'Cabin Sketch', cursive;
   text-shadow: 4px 4px 4px #333;
   margin:0;
 }
@@ -200,7 +180,6 @@ font-family: 'Cabin Sketch', cursive;
 }
 #newsletter{
   padding:15px;
-  color:#f4f4f4;
   color:var(--textColor1);
   background: #35424a url('../img/CVArt3.jpg') repeat center center;
   overflow:hidden;
@@ -220,7 +199,6 @@ font-family: 'Cabin Sketch', cursive;
   padding:5px;
 }
 #navListAndMapDiv > div {
-  background:#002147;
   background: var(--backgroundColor);
   margin:5px;
 }
@@ -235,7 +213,6 @@ font-family: 'Cabin Sketch', cursive;
 /* Sidebar */
 #sidebar{
   padding:10px;
-  background: #ddd;
   background: var(--primary);
   border-radius: 5px;
 }
@@ -244,14 +221,12 @@ font-family: 'Cabin Sketch', cursive;
 #mainContent {
   display: flex;
   flex-direction:column;
-  background:#002147;
   background: var(--backgroundColor);
   padding:5px;
 
 }
 
 #mainContent > div {
-  background: #ddd;
   background: var(--primary);
   margin:5px;
   border-radius: 5px;
@@ -268,7 +243,6 @@ font-family: 'Cabin Sketch', cursive;
   border-radius: 5px;
 }
 .box {
-  background: #ddd;
   background: var(--primary);
   padding:5px;
 }
@@ -295,9 +269,7 @@ font-family: 'Cabin Sketch', cursive;
 footer{
   padding-top:20px;
   padding-bottom:20px;
-  color:#f4f4f4;
   color:var(--textColor1);
-  background-color:#002147;
   background-color:var(--backgroundColor);
   font-size: 80%;
 }
@@ -346,14 +318,12 @@ footer .headerFlex > div {
 }
 
 .collapsible ul li a {
-  color: #347c98;
   color: var(--textColor2);
   text-decoration: none;
   padding-left: 0.4em;
 }
 
 .collapsible ul li a:hover {
-  color: #002147;
   color: var(--backgroundColor);
   text-decoration: none;
 }
@@ -364,7 +334,6 @@ footer .headerFlex > div {
 }
 
 .collapsible li.leaf>span {
-  color:#ddd;
   color:var(--primary);
 }
 
