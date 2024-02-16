@@ -123,6 +123,7 @@
             var Ephesus = {lat: 37.941111, lng: 27.341944};
             var Cape_Verde = {lat: 15.300000, lng: -23.700000};
             var La_Palma = {lat: 28.666667, lng: -17.866667};
+            var Romania = {lat: 46.000000, lng: 25.000000};
             
             var map = new google.maps.Map(document.getElementById('map'), {
               zoom: 1.9,
@@ -339,6 +340,11 @@
               map: map,
               title:"La Palma"
             });
+            var RomaniaMarker = new google.maps.Marker({
+              position: Romania,
+              map: map,
+              title:"Romania"
+            });
 
 
             ParisMarker.addListener('click', function() {
@@ -466,6 +472,9 @@
             });
             La_PalmaMarker.addListener('click', function() {
               $('#mainContent').load('./places/La_Palma.html');
+            });
+            RomaniaMarker.addListener('click', function() {
+              $('#mainContent').load('./places/Romania.html');
             });
             
           }
