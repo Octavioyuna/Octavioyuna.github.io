@@ -31,6 +31,7 @@ For browsers with limited compatibility, the page can display but some original 
   + Google Chrome
   + Mozilla Firefox
   + Safari
+  + Microsoft Edge
 
 * Limited compatibility
   + Microsoft Explorer
