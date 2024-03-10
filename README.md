@@ -41,4 +41,4 @@ For browsers with limited compatibility, the page can display but some original 
 #### Versions
 
 * Version 1.0.0: September 2017
-* Last update: Version 1.0.6: Feb. 2024
+* Last update: Version 1.0.7: Mar. 2024
