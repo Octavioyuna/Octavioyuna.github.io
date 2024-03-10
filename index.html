@@ -125,6 +125,7 @@
             var La_Palma = {lat: 28.666667, lng: -17.866667};
             var Romania = {lat: 46.000000, lng: 25.000000};
             var Alpes_Maritimes = {lat: 43.833333, lng: 7.166667};
+            var Monaco = {lat: 43.731111, lng: 7.420000};
             
             var map = new google.maps.Map(document.getElementById('map'), {
               zoom: 1.9,
@@ -351,6 +352,11 @@
               map: map,
               title:"Alpes-Maritimes"
             });
+            var MonacoMarker = new google.maps.Marker({
+              position: Monaco,
+              map: map,
+              title:"Monaco"
+            });
 
 
             ParisMarker.addListener('click', function() {
@@ -484,6 +490,9 @@
             });
             Alpes_MaritimesMarker.addListener('click', function() {
               $('#mainContent').load('./places/Alpes-maritimes.html');
+            });
+            MonacoMarker.addListener('click', function() {
+              $('#mainContent').load('./places/Monaco.html');
             });
             
           }
