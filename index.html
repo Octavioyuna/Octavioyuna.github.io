@@ -126,6 +126,7 @@
             var Romania = {lat: 46.000000, lng: 25.000000};
             var Alpes_Maritimes = {lat: 43.833333, lng: 7.166667};
             var Monaco = {lat: 43.731111, lng: 7.420000};
+            var Marrakesh = {lat: 31.630000, lng: -8.008889};
             
             var map = new google.maps.Map(document.getElementById('map'), {
               zoom: 1.9,
@@ -357,6 +358,11 @@
               map: map,
               title:"Monaco"
             });
+            var MarrakeshMarker = new google.maps.Marker({
+              position: Marrakesh,
+              map: map,
+              title:"Marrakesh"
+            });
 
 
             ParisMarker.addListener('click', function() {
@@ -493,6 +499,9 @@
             });
             MonacoMarker.addListener('click', function() {
               $('#mainContent').load('./places/Monaco.html');
+            });
+            MarrakeshMarker.addListener('click', function() {
+              $('#mainContent').load('./places/Marrakesh.html');
             });
             
           }
