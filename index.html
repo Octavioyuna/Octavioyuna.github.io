@@ -128,6 +128,7 @@
             var Monaco = {lat: 43.731111, lng: 7.420000};
             var Marrakesh = {lat: 31.630000, lng: -8.008889};
             var Stresa = {lat: 45.883611, lng: 8.539444};
+            var Liechtenstein = {lat: 47.150000, lng: 9.550000};
             
             var map = new google.maps.Map(document.getElementById('map'), {
               zoom: 1.9,
@@ -369,6 +370,11 @@
               map: map,
               title:"Stresa"
             });
+            var LiechtensteinMarker = new google.maps.Marker({
+              position: Liechtenstein,
+              map: map,
+              title:"Liechtenstein"
+            });
 
 
             ParisMarker.addListener('click', function() {
@@ -511,6 +517,9 @@
             });
             StresaMarker.addListener('click', function() {
               $('#mainContent').load('./places/Stresa.html');
+            });
+            LiechtensteinMarker.addListener('click', function() {
+              $('#mainContent').load('./places/Liechtenstein.html');
             });
             
           }
