@@ -106,16 +106,7 @@
 
   <!-- Optimized Google Maps Script -->
   <script>
-    function initMap() {
-      const map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 1.9,
-        center: { lat: 26, lng: 5 }
-      });
-
-      // Array of locations
-      
-
-const locations = [
+    const locations = [
   { name: "Paris", file: "Paris.html", lat: 48.856700, lng: 2.350800 },
   { name: "Bulgaria", file: "Bulgaria.html", lat: 42.683333, lng: 23.316667 },
   { name: "Galapagos", file: "Galapagos.html", lat: -0.666667, lng: -90.550000 },
@@ -166,21 +157,32 @@ const locations = [
   { name: "Liechtenstein", file: "Liechtenstein.html", lat: 47.150000, lng: 9.550000 }
 ];
 
+async function initMap() {
+  // Import the required Google Maps libraries
+  const { Map } = await google.maps.importLibrary("maps");
+  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
+  // Initialize the map (mapId is required for Advanced Marker Elements)
+  const map = new Map(document.getElementById('map'), {
+    zoom: 1.9,
+    center: { lat: 26, lng: 5 },
+    mapId: "DEMO_MAP_ID" // Replace with your Map ID from Google Cloud Console
+  });
 
+  // Create markers for each location
+  locations.forEach(loc => {
+    const marker = new AdvancedMarkerElement({
+      position: { lat: loc.lat, lng: loc.lng },
+      map: map,
+      title: loc.name
+    });
 
-      locations.forEach(loc => {
-        const marker = new google.maps.Marker({
-          position: { lat: loc.lat, lng: loc.lng },
-          map: map,
-          title: loc.name
-        });
-
-        marker.addListener('click', () => {
-          $('#mainContent').load(`./places/${loc.file}`);
-        });
-      });
-    }
+    // Use standard DOM event listener for Advanced Markers
+    marker.addListener('gmp-click', () => {
+      $('#mainContent').load(`./places/${loc.file}`);
+    });
+  });
+}
 
     // Dynamic sidebar loading after DOM load
     $(document).ready(function() {
