@@ -51,60 +51,27 @@
   <main>
     <section id="showcase">
       <div class="container">
-        <h2>Travel recommendations &amp; tips</h2>
+        <h1>Travel recommendations &amp; tips</h1>
       </div>
     </section>
 
     <section>
       <div class="container">
-        <div id="navListAndMapDiv">
-          <aside id="sidebar"></aside>
+        <article id="navListAndMapDiv">
 
-          <div id="mapContainer">
-            <div id="map" style="height: 400px; width: 100%;"></div>
-          </div>
+          <div>
+        <aside id="sidebar"></aside>
+        <script type="text/javascript">
+        $(function(){$("#sidebar").load("./navDivContent.html");});
+        </script>
         </div>
-      </div>
-    </section>
+          
 
-    <section>
-      <div class="container">
-        <article id="mainContent">
-          <h2>Welcome!</h2>
-          <div class="boxes_span">
-            <div class="box">
-              <p>Select a place of interest on the map or navigate using the side/top menu.</p>
-              <p>A photo collage of all places may be found <a href="./collage.html">here</a>.</p>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
+          <div>
 
-    <section id="contact-info">
-      <div class="container">
-        <p class="form_1">For comments or questions, please visit our <a href="contact.html">Contact page</a>.</p>
-      </div>
-    </section>
-  </main>
+        <div id="map"></div>
 
-  <div class="container">
-    <p><button onclick="goToTopFunction()" class="button_1" id="goToTopBtn" title="Go to top">Go to top</button></p>
-  </div>
-
-  <footer>
-    <section id="boxesFooter">
-      <div class="container">
-        <div class="headerFlex">
-          <div id="dateTxt"></div>
-          <div id="sysTxt"></div>
-          <div id="copyTxt"></div>
-        </div>
-      </div>
-    </section>
-  </footer>
-
-  <!-- Google Maps Script -->
+<!-- Google Maps Script -->
   <script>
     const locations = [
       { name: "Paris", file: "Paris.html", lat: 48.856700, lng: 2.350800 },
@@ -183,6 +150,62 @@
     });
   </script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8w4BAWceAXf-o5Qy64qUuXq9vALVLmMg&callback=initMap"></script>
+
+
+
+
+
+
+            
+      </div>
+    </article>
+
+    </div>
+
+</section>
+
+    <section>
+      <div class="container">
+        <article id="mainContent">
+          <h2>Welcome!</h2>
+          <div class="boxes_span">
+            <div class="box">
+              <p>Select a place of interest on the map or navigate using the side/top menu.</p>
+              <p>A photo collage of all places may be found <a href="./collage.html">here</a>.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="newsletter">
+      <div class="container">
+        <form class="form_1">
+        <p class="form_1">For comments or questions, please visit our <a href="contact.html">Contact page</a>.</p>
+          </form>
+      </div>
+    </section>
+  </main>
+
+  <section>
+  <div class="container">
+    <p><button onclick="goToTopFunction()" class="button_1" id="goToTopBtn" title="Go to top">Go to top</button></p>
+  </div>
+    </section>
+
+  <footer>
+    <section id="boxesFooter">
+      <div class="container">
+        <div class="headerFlex">
+          <div id="dateTxt"></div>
+          <div id="sysTxt"></div>
+          <div id="copyTxt"></div>
+        </div>
+      </div>
+    </section>
+  </footer>
+
+  
 
 </body>
 </html>
