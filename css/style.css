@@ -293,26 +293,64 @@ footer .headerFlex > div {
   color: var(--primary);
 }
 
+
+
+/**************//**************//**************//**************/
+
+
 /* Media Queries */
-@media (max-width: 768px) {
-  .container {
-    width: 90%;
+@media(max-width: 768px){
+
+  .headerFlex {
+    flex-wrap: wrap;
+  }
+  .headerFlex > div {
+    flex-basis: 100%;
+  }
+  .navFlex {
+    flex-wrap: wrap;
+  }
+  .navFlex > li {
+    flex-basis: 100%;
+  }
+  header #branding,
+  header nav,
+  header nav li,
+  #newsletter h1,
+  #newsletter form{
+    float:none;
+    text-align:center;
+    width:100%;
+  }
+  #mainContent{
+    grid-template-columns: 1fr;
   }
 
-  .headerFlex, 
-  .navFlex, 
+  #newsletter button{
+    display:block;
+    width:100%;
+  }
+
+  #newsletter form input[type="email"]{
+    width:100%;
+    margin-bottom:5px;
+  }
   .form_1 {
-    flex-direction: column;
-    align-items: stretch;
+    flex-wrap: wrap;
+  }
+  .form_1 > * {
+    flex-basis: 100%;
   }
 
   #navListAndMapDiv {
     grid-template-columns: 1fr;
   }
 
-  #newsletter form input[type="email"],
-  #newsletter button {
-    width: 100%;
-    margin-bottom: 5px;
+  .boxes {
+    grid-template-columns: 1fr;
   }
+  .container{
+  width:90%;
+  margin:auto;
+}
 }
