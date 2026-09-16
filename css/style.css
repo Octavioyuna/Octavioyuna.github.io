@@ -1,6 +1,5 @@
 /* Main style for Travel website : CV, OE 2018 */
 /* Parts adapted from Traversy Media, 2017 */
-/* background occasionally repeated for old browsers */
 
 /* CSS Variables */
 :root {
@@ -8,270 +7,226 @@
   --side: #333;
   --light: #fff;
   --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
-  --backgroundColor:#002147;
-  --backgroundColor2:#35424a;
-  --textColor1:#f4f4f4;
-  --textColor2:#347c98;
-  --textColorHeading1:#002147;
-  --secondary:#999;
-  --hover:#cccccc;
+  --backgroundColor: #002147;
+  --backgroundColor2: #35424a;
+  --textColor1: #f4f4f4;
+  --textColor2: #347c98;
+  --textColorHeading1: #002147;
+  --secondary: #999;
+  --hover: #cccccc;
+  --font-heading: 'Cabin Sketch', cursive, sans-serif;
+  --font-body: 'Ubuntu', sans-serif;
 }
 
-body{
-  font-family: Ubuntu, sans-serif;
-  padding:0;
-  margin:0;
-  background-color:var(--backgroundColor);
+body {
+  font-family: var(--font-body);
+  padding: 0;
+  margin: 0;
+  background-color: var(--backgroundColor);
 }
 
 /* Global */
-.container{
-  width:80%;
-  margin:auto;
+.container {
+  width: 80%;
+  margin: auto;
 }
 
-ul{
-  margin:0;
-  padding:0;
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-
-h1 {
-font-size: 180%;
-}
-
-h2 {
-  font-size: 160%;
-  color: var(--textColorHeading1);
-}
-h3 {
-  font-size: 140%;
-  color:  var(--textColorHeading1);
-}
+h1 { font-size: 1.8rem; }
+h2 { font-size: 1.6rem; color: var(--textColorHeading1); }
+h3 { font-size: 1.4rem; color: var(--textColorHeading1); }
 h4 {
-  font-size: 120%;
-  color:  var(--textColorHeading1);
-  margin-top: 5px;
-  margin-bottom: 5px;
+  font-size: 1.2rem;
+  color: var(--textColorHeading1);
+  margin: 5px 0;
 }
 
+/* Flex Navigation Header */
 .headerFlex {
   display: flex;
-  align-items: flex-end;
-    -ms-flex-wrap:wrap;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
+
 .headerFlex > nav {
   margin-left: auto;
-  flex-wrap: wrap;
--ms-flex-preferred-size: 100%;
 }
+
 .headerFlex > * {
-  padding:5px;
+  padding: 5px;
 }
+
 .navFlex {
   display: flex;
   flex-wrap: wrap;
-  -ms-flex-wrap:wrap;
-}
-.navFlex > li {
-  flex: 1;
+  gap: 15px;
 }
 
-
-.navFlex > li > a{
+.navFlex > li > a {
   white-space: nowrap;
 }
 
-.button_1{
-  background:var(--textColor2);
-  padding-left: 20px;
-  padding-right:20px;
-  color:var(--textColor1);
+.button_1 {
+  background: var(--textColor2);
+  padding: 8px 20px;
+  color: var(--textColor1);
+  border: none;
   cursor: pointer;
 }
 
-#navMenu{
-  padding:5px;
+#navMenu {
+  padding: 5px;
 }
 
-/* Header **/
-header{
-  color:var(--textColor1);
-  padding-top:10px;
-  padding-bottom:10px;
-  border-bottom:var(--textColor2) 3px solid;
+/* Header */
+header {
+  color: var(--textColor1);
+  padding: 10px 0;
+  border-bottom: var(--textColor2) 3px solid;
 }
 
-header a{
-  color:var(--textColor1);
-  text-decoration:none;
+header a {
+  color: var(--textColor1);
+  text-decoration: none;
   text-transform: uppercase;
-  font-size:16px;
-  font-weight:bold;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
-header li{
-  float:left;
-  list-style-type: none;
-  padding: 0 20px 0 20px;
-}
-
-header #branding{
-  float:left;
-}
-
-header #branding h1{
-  margin:0;
-  font-family: 'Cabin Sketch';
-}
-
-header nav{
-  float:right;
+header #branding h1 {
+  margin: 0;
+  font-family: var(--font-heading);
 }
 
 header .highlight,
-header .current a{
+header .current a {
   color: var(--textColor2);
 }
 
-header a:hover{
+header a:hover {
   color: var(--hover);
 }
 
-header .logoImgContainer img{
+header .logoImgContainer img {
   height: 50px;
   width: auto;
 }
 
 /* Showcase */
-#showcase{
-  padding-top:5px;
-  padding-bottom:5px;
-  
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../img/chuchosVagabundosBannerSmall_10.jpg') no-repeat center center;
-   background: -moz-linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.1)), url('../img/chuchosVagabundosBannerSmall_10.jpg') no-repeat center center;
-    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.1)), url('../img/chuchosVagabundosBannerSmall_10.jpg') no-repeat center center;
-
-  text-align:center;
-  color:var(--textColor1);
-  background-size:cover;
+#showcase {
+  padding: 20px 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+              url('../img/chuchosVagabundosBannerSmall_10.jpg') no-repeat center center / cover;
+  text-align: center;
+  color: var(--textColor1);
 }
 
-#showcase h1{
-  font-size: 200%;
-  font-family: Cabin Sketch;
-font-weight: bold;
+#showcase h1 {
+  font-size: 2rem;
+  font-family: var(--font-heading);
+  font-weight: bold;
   text-shadow: 4px 4px 4px #333;
-  margin:0;
+  margin: 0;
 }
 
 /* Newsletter */
-.form_1{
+.form_1 {
   display: flex;
+  align-items: center;
+  gap: 10px;
 }
+
 .form_1 > nav {
   margin-left: auto;
-  flex-wrap: wrap;
-}
-.form_1 > * {
-  padding:5px;
-  display:inline-block;
-  overflow:hidden;
-}
-#newsletter{
-  padding:15px;
-  color:var(--textColor1);
-  background: #35424a url('../img/CVArt3.jpg') repeat center center;
-  overflow:hidden;
-}
-#newsletter form {
-  float:right;
-}
-#newsletter input[type="email"]{
-  padding:4px;
-  width:250px;
 }
 
-/* navListAndMapDiv */
-#navListAndMapDiv{
-  display:grid;
-  grid-template-columns: 4fr 6fr;
-  padding:5px;
+#newsletter {
+  padding: 15px;
+  color: var(--textColor1);
+  background: #35424a url('../img/CVArt3.jpg') repeat center center;
+  overflow: hidden;
 }
+
+#newsletter input[type="email"] {
+  padding: 6px;
+  width: 250px;
+}
+
+/* Grid Layouts */
+#navListAndMapDiv {
+  display: grid;
+  grid-template-columns: 4fr 6fr;
+  gap: 10px;
+  padding: 5px;
+}
+
 #navListAndMapDiv > div {
   background: var(--backgroundColor);
-  margin:5px;
 }
 
-/* google maps markers */
 #map {
   height: 340px;
   width: 100%;
-  border-radius:5px;
+  border-radius: 5px;
 }
 
-/* Sidebar */
-#sidebar{
-  padding:10px;
+#sidebar {
+  padding: 10px;
   background: var(--primary);
   border-radius: 5px;
 }
 
-/* mainContent added to contain all the main box */
+/* Main Content */
 #mainContent {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   background: var(--backgroundColor);
-  padding:5px;
-
+  padding: 5px;
 }
 
 #mainContent > div {
   background: var(--primary);
-  margin:5px;
+  margin: 5px;
   border-radius: 5px;
-  padding:5px;
+  padding: 5px;
 }
+
 .boxes {
   display: grid;
-  grid-gap: 5px;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  padding:0px;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  padding: 0;
 }
+
 .boxes_span {
-  padding:0px;
+  padding: 0;
   border-radius: 5px;
 }
+
 .box {
   background: var(--primary);
-  padding:5px;
+  padding: 10px;
 }
 
-#mainContent > div > h2 {
-  padding:5px;
-  margin:0px;
-}
-#mainContent > div > h3 {
-  padding:5px;
-  margin:0px;
-}
+#mainContent > div > h2,
+#mainContent > div > h3,
 #mainContent > div > h4 {
-  margin:0px;
+  padding: 5px;
+  margin: 0;
 }
 
-.box ul{
-  list-style-type: none;
-}
-
-
-/* BoxesFooter */
-
-footer{
-  padding-top:20px;
-  padding-bottom:20px;
-  color:var(--textColor1);
-  background-color:var(--backgroundColor);
-  font-size: 80%;
+/* Footer */
+footer {
+  padding: 20px 0;
+  color: var(--textColor1);
+  background-color: var(--backgroundColor);
+  font-size: 0.8rem;
 }
 
 footer .headerFlex {
@@ -279,41 +234,31 @@ footer .headerFlex {
 }
 
 footer .headerFlex > div {
-  padding: 0 20px 0 20px;
-  flex-wrap: wrap;
+  padding: 0 20px;
 }
 
-
-
-/**************//**************//**************//**************/
-/*OE*/
-
-/*other*/
+/* Content & Media */
 .contentItemImgContainer {
-  text-align: center;
-  padding:5px;
-  overflow: hidden;
+  display: flex;
   justify-content: center;
-  display: block;
+  padding: 5px;
+  overflow: hidden;
 }
+
 .contentItemImgContainer img {
   max-width: 100%;
   max-height: 400px;
-  display: block; /* remove extra space below image */
-  justify-content: center;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  height: auto;
+  display: block;
 }
 
 #listHeader {
   cursor: pointer;
 }
 
-/**************/
-/*collapsibleList*/
-/**************/
-.collapsible ul, .collapsible ul li {
+/* Collapsible List */
+.collapsible ul, 
+.collapsible ul li {
   list-style-type: none;
 }
 
@@ -325,7 +270,6 @@ footer .headerFlex > div {
 
 .collapsible ul li a:hover {
   color: var(--backgroundColor);
-  text-decoration: none;
 }
 
 .expand, .collapse, .leaf {
@@ -333,67 +277,30 @@ footer .headerFlex > div {
   cursor: pointer;
 }
 
-.collapsible li.leaf>span {
-  color:var(--primary);
+.collapsible li.leaf > span {
+  color: var(--primary);
 }
 
-
-/**************//**************//**************//**************/
-
-
 /* Media Queries */
-@media(max-width: 768px){
-
-  .headerFlex {
-    flex-wrap: wrap;
-  }
-  .headerFlex > div {
-    flex-basis: 100%;
-  }
-  .navFlex {
-    flex-wrap: wrap;
-  }
-  .navFlex > li {
-    flex-basis: 100%;
-  }
-  header #branding,
-  header nav,
-  header nav li,
-  #newsletter h1,
-  #newsletter form{
-    float:none;
-    text-align:center;
-    width:100%;
-  }
-  #mainContent{
-    grid-template-columns: 1fr;
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
   }
 
-  #newsletter button{
-    display:block;
-    width:100%;
-  }
-
-  #newsletter form input[type="email"]{
-    width:100%;
-    margin-bottom:5px;
-  }
+  .headerFlex, 
+  .navFlex, 
   .form_1 {
-    flex-wrap: wrap;
-  }
-  .form_1 > * {
-    flex-basis: 100%;
+    flex-direction: column;
+    align-items: stretch;
   }
 
   #navListAndMapDiv {
     grid-template-columns: 1fr;
   }
 
-  .boxes {
-    grid-template-columns: 1fr;
+  #newsletter form input[type="email"],
+  #newsletter button {
+    width: 100%;
+    margin-bottom: 5px;
   }
-  .container{
-  width:90%;
-  margin:auto;
-}
 }
