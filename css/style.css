@@ -50,7 +50,6 @@ h4 {
 .headerFlex {
   display: flex;
   align-items: flex-end;
-  justify-content: space-between;
   flex-wrap: wrap;
 }
 
