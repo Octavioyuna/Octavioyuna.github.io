@@ -70,6 +70,8 @@
         <div id="map"></div>
 
 <!-- Google Maps Script -->
+            <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <script>
     const locations = [
       { name: "Paris", file: "Paris.html", lat: 48.856700, lng: 2.350800 },
@@ -122,32 +124,29 @@
       { name: "Liechtenstein", file: "Liechtenstein.html", lat: 47.150000, lng: 9.550000 }
     ];
 
-    function initMap() {
-      const mapCenter = { lat: 26, lng: 5 };
-      
-      const map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 1.9,
-        center: mapCenter
-      });
-
-      locations.forEach(loc => {
-        const marker = new google.maps.Marker({
-          position: { lat: loc.lat, lng: loc.lng },
-          map: map,
-          title: loc.name
-        });
-
-        marker.addListener('click', function() {
-          $('#mainContent').load('./places/' + loc.file);
-        });
-      });
-    }
-
+    
+function initMap() {
+  var map = L.map('map').setView([26, 5], 3);
+  
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+  }).addTo(map);
+  
+  locations.forEach(loc => {
+    L.marker([loc.lat, loc.lng])
+     .addTo(map)
+     .bindPopup(loc.name)
+     .on('click', function() {
+       $('#mainContent').load('./places/' + loc.file);
+     });
+  });
+}
+</script>
+<script>
     $(document).ready(function() {
       $("#sidebar").load("./navDivContent.html");
     });
   </script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8w4BAWceAXf-o5Qy64qUuXq9vALVLmMg&callback=initMap"></script>
 
             
       </div>
