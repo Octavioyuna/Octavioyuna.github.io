@@ -1,581 +1,206 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Una and Octavio's Travel Website, Chuchos Vagabundos">
   <meta name="keywords" content="travel, travel advice, website">
   <meta name="author" content="OE, UK">
 
-  <!--From Google clickable marker API Pages-->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-  <!--Original OE files-->
-  <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="./js/js.js"></script>
-
-  <!--Una and Octavio's Travel Website, Chuchos Vagabundos-->
-  <!--OE,2017-->
-  <!--Parts adapted from Traversy Media, 2017-->
-
   <title>Chuchos Vagabundos | Home</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
 
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="./css/style.css">
-
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin Sketch">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Ubuntu&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-  <!--<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">-->
-  <link rel="shortcut icon" type="image/png" href="favicon.png">
-
+  <!-- Core JavaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script type="text/javascript" src="./js/js.js" defer></script>
 </head>
+  
 <body onload="writeFooterDivs();">
+
   <header>
     <div class="container">
       <div class="headerFlex">
         <div class="logo">
           <div class="logoImgContainer">
-            <img src="./img/logoFlag.png" alt="img" />
+            <img src="./img/logoFlag.png" alt="Chuchos Vagabundos Logo">
           </div>
         </div>
         <div id="branding">
           <h1><span class="highlight">Chuchos </span>Vagabundos</h1>
         </div>
-        <nav class="topNav">
+        <nav class="topNav" aria-label="Main Navigation">
           <ul class="navFlex">
-            <li class="current"><a href="index.html"><span class="material-icons">home</span>&nbspHome</a></li>
-            <li><a href="about.html"><span class="material-icons">pets</span>&nbspAbout</a></li>
-            <li><a href="contact.html"><span class="material-icons">mail</span>&nbspContact</a></li>
-            <li><a href="links.html"><span class="material-icons">public</span>&nbspLinks</a></li>
+            <li class="current"><a href="index.html"><span class="material-icons" aria-hidden="true">home</span> Home</a></li>
+            <li><a href="about.html"><span class="material-icons" aria-hidden="true">pets</span> About</a></li>
+            <li><a href="contact.html"><span class="material-icons" aria-hidden="true">mail</span> Contact</a></li>
+            <li><a href="links.html"><span class="material-icons" aria-hidden="true">public</span> Links</a></li>
           </ul>
         </nav>
       </div>
     </div>
   </header>
 
-  <section id="showcase">
-    <div class="container">
-      <h1>Travel recommendations & tips</h1>
-    </div>
-  </section>
+  
+    <section id="showcase">
+      <div class="container">
+        <h1>Travel recommendations &amp; tips</h1>
+      </div>
+    </section>
 
-  <section>
-    <div class="container">
-      <article id="navListAndMapDiv">
-        <div>
-          <aside id="sidebar">
-          </aside>
-          <script type="text/javascript">
-          $(function(){$("#sidebar").load("./navDivContent.html");});
-          </script>
+    <section>
+      <div class="container">
+        <article id="navListAndMapDiv">
+
+          <div>
+        <aside id="sidebar"></aside>
         </div>
+          
 
-        <div>
+          <div>
 
-          <div id="map"></div>
-          <script>
-          function initMap() {
-            var mapCenter = {lat: 26, lng: 5};
-            var Paris = {lat: 48.856700, lng: 2.350800};
-            var Bulgaria = {lat: 42.683333, lng: 23.316667};
-            var Galapagos = {lat: -0.666667, lng: -90.550000};
-            var Quito = {lat: -0.233333, lng: -78.516667};
-            var Costa_Rica = {lat: 10.000000, lng:  -84.000000};
-            var Bolivia = {lat: -16.712000, lng:  -64.666000};
-            var Madagascar = {lat: -20.000000, lng:   47.000000};
-            var Seychelles = {lat: -4.583333, lng:  55.666667};
-            var Rajasthan = {lat: 26.600000, lng:  73.800000};
-            var New_Delhi = {lat: 28.613889, lng:  77.208889};
-            var Agra = {lat: 27.180000, lng:  78.020000};
-            var Aurangabad = {lat: 19.880000, lng:  75.320000};
-            var Varanasi = {lat: 25.280000, lng:  82.960000};
-            var Ethiopia = {lat: 8.000000, lng:  38.000000};
-            var Norway = {lat: 61.000000, lng:   8.000000};
-            var Quintana_Roo = {lat: 19.600000, lng:  -87.920000};
-            var Yucatan = {lat: 20.833333, lng: -89.000000};
-            var Chile = {lat: -34.000000, lng: -71.000000};
-            var Sarajevo = {lat: 43.866667, lng: 18.416667};
-            var Santorini = {lat: 36.416667, lng: 25.433333};
-            var Crete = {lat: 35.210000, lng: 24.910000};
-            var Sardinia = {lat: 40.000000, lng: 9.000000};
-            var Madrid = {lat: 40.416944, lng: -3.703333};
-            var Jordan = {lat: 31.240000, lng: 36.510000};
-            var Azores = {lat: 38.660000, lng: -28.070000};
-            var Madeira = {lat: 32.650000, lng: -16.916667};
-            var Moscow = {lat: 55.755833, lng: 37.617222};
-            var Dublin = {lat: 53.350000, lng: -6.260278};
-            var Budapest = {lat: 47.492500, lng: 19.051389};
-            var Sicily = {lat: 37.500000, lng: 14.000000};
-            var Zaragoza = {lat: 41.650000, lng: -0.883333};
-            var Geneva = {lat: 46.201667, lng: 6.146944};
-            var South_Tyrol = {lat: 46.500000, lng: 11.350000};
-            var Frankfurt = {lat: 50.110556, lng: 8.682222};
-            var Valais = {lat: 46.066667, lng: 7.600000};
-            var Aosta_Valley = {lat: 45.746944, lng: 7.439167};
-            var Lisbon = {lat: 38.725278, lng: -9.150000};
-            var Egypt = {lat: 26.000000, lng: 30.000000};
-            var Athens = {lat: 37.984167, lng: 23.728056};
-            var Ephesus = {lat: 37.941111, lng: 27.341944};
-            var Cape_Verde = {lat: 15.300000, lng: -23.700000};
-            var La_Palma = {lat: 28.666667, lng: -17.866667};
-            var Romania = {lat: 46.000000, lng: 25.000000};
-            var Alpes_Maritimes = {lat: 43.833333, lng: 7.166667};
-            var Monaco = {lat: 43.731111, lng: 7.420000};
-            var Marrakesh = {lat: 31.630000, lng: -8.008889};
-            var Stresa = {lat: 45.883611, lng: 8.539444};
-            var Liechtenstein = {lat: 47.150000, lng: 9.550000};
+        <div id="map"></div>
 
-            var map = new google.maps.Map(document.getElementById('map'), {
-              zoom: 1.9,
-              center: mapCenter
-            });
+<!-- Google Maps Script -->
+  <script>
+    const locations = [
+      { name: "Paris", file: "Paris.html", lat: 48.856700, lng: 2.350800 },
+      { name: "Bulgaria", file: "Bulgaria.html", lat: 42.683333, lng: 23.316667 },
+      { name: "Galapagos", file: "Galapagos.html", lat: -0.666667, lng: -90.550000 },
+      { name: "Quito", file: "Quito.html", lat: -0.233333, lng: -78.516667 },
+      { name: "Costa Rica", file: "Costa_Rica.html", lat: 10.000000, lng: -84.000000 },
+      { name: "Bolivia", file: "Bolivia.html", lat: -16.712000, lng: -64.666000 },
+      { name: "Madagascar", file: "Madagascar.html", lat: -20.000000, lng: 47.000000 },
+      { name: "Seychelles", file: "Seychelles.html", lat: -4.583333, lng: 55.666667 },
+      { name: "Rajasthan", file: "Rajasthan.html", lat: 26.600000, lng: 73.800000 },
+      { name: "New Delhi", file: "New_Delhi.html", lat: 28.613889, lng: 77.208889 },
+      { name: "Agra", file: "Agra.html", lat: 27.180000, lng: 78.020000 },
+      { name: "Aurangabad", file: "Aurangabad.html", lat: 19.880000, lng: 75.320000 },
+      { name: "Varanasi", file: "Varanasi.html", lat: 25.280000, lng: 82.960000 },
+      { name: "Ethiopia", file: "Ethiopia.html", lat: 8.000000, lng: 38.000000 },
+      { name: "Norway", file: "Norway.html", lat: 61.000000, lng: 8.000000 },
+      { name: "Quintana Roo", file: "Quintana_Roo.html", lat: 19.600000, lng: -87.920000 },
+      { name: "Yucatan", file: "Yucatan.html", lat: 20.833333, lng: -89.000000 },
+      { name: "Chile", file: "Chile.html", lat: -34.000000, lng: -71.000000 },
+      { name: "Sarajevo", file: "Sarajevo.html", lat: 43.866667, lng: 18.416667 },
+      { name: "Santorini", file: "Santorini.html", lat: 36.416667, lng: 25.433333 },
+      { name: "Crete", file: "Crete.html", lat: 35.210000, lng: 24.910000 },
+      { name: "Sardinia", file: "Sardinia.html", lat: 40.000000, lng: 9.000000 },
+      { name: "Madrid", file: "Madrid.html", lat: 40.416944, lng: -3.703333 },
+      { name: "Jordan", file: "Jordan.html", lat: 31.240000, lng: 36.510000 },
+      { name: "Azores", file: "Azores.html", lat: 38.660000, lng: -28.070000 },
+      { name: "Madeira", file: "Madeira.html", lat: 32.650000, lng: -16.916667 },
+      { name: "Moscow", file: "Moscow.html", lat: 55.755833, lng: 37.617222 },
+      { name: "Dublin", file: "Dublin.html", lat: 53.350000, lng: -6.260278 },
+      { name: "Budapest", file: "Budapest.html", lat: 47.492500, lng: 19.051389 },
+      { name: "Sicily", file: "Sicily.html", lat: 37.500000, lng: 14.000000 },
+      { name: "Zaragoza", file: "Zaragoza.html", lat: 41.650000, lng: -0.883333 },
+      { name: "Geneva", file: "Geneva.html", lat: 46.201667, lng: 6.146944 },
+      { name: "South Tyrol", file: "South_Tyrol.html", lat: 46.500000, lng: 11.350000 },
+      { name: "Frankfurt", file: "Frankfurt.html", lat: 50.110556, lng: 8.682222 },
+      { name: "Valais", file: "Valais.html", lat: 46.066667, lng: 7.600000 },
+      { name: "Aosta Valley", file: "Aosta_Valley.html", lat: 45.746944, lng: 7.439167 },
+      { name: "Lisbon", file: "Lisbon.html", lat: 38.725278, lng: -9.150000 },
+      { name: "Egypt", file: "Egypt.html", lat: 26.000000, lng: 30.000000 },
+      { name: "Athens", file: "Athens.html", lat: 37.984167, lng: 23.728056 },
+      { name: "Ephesus", file: "Ephesus.html", lat: 37.941111, lng: 27.341944 },
+      { name: "Cape Verde", file: "Cape_Verde.html", lat: 15.300000, lng: -23.700000 },
+      { name: "La Palma", file: "La_Palma.html", lat: 28.666667, lng: -17.866667 },
+      { name: "Romania", file: "Romania.html", lat: 46.000000, lng: 25.000000 },
+      { name: "Alpes-Maritimes", file: "Alpes-maritimes.html", lat: 43.833333, lng: 7.166667 },
+      { name: "Monaco", file: "Monaco.html", lat: 43.731111, lng: 7.420000 },
+      { name: "Marrakesh", file: "Marrakesh.html", lat: 31.630000, lng: -8.008889 },
+      { name: "Stresa", file: "Stresa.html", lat: 45.883611, lng: 8.539444 },
+      { name: "Liechtenstein", file: "Liechtenstein.html", lat: 47.150000, lng: 9.550000 }
+    ];
 
-            var ParisMarker = new google.maps.Marker({
-              position: Paris,
-              map: map,
-              title:"Paris"
-            });
-            var BulgariaMarker = new google.maps.Marker({
-              position: Bulgaria,
-              map: map,
-              title:"Bulgaria"
-            });
-            var GalapagosMarker = new google.maps.Marker({
-              position: Galapagos,
-              map: map,
-              title:"Galapagos"
-            });
-            var QuitoMarker = new google.maps.Marker({
-              position: Quito,
-              map: map,
-              title:"Quito"
-            });
-            var Costa_RicaMarker = new google.maps.Marker({
-              position: Costa_Rica,
-              map: map,
-              title:"Costa Rica"
-            });
-            var BoliviaMarker = new google.maps.Marker({
-              position: Bolivia,
-              map: map,
-              title:"Bolivia"
-            });
-            var MadagascarMarker = new google.maps.Marker({
-              position: Madagascar,
-              map: map,
-              title:"Madagascar"
-            });
-            var SeychellesMarker = new google.maps.Marker({
-              position: Seychelles,
-              map: map,
-              title:"Seychelles"
-            });
-            var RajasthanMarker = new google.maps.Marker({
-              position: Rajasthan,
-              map: map,
-              title:"Rajasthan"
-            });
-            var New_DelhiMarker = new google.maps.Marker({
-              position: New_Delhi,
-              map: map,
-              title:"New Delhi"
-            });
-            var AgraMarker = new google.maps.Marker({
-              position: Agra,
-              map: map,
-              title:"Agra"
-            });
-            var AurangabadMarker = new google.maps.Marker({
-              position: Aurangabad,
-              map: map,
-              title:"Aurangabad"
-            });
-            var VaranasiMarker = new google.maps.Marker({
-              position: Varanasi,
-              map: map,
-              title:"Varanasi"
-            });
-            var EthiopiaMarker = new google.maps.Marker({
-              position: Ethiopia,
-              map: map,
-              title:"Ethiopia"
-            });
-            var NorwayMarker = new google.maps.Marker({
-              position: Norway,
-              map: map,
-              title:"Norway"
-            });
-            var Quintana_RooMarker = new google.maps.Marker({
-              position: Quintana_Roo,
-              map: map,
-              title:"Quintana Roo"
-            });
-            var YucatanMarker = new google.maps.Marker({
-              position: Yucatan,
-              map: map,
-              title:"Yucatan"
-            });
-            var ChileMarker = new google.maps.Marker({
-              position: Chile,
-              map: map,
-              title:"Chile"
-            });
-            var SarajevoMarker = new google.maps.Marker({
-              position: Sarajevo,
-              map: map,
-              title:"Sarajevo"
-            });
-            var SantoriniMarker = new google.maps.Marker({
-              position: Santorini,
-              map: map,
-              title:"Santorini"
-            });
-            var CreteMarker = new google.maps.Marker({
-              position: Crete,
-              map: map,
-              title:"Crete"
-            });
-            var SardiniaMarker = new google.maps.Marker({
-              position: Sardinia,
-              map: map,
-              title:"Sardinia"
-            });
-            var MadridMarker = new google.maps.Marker({
-              position: Madrid,
-              map: map,
-              title:"Madrid"
-            });
-            var JordanMarker = new google.maps.Marker({
-              position: Jordan,
-              map: map,
-              title:"Jordan"
-            });
-            var AzoresMarker = new google.maps.Marker({
-              position: Azores,
-              map: map,
-              title:"Azores"
-            });
-            var MadeiraMarker = new google.maps.Marker({
-              position: Madeira,
-              map: map,
-              title:"Madeira"
-            });
-            var MoscowMarker = new google.maps.Marker({
-              position: Moscow,
-              map: map,
-              title:"Moscow"
-            });
-            var DublinMarker = new google.maps.Marker({
-              position: Dublin,
-              map: map,
-              title:"Dublin"
-            });
-            var BudapestMarker = new google.maps.Marker({
-              position: Budapest,
-              map: map,
-              title:"Budapest"
-            });
-            var SicilyMarker = new google.maps.Marker({
-              position: Sicily,
-              map: map,
-              title:"Sicily"
-            });
-            var ZaragozaMarker = new google.maps.Marker({
-              position: Zaragoza,
-              map: map,
-              title:"Zaragoza"
-            });
-            var GenevaMarker = new google.maps.Marker({
-              position: Geneva,
-              map: map,
-              title:"Geneva"
-            });
-            var South_TyrolMarker = new google.maps.Marker({
-              position: South_Tyrol,
-              map: map,
-              title:"South Tyrol"
-            });
-            var FrankfurtMarker = new google.maps.Marker({
-              position: Frankfurt,
-              map: map,
-              title:"Frankfurt"
-            });
-            var ValaisMarker = new google.maps.Marker({
-              position: Valais,
-              map: map,
-              title:"Valais"
-            });
-            var Aosta_ValleyMarker = new google.maps.Marker({
-              position: Aosta_Valley,
-              map: map,
-              title:"Aosta Valley"
-            });
-            var LisbonMarker = new google.maps.Marker({
-              position: Lisbon,
-              map: map,
-              title:"Lisbon"
-            });
-            var EgyptMarker = new google.maps.Marker({
-              position: Egypt,
-              map: map,
-              title:"Egypt"
-            });
-            var AthensMarker = new google.maps.Marker({
-              position: Athens,
-              map: map,
-              title:"Athens"
-            });
-            var EphesusMarker = new google.maps.Marker({
-              position: Ephesus,
-              map: map,
-              title:"Ephesus"
-            });
-            var Cape_VerdeMarker = new google.maps.Marker({
-              position: Cape_Verde,
-              map: map,
-              title:"Cape Verde"
-            });
-            var La_PalmaMarker = new google.maps.Marker({
-              position: La_Palma,
-              map: map,
-              title:"La Palma"
-            });
-            var RomaniaMarker = new google.maps.Marker({
-              position: Romania,
-              map: map,
-              title:"Romania"
-            });
-            var Alpes_MaritimesMarker = new google.maps.Marker({
-              position: Alpes_Maritimes,
-              map: map,
-              title:"Alpes-Maritimes"
-            });
-            var MonacoMarker = new google.maps.Marker({
-              position: Monaco,
-              map: map,
-              title:"Monaco"
-            });
-            var MarrakeshMarker = new google.maps.Marker({
-              position: Marrakesh,
-              map: map,
-              title:"Marrakesh"
-            });
-            var StresaMarker = new google.maps.Marker({
-              position: Stresa,
-              map: map,
-              title:"Stresa"
-            });
-            var LiechtensteinMarker = new google.maps.Marker({
-              position: Liechtenstein,
-              map: map,
-              title:"Liechtenstein"
-            });
+    function initMap() {
+      const mapCenter = { lat: 26, lng: 5 };
+      
+      const map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 1.9,
+        center: mapCenter
+      });
 
+      locations.forEach(loc => {
+        const marker = new google.maps.Marker({
+          position: { lat: loc.lat, lng: loc.lng },
+          map: map,
+          title: loc.name
+        });
 
-            ParisMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Paris.html');
-            });
-            BulgariaMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Bulgaria.html');
-            });
-            GalapagosMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Galapagos.html');
-            });
-            QuitoMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Quito.html');
-            });
-            Costa_RicaMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Costa_Rica.html');
-            });
-            BoliviaMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Bolivia.html');
-            });
-            MadagascarMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Madagascar.html');
-            });
-            SeychellesMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Seychelles.html');
-            });
-            RajasthanMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Rajasthan.html');
-            });
-            New_DelhiMarker.addListener('click', function() {
-              $('#mainContent').load('./places/New_Delhi.html');
-            });
-            AgraMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Agra.html');
-            });
-            AurangabadMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Aurangabad.html');
-            });
-            VaranasiMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Varanasi.html');
-            });
-            EthiopiaMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Ethiopia.html');
-            });
-            NorwayMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Norway.html');
-            });
-            Quintana_RooMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Quintana_Roo.html');
-            });
-            YucatanMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Yucatan.html');
-            });
-            ChileMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Chile.html');
-            });
-            SarajevoMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Sarajevo.html');
-            });
-            SantoriniMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Santorini.html');
-            });
-            CreteMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Crete.html');
-            });
-            SardiniaMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Sardinia.html');
-            });
-            MadridMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Madrid.html');
-            });
-            JordanMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Jordan.html');
-            });
-            AzoresMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Azores.html');
-            });
-            MadeiraMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Madeira.html');
-            });
-            MoscowMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Moscow.html');
-            });
-            DublinMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Dublin.html');
-            });
-            BudapestMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Budapest.html');
-            });
-            SicilyMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Sicily.html');
-            });
-            ZaragozaMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Zaragoza.html');
-            });
-            GenevaMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Geneva.html');
-            });
-            South_TyrolMarker.addListener('click', function() {
-              $('#mainContent').load('./places/South_Tyrol.html');
-            });
-             FrankfurtMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Frankfurt.html');
-            });
-             ValaisMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Valais.html');
-            });
-            Aosta_ValleyMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Aosta_Valley.html');
-            });
-            LisbonMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Lisbon.html');
-            });
-            EgyptMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Egypt.html');
-            });
-            AthensMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Athens.html');
-            });
-            EphesusMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Ephesus.html');
-            });
-            Cape_VerdeMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Cape_Verde.html');
-            });
-            La_PalmaMarker.addListener('click', function() {
-              $('#mainContent').load('./places/La_Palma.html');
-            });
-            RomaniaMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Romania.html');
-            });
-            Alpes_MaritimesMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Alpes-maritimes.html');
-            });
-            MonacoMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Monaco.html');
-            });
-            MarrakeshMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Marrakesh.html');
-            });
-            StresaMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Stresa.html');
-            });
-            LiechtensteinMarker.addListener('click', function() {
-              $('#mainContent').load('./places/Liechtenstein.html');
-            });
+        marker.addListener('click', function() {
+          $('#mainContent').load('./places/' + loc.file);
+        });
+      });
+    }
 
-          }
-          </script>
-          <script async defer
-          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8w4BAWceAXf-o5Qy64qUuXq9vALVLmMg&callback=initMap">
-          </script>
+    $(document).ready(function() {
+      $("#sidebar").load("./navDivContent.html");
+    });
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8w4BAWceAXf-o5Qy64qUuXq9vALVLmMg&callback=initMap"></script>
 
-        </div>
-      </article>
+            
+      </div>
+    </article>
+
     </div>
-  </section>
 
-  <section>
-    <div class="container">
-      <article id="mainContent">
-        <div>
-        <h2>Welcome!!!</h2>
+</section>
+
+    <section>
+      <div class="container">
+        <article id="mainContent">
+          <div>
+          <h2>Welcome!</h2>
           <div class="boxes_span">
             <div class="box">
-              <p>Select place of interest with the map or navigating with the side/top tree menu.</p>
+              <p>Select a place of interest on the map or navigate using the side/top menu.</p>
               <p>A photo collage of all places may be found <a href="./collage.html">here</a>.</p>
             </div>
+            </div>
           </div>
-        </div>
-      </article>
-    </div>
-  </section>
+        </article>
+      </div>
+    </section>
 
-  <section id="newsletter">
-    <div class="container">
-      <form class="form_1">
+    <section id="newsletter">
+      <div class="container">
+        <form class="form_1">
         For comments/questions please click on "Contact".
-      </form>
-    </div>
-  </section>
+          </form>
+      </div>
+    </section>
+  
 
   <section>
-    <div class="container">
-      <p><button onclick="goToTopFunction()" class="button_1" id="goToTopBtn" title="Go to top">Go to top</button></p>
-    </div>
-  </section>
+  <div class="container">
+    <p><button onclick="goToTopFunction()" class="button_1" id="goToTopBtn" title="Go to top">Go to top</button></p>
+  </div>
+    </section>
 
   <footer>
     <section id="boxesFooter">
       <div class="container">
         <div class="headerFlex">
-          <div id="dateTxt">
-          </div>
-          <div id="sysTxt">
-          </div>
-          <div id="copyTxt">
-          </div>
+          <div id="dateTxt"></div>
+          <div id="sysTxt"></div>
+          <div id="copyTxt"></div>
         </div>
       </div>
     </section>
   </footer>
+
+  
+
 </body>
 </html>
