@@ -110,9 +110,17 @@ header li{
   padding: 0 20px 0 20px;
 }
 
+header #branding{
+  float:left;
+}
+
 header #branding h1 {
   margin: 0;
   font-family: var(--font-heading);
+}
+
+header nav{
+  float:right;
 }
 
 header .highlight,
@@ -150,12 +158,11 @@ header .logoImgContainer img {
 /* Newsletter */
 .form_1 {
   display: flex;
-  align-items: center;
-  gap: 10px;
 }
 
 .form_1 > nav {
   margin-left: auto;
+  flex-wrap: wrap;
 }
 
 #newsletter {
@@ -165,8 +172,12 @@ header .logoImgContainer img {
   overflow: hidden;
 }
 
+#newsletter form {
+  float:right;
+}
+
 #newsletter input[type="email"] {
-  padding: 6px;
+  padding: 4px;
   width: 250px;
 }
 
@@ -174,20 +185,22 @@ header .logoImgContainer img {
 #navListAndMapDiv {
   display: grid;
   grid-template-columns: 4fr 6fr;
-  gap: 10px;
   padding: 5px;
 }
 
 #navListAndMapDiv > div {
   background: var(--backgroundColor);
+  margin:5px;
 }
 
+/* google maps markers */
 #map {
   height: 340px;
   width: 100%;
   border-radius: 5px;
 }
 
+/* Sidebar */
 #sidebar {
   padding: 10px;
   background: var(--primary);
@@ -223,7 +236,7 @@ header .logoImgContainer img {
 
 .box {
   background: var(--primary);
-  padding: 10px;
+  padding: 5px;
 }
 
 #mainContent > div > h2,
@@ -233,9 +246,14 @@ header .logoImgContainer img {
   margin: 0;
 }
 
+.box ul{
+  list-style-type: none;
+}
+
 /* Footer */
 footer {
-  padding: 20px 0;
+  padding-top:20px;
+  padding-bottom:20px;
   color: var(--textColor1);
   background-color: var(--backgroundColor);
   font-size: 0.8rem;
@@ -246,22 +264,27 @@ footer .headerFlex {
 }
 
 footer .headerFlex > div {
-  padding: 0 20px;
+  padding: 0 20px 0 20px;
+  flex-wrap: wrap;
 }
 
 /* Content & Media */
 .contentItemImgContainer {
-  display: flex;
-  justify-content: center;
-  padding: 5px;
+  text-align: center;
+  padding:5px;
   overflow: hidden;
+  justify-content: center;
+  display: block;
 }
 
 .contentItemImgContainer img {
   max-width: 100%;
   max-height: 400px;
-  height: auto;
-  display: block;
+  display: block; /* remove extra space below image */
+  justify-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #listHeader {
@@ -282,6 +305,7 @@ footer .headerFlex > div {
 
 .collapsible ul li a:hover {
   color: var(--backgroundColor);
+  text-decoration: none;
 }
 
 .expand, .collapse, .leaf {
