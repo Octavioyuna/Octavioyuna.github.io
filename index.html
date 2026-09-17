@@ -19,7 +19,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Ubuntu&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+   <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 
   <!-- Core JavaScript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -128,28 +129,31 @@
 
     
 function initMap() {
-  var map = L.map('map').setView([26, 5], 3);
+  var mapCenter = [26, 5];
+  
+  var map = L.map('map').setView(mapCenter, 3);
   
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
     attribution: '© OpenStreetMap contributors'
   }).addTo(map);
   
-  locations.forEach(loc => {
-    L.marker([loc.lat, loc.lng])
-     .addTo(map)
-     .bindPopup(loc.name)
-     .on('click', function() {
-       $('#mainContent').load('./places/' + loc.file);
-     });
+  locations.forEach(function(loc) {
+    var marker = L.marker([loc.lat, loc.lng]).addTo(map);
+    
+    marker.bindPopup(loc.name);
+    
+    marker.on('click', function() {
+      $('#mainContent').load('./places/' + loc.file);
+    });
   });
 }
-</script>
-<script>
-    $(document).ready(function() {
-      $("#sidebar").load("./navDivContent.html");
-    });
-  </script>
 
+$(document).ready(function() {
+  $("#sidebar").load("./navDivContent.html");
+  initMap();
+});
+</script>
             
       </div>
     </article>
