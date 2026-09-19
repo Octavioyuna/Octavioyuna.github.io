@@ -142,8 +142,8 @@ function initMap() {
     // Hover tooltip (shows on mouse over)
     marker.bindTooltip(loc.name, {
       permanent: false,
-      direction: 'top',
-      offset: [0, -10]
+    direction: 'center',
+    offset: [0, 0]
     });
     // Click popup (shows on click)
     marker.bindPopup(loc.name);
