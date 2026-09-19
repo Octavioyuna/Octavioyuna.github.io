@@ -130,13 +130,12 @@
 function initMap() {
   var mapCenter = [26, 5];
   
-  var map = L.map('map').setView(mapCenter, 2);
+  var map = L.map('map', { attributionControl: false }).setView(mapCenter, 2);
 
   L.control.attribution({ prefix: false }).addTo(map);
   
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
-    attribution: '© OpenStreetMap contributors'
   }).addTo(map);
   
   // Loop through each place marker
