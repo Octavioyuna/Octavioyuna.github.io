@@ -131,6 +131,8 @@ function initMap() {
   var mapCenter = [26, 5];
   
   var map = L.map('map').setView(mapCenter, 2);
+
+  L.control.attribution({ prefix: false }).addTo(map);
   
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
@@ -144,7 +146,7 @@ function initMap() {
     marker.bindTooltip(loc.name, {
       permanent: false,
       direction: 'top',
-      offset: [0, -10]
+      offset: [0, 0]
     });
     // Click popup (shows on click)
     marker.bindPopup(loc.name);
