@@ -138,9 +138,18 @@ function initMap() {
     attribution: '© OpenStreetMap contributors'
   }).addTo(map);
   
+  // Loop through each place marker
   locations.forEach(function(loc) {
     var marker = L.marker([loc.lat, loc.lng]).addTo(map);
+    // Hover tooltip (shows on mouse over)
+    marker.bindTooltip(loc.name, {
+      permanent: false,
+      direction: 'top',
+      offset: [0, -10]
+    });
+    // Click popup (shows on click)
     marker.bindPopup(loc.name);
+    // Click event - load page content
     marker.on('click', function() {
       $('#mainContent').load('./places/' + loc.file);
     });
@@ -155,9 +164,7 @@ $(document).ready(function() {
             
       </div>
     </article>
-
     </div>
-
 </section>
 
     <section>
