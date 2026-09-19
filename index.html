@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
    <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 
   <!-- Core JavaScript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -72,7 +72,7 @@
 
         <div id="map"></div>
 
-<!-- Google Maps Script -->
+<!-- Leaflet Map Script -->
             <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
   <script>
@@ -131,7 +131,7 @@
 function initMap() {
   var mapCenter = [26, 5];
   
-  var map = L.map('map').setView(mapCenter, 3);
+  var map = L.map('map').setView(mapCenter, 2);
   
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
@@ -140,9 +140,7 @@ function initMap() {
   
   locations.forEach(function(loc) {
     var marker = L.marker([loc.lat, loc.lng]).addTo(map);
-    
     marker.bindPopup(loc.name);
-    
     marker.on('click', function() {
       $('#mainContent').load('./places/' + loc.file);
     });
