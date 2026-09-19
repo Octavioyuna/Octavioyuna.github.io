@@ -128,7 +128,7 @@
 
     
 function initMap() {
-  var mapCenter = [26.5, 5];
+  var mapCenter = [28, 5];
   var mapZoomInitial = 2;
   var map = L.map('map', { attributionControl: false }).setView(mapCenter, mapZoomInitial);
   L.control.attribution({ prefix: false }).addTo(map);
@@ -142,8 +142,7 @@ function initMap() {
     // Hover tooltip (shows on mouse over)
     marker.bindTooltip(loc.name, {
       permanent: false,
-      direction: 'top',
-      offset: [0, -10]
+      direction: 'top'
     });
     // Click popup (shows on click)
     marker.bindPopup(loc.name);
