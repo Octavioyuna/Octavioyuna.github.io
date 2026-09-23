@@ -75,59 +75,8 @@
 
 <!-- Leaflet Map Script -->
   <script>
-    const locations = [
-      { name: "Paris", file: "Paris.html", lat: 48.856700, lng: 2.350800 },
-      { name: "Bulgaria", file: "Bulgaria.html", lat: 42.683333, lng: 23.316667 },
-      { name: "Galapagos", file: "Galapagos.html", lat: -0.666667, lng: -90.550000 },
-      { name: "Quito", file: "Quito.html", lat: -0.233333, lng: -78.516667 },
-      { name: "Costa Rica", file: "Costa_Rica.html", lat: 10.000000, lng: -84.000000 },
-      { name: "Bolivia", file: "Bolivia.html", lat: -16.712000, lng: -64.666000 },
-      { name: "Madagascar", file: "Madagascar.html", lat: -20.000000, lng: 47.000000 },
-      { name: "Seychelles", file: "Seychelles.html", lat: -4.583333, lng: 55.666667 },
-      { name: "Rajasthan", file: "Rajasthan.html", lat: 26.600000, lng: 73.800000 },
-      { name: "New Delhi", file: "New_Delhi.html", lat: 28.613889, lng: 77.208889 },
-      { name: "Agra", file: "Agra.html", lat: 27.180000, lng: 78.020000 },
-      { name: "Aurangabad", file: "Aurangabad.html", lat: 19.880000, lng: 75.320000 },
-      { name: "Varanasi", file: "Varanasi.html", lat: 25.280000, lng: 82.960000 },
-      { name: "Ethiopia", file: "Ethiopia.html", lat: 8.000000, lng: 38.000000 },
-      { name: "Norway", file: "Norway.html", lat: 61.000000, lng: 8.000000 },
-      { name: "Quintana Roo", file: "Quintana_Roo.html", lat: 19.600000, lng: -87.920000 },
-      { name: "Yucatan", file: "Yucatan.html", lat: 20.833333, lng: -89.000000 },
-      { name: "Chile", file: "Chile.html", lat: -34.000000, lng: -71.000000 },
-      { name: "Sarajevo", file: "Sarajevo.html", lat: 43.866667, lng: 18.416667 },
-      { name: "Santorini", file: "Santorini.html", lat: 36.416667, lng: 25.433333 },
-      { name: "Crete", file: "Crete.html", lat: 35.210000, lng: 24.910000 },
-      { name: "Sardinia", file: "Sardinia.html", lat: 40.000000, lng: 9.000000 },
-      { name: "Madrid", file: "Madrid.html", lat: 40.416944, lng: -3.703333 },
-      { name: "Jordan", file: "Jordan.html", lat: 31.240000, lng: 36.510000 },
-      { name: "Azores", file: "Azores.html", lat: 38.660000, lng: -28.070000 },
-      { name: "Madeira", file: "Madeira.html", lat: 32.650000, lng: -16.916667 },
-      { name: "Moscow", file: "Moscow.html", lat: 55.755833, lng: 37.617222 },
-      { name: "Dublin", file: "Dublin.html", lat: 53.350000, lng: -6.260278 },
-      { name: "Budapest", file: "Budapest.html", lat: 47.492500, lng: 19.051389 },
-      { name: "Sicily", file: "Sicily.html", lat: 37.500000, lng: 14.000000 },
-      { name: "Zaragoza", file: "Zaragoza.html", lat: 41.650000, lng: -0.883333 },
-      { name: "Geneva", file: "Geneva.html", lat: 46.201667, lng: 6.146944 },
-      { name: "South Tyrol", file: "South_Tyrol.html", lat: 46.500000, lng: 11.350000 },
-      { name: "Frankfurt", file: "Frankfurt.html", lat: 50.110556, lng: 8.682222 },
-      { name: "Valais", file: "Valais.html", lat: 46.066667, lng: 7.600000 },
-      { name: "Aosta Valley", file: "Aosta_Valley.html", lat: 45.746944, lng: 7.439167 },
-      { name: "Lisbon", file: "Lisbon.html", lat: 38.725278, lng: -9.150000 },
-      { name: "Egypt", file: "Egypt.html", lat: 26.000000, lng: 30.000000 },
-      { name: "Athens", file: "Athens.html", lat: 37.984167, lng: 23.728056 },
-      { name: "Ephesus", file: "Ephesus.html", lat: 37.941111, lng: 27.341944 },
-      { name: "Cape Verde", file: "Cape_Verde.html", lat: 15.300000, lng: -23.700000 },
-      { name: "La Palma", file: "La_Palma.html", lat: 28.666667, lng: -17.866667 },
-      { name: "Romania", file: "Romania.html", lat: 46.000000, lng: 25.000000 },
-      { name: "Alpes-Maritimes", file: "Alpes-maritimes.html", lat: 43.833333, lng: 7.166667 },
-      { name: "Monaco", file: "Monaco.html", lat: 43.731111, lng: 7.420000 },
-      { name: "Marrakesh", file: "Marrakesh.html", lat: 31.630000, lng: -8.008889 },
-      { name: "Stresa", file: "Stresa.html", lat: 45.883611, lng: 8.539444 },
-      { name: "Liechtenstein", file: "Liechtenstein.html", lat: 47.150000, lng: 9.550000 }
-    ];
-
     
-function initMap() {
+async function initMap() {
   var mapCenter = [28, 5];
   var mapZoomInitial = 2;
   var map = L.map('map', { attributionControl: false }).setView(mapCenter, mapZoomInitial);
@@ -136,22 +85,31 @@ function initMap() {
     maxZoom: 19,
   }).addTo(map);
   
-  // Loop through each place marker
-  locations.forEach(function(loc) {
-    var marker = L.marker([loc.lat, loc.lng]).addTo(map);
-    // Hover tooltip (shows on mouse over)
-    marker.bindTooltip(loc.name, {
-      permanent: false,
-    direction: 'top',
-    offset: [-15,0]
+  try {
+    // 1. Fetch places.json file asynchronously
+    const response = await fetch('places.json');
+    const locations = await response.json();
+
+    // 2. Loop through each place marker (using data from the JSON file)
+    locations.forEach(function(loc) {
+      var marker = L.marker([loc.lat, loc.lng]).addTo(map);
+      // Hover tooltip (shows on mouse over)
+      marker.bindTooltip(loc.name, {
+        permanent: false,
+        direction: 'top',
+        offset: [-15,0]
+      });
+      // Click popup (shows on click)
+      marker.bindPopup(loc.name);
+      // Click event - load page content
+      marker.on('click', function() {
+        $('#mainContent').load('./places/' + loc.file);
+      });
     });
-    // Click popup (shows on click)
-    marker.bindPopup(loc.name);
-    // Click event - load page content
-    marker.on('click', function() {
-      $('#mainContent').load('./places/' + loc.file);
-    });
-  });
+    
+  } catch (error) {
+    console.error('Failed to load locations.json:', error);
+  }
 }
 
 $(document).ready(function() {
