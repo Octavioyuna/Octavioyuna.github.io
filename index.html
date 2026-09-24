@@ -87,7 +87,7 @@ async function initMap() {
   
   try {
     // 1. Fetch places.json file asynchronously
-    const response = await fetch('places.json');
+    const response = await fetch('./places.json');
     const locations = await response.json();
 
     // 2. Loop through each place marker (using data from the JSON file)
