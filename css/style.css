@@ -1,5 +1,6 @@
 /* Main style for Travel website : CV, OE 2018 */
 /* Parts adapted from Traversy Media, 2017 */
+/* background occasionally repeated for old browsers */
 
 /* CSS Variables */
 :root {
@@ -7,103 +8,106 @@
   --side: #333;
   --light: #fff;
   --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
-  --backgroundColor: #002147;
-  --backgroundColor2: #35424a;
-  --textColor1: #f4f4f4;
-  --textColor2: #347c98;
-  --textColorHeading1: #002147;
-  --secondary: #999;
-  --hover: #cccccc;
-  --font-heading: 'Cabin Sketch', cursive, sans-serif;
-  --font-body: 'Ubuntu', sans-serif;
+  --backgroundColor:#002147;
+  --backgroundColor2:#35424a;
+  --textColor1:#f4f4f4;
+  --textColor2:#347c98;
+  --textColorHeading1:#002147;
+  --secondary:#999;
+  --hover:#cccccc;
 }
 
-body {
-  font-family: var(--font-body);
-  padding: 0;
-  margin: 0;
-  background-color: var(--backgroundColor);
+body{
+  font-family: Ubuntu, sans-serif;
+  padding:0;
+  margin:0;
+  background-color:var(--backgroundColor);
 }
 
 /* Global */
-.container {
-  width: 80%;
-  margin: auto;
+.container{
+  width:80%;
+  margin:auto;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+ul{
+  margin:0;
+  padding:0;
 }
 
-h1 { font-size: 1.8rem; }
-h2 { font-size: 1.6rem; color: var(--textColorHeading1); }
-h3 { font-size: 1.4rem; color: var(--textColorHeading1); }
-h4 {
-  font-size: 1.2rem;
+
+h1 {
+font-size: 180%;
+}
+
+h2 {
+  font-size: 160%;
   color: var(--textColorHeading1);
-  margin: 5px 0;
+}
+h3 {
+  font-size: 140%;
+  color:  var(--textColorHeading1);
+}
+h4 {
+  font-size: 120%;
+  color:  var(--textColorHeading1);
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
-/* Flex Navigation Header */
 .headerFlex {
   display: flex;
   align-items: flex-end;
-  flex-wrap: wrap;
-  -ms-flex-wrap:wrap;
+    -ms-flex-wrap:wrap;
 }
-
 .headerFlex > nav {
   margin-left: auto;
   flex-wrap: wrap;
-  -ms-flex-preferred-size: 100%;
+-ms-flex-preferred-size: 100%;
 }
-
 .headerFlex > * {
-  padding: 5px;
+  padding:5px;
 }
-
 .navFlex {
   display: flex;
   flex-wrap: wrap;
   -ms-flex-wrap:wrap;
 }
-
 .navFlex > li {
   flex: 1;
 }
 
-.navFlex > li > a {
+
+.navFlex > li > a{
   white-space: nowrap;
 }
 
-.button_1 {
-  background: var(--textColor2);
+.button_1{
+  background:var(--textColor2);
   padding-left: 20px;
   padding-right:20px;
-  color: var(--textColor1);
+  color:var(--textColor1);
   cursor: pointer;
 }
 
-#navMenu {
-  padding: 5px;
+#navMenu{
+  padding:5px;
 }
 
-/* Header */
-header {
-  color: var(--textColor1);
+/* Header **/
+header{
+  color:var(--textColor1);
   padding-top:10px;
   padding-bottom:10px;
-  border-bottom: var(--textColor2) 3px solid;
+  border-bottom:var(--textColor2) 3px solid;
 }
 
-header a {
-  color: var(--textColor1);
-  text-decoration: none;
+header a{
+  color:var(--textColor1);
+  text-decoration:none;
   text-transform: uppercase;
-  font-size: 1rem;
-  font-weight: bold;
+  font-size:16px;
+  font-weight:bold;
 }
 
 header li{
@@ -116,9 +120,9 @@ header #branding{
   float:left;
 }
 
-header #branding h1 {
-  margin: 0;
-  font-family: var(--font-heading);
+header #branding h1{
+  margin:0;
+  font-family: 'Cabin Sketch';
 }
 
 header nav{
@@ -126,70 +130,74 @@ header nav{
 }
 
 header .highlight,
-header .current a {
+header .current a{
   color: var(--textColor2);
 }
 
-header a:hover {
+header a:hover{
   color: var(--hover);
 }
 
-header .logoImgContainer img {
+header .logoImgContainer img{
   height: 50px;
   width: auto;
 }
 
 /* Showcase */
-#showcase {
+#showcase{
   padding-top:5px;
   padding-bottom:5px;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-              url('../img/chuchosVagabundosBannerSmall_10.jpg') no-repeat center center / cover;
-  text-align: center;
-  color: var(--textColor1);
+  
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../img/chuchosVagabundosBannerSmall_10.jpg') no-repeat center center;
+   background: -moz-linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.1)), url('../img/chuchosVagabundosBannerSmall_10.jpg') no-repeat center center;
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.1)), url('../img/chuchosVagabundosBannerSmall_10.jpg') no-repeat center center;
+
+  text-align:center;
+  color:var(--textColor1);
+  background-size:cover;
 }
 
-#showcase h1 {
-  font-size: 2rem;
-  font-family: var(--font-heading);
-  font-weight: bold;
+#showcase h1{
+  font-size: 200%;
+  font-family: Cabin Sketch;
+font-weight: bold;
   text-shadow: 4px 4px 4px #333;
-  margin: 0;
+  margin:0;
 }
 
 /* Newsletter */
-.form_1 {
+.form_1{
   display: flex;
 }
-
 .form_1 > nav {
   margin-left: auto;
   flex-wrap: wrap;
 }
-
-#newsletter {
-  padding: 15px;
-  color: var(--textColor1);
-  background: #35424a url('../img/CVArt3.jpg') repeat center center;
-  overflow: hidden;
+.form_1 > * {
+  padding:5px;
+  display:inline-block;
+  overflow:hidden;
 }
-
+#newsletter{
+  padding:15px;
+  color:var(--textColor1);
+  background: #35424a url('../img/CVArt3.jpg') repeat center center;
+  overflow:hidden;
+}
 #newsletter form {
   float:right;
 }
-
-#newsletter input[type="email"] {
-  padding: 4px;
-  width: 250px;
+#newsletter input[type="email"]{
+  padding:4px;
+  width:250px;
 }
 
-/* Grid Layouts */
-#navListAndMapDiv {
-  display: grid;
+/* navListAndMapDiv */
+#navListAndMapDiv{
+  display:grid;
   grid-template-columns: 4fr 6fr;
-  padding: 5px;
+  padding:5px;
 }
-
 #navListAndMapDiv > div {
   background: var(--backgroundColor);
   margin:5px;
@@ -199,66 +207,71 @@ header .logoImgContainer img {
 #map {
   height: 340px;
   width: 100%;
-  border-radius: 5px;
+  border-radius:5px;
 }
 
 /* Sidebar */
-#sidebar {
-  padding: 10px;
+#sidebar{
+  padding:10px;
   background: var(--primary);
   border-radius: 5px;
 }
 
-/* Main Content */
+/* mainContent added to contain all the main box */
 #mainContent {
   display: flex;
-  flex-direction: column;
+  flex-direction:column;
   background: var(--backgroundColor);
-  padding: 5px;
+  padding:5px;
+
 }
 
 #mainContent > div {
   background: var(--primary);
-  margin: 5px;
+  margin:5px;
   border-radius: 5px;
-  padding: 5px;
+  padding:5px;
 }
-
 .boxes {
   display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
-  padding: 0;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  padding:0px;
 }
-
 .boxes_span {
-  padding: 0;
+  padding:0px;
   border-radius: 5px;
 }
-
 .box {
   background: var(--primary);
-  padding: 5px;
+  padding:5px;
 }
 
-#mainContent > div > h2,
-#mainContent > div > h3,
+#mainContent > div > h2 {
+  padding:5px;
+  margin:0px;
+}
+#mainContent > div > h3 {
+  padding:5px;
+  margin:0px;
+}
 #mainContent > div > h4 {
-  padding: 5px;
-  margin: 0;
+  margin:0px;
 }
 
 .box ul{
   list-style-type: none;
 }
 
-/* Footer */
-footer {
+
+/* BoxesFooter */
+
+footer{
   padding-top:20px;
   padding-bottom:20px;
-  color: var(--textColor1);
-  background-color: var(--backgroundColor);
-  font-size: 0.8rem;
+  color:var(--textColor1);
+  background-color:var(--backgroundColor);
+  font-size: 80%;
 }
 
 footer .headerFlex {
@@ -270,7 +283,12 @@ footer .headerFlex > div {
   flex-wrap: wrap;
 }
 
-/* Content & Media */
+
+
+/**************//**************//**************//**************/
+/*OE*/
+
+/*other*/
 .contentItemImgContainer {
   text-align: center;
   padding:5px;
@@ -278,7 +296,6 @@ footer .headerFlex > div {
   justify-content: center;
   display: block;
 }
-
 .contentItemImgContainer img {
   max-width: 100%;
   max-height: 400px;
@@ -293,9 +310,10 @@ footer .headerFlex > div {
   cursor: pointer;
 }
 
-/* Collapsible List */
-.collapsible ul, 
-.collapsible ul li {
+/**************/
+/*collapsibleList*/
+/**************/
+.collapsible ul, .collapsible ul li {
   list-style-type: none;
 }
 
@@ -315,10 +333,9 @@ footer .headerFlex > div {
   cursor: pointer;
 }
 
-.collapsible li.leaf > span {
-  color: var(--primary);
+.collapsible li.leaf>span {
+  color:var(--primary);
 }
-
 
 
 /**************//**************//**************//**************/
