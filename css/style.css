@@ -37,9 +37,20 @@ ul {
   list-style: none;
 }
 
-h1 { font-size: 1.8rem; }
-h2 { font-size: 1.6rem; color: var(--textColorHeading1); }
-h3 { font-size: 1.4rem; color: var(--textColorHeading1); }
+h1 {
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  color: var(--textColorHeading1);
+}
+
+h3 {
+  font-size: 1.4rem;
+  color: var(--textColorHeading1);
+}
+
 h4 {
   font-size: 1.2rem;
   color: var(--textColorHeading1);
@@ -50,7 +61,7 @@ h4 {
 .headerFlex {
   display: flex;
   align-items: flex-end;
-  -ms-flex-wrap:wrap;
+  -ms-flex-wrap: wrap;
 }
 
 .headerFlex > nav {
@@ -66,7 +77,7 @@ h4 {
 .navFlex {
   display: flex;
   flex-wrap: wrap;
-  -ms-flex-wrap:wrap;
+  -ms-flex-wrap: wrap;
 }
 
 .navFlex > li {
@@ -80,7 +91,7 @@ h4 {
 .button_1 {
   background: var(--textColor2);
   padding-left: 20px;
-  padding-right:20px;
+  padding-right: 20px;
   color: var(--textColor1);
   cursor: pointer;
 }
@@ -92,8 +103,8 @@ h4 {
 /* Header */
 header {
   color: var(--textColor1);
-  padding-top:10px;
-  padding-bottom:10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border-bottom: var(--textColor2) 3px solid;
 }
 
@@ -105,14 +116,14 @@ header a {
   font-weight: bold;
 }
 
-header li{
-  float:left;
+header li {
+  float: left;
   list-style-type: none;
   padding: 0 20px 0 20px;
 }
 
-header #branding{
-  float:left;
+header #branding {
+  float: left;
 }
 
 header #branding h1 {
@@ -120,8 +131,8 @@ header #branding h1 {
   font-family: var(--font-heading);
 }
 
-header nav{
-  float:right;
+header nav {
+  float: right;
 }
 
 header .highlight,
@@ -140,8 +151,8 @@ header .logoImgContainer img {
 
 /* Showcase */
 #showcase {
-  padding-top:5px;
-  padding-bottom:5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
               url('../img/chuchosVagabundosBannerSmall_10.jpg') no-repeat center center / cover;
   text-align: center;
@@ -174,7 +185,7 @@ header .logoImgContainer img {
 }
 
 #newsletter form {
-  float:right;
+  float: right;
 }
 
 #newsletter input[type="email"] {
@@ -191,10 +202,10 @@ header .logoImgContainer img {
 
 #navListAndMapDiv > div {
   background: var(--backgroundColor);
-  margin:5px;
+  margin: 5px;
 }
 
-/* map markers */
+/* Map Markers */
 #map {
   height: 340px;
   width: 100%;
@@ -247,14 +258,14 @@ header .logoImgContainer img {
   margin: 0;
 }
 
-.box ul{
+.box ul {
   list-style-type: none;
 }
 
 /* Footer */
 footer {
-  padding-top:20px;
-  padding-bottom:20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   color: var(--textColor1);
   background-color: var(--backgroundColor);
   font-size: 0.8rem;
@@ -272,7 +283,7 @@ footer .headerFlex > div {
 /* Content & Media */
 .contentItemImgContainer {
   text-align: center;
-  padding:5px;
+  padding: 5px;
   overflow: hidden;
   justify-content: center;
   display: block;
@@ -293,7 +304,7 @@ footer .headerFlex > div {
 }
 
 /* Collapsible List */
-.collapsible ul, 
+.collapsible ul,
 .collapsible ul li {
   list-style-type: none;
 }
@@ -309,7 +320,9 @@ footer .headerFlex > div {
   text-decoration: none;
 }
 
-.expand, .collapse, .leaf {
+.expand,
+.collapse,
+.leaf {
   padding-left: 1.6em;
   cursor: pointer;
 }
@@ -318,51 +331,52 @@ footer .headerFlex > div {
   color: var(--primary);
 }
 
-
-
-/**************//**************//**************//**************/
-
-
 /* Media Queries */
-@media(max-width: 768px){
-
+@media (max-width: 768px) {
   .headerFlex {
     flex-wrap: wrap;
   }
+
   .headerFlex > div {
     flex-basis: 100%;
   }
+
   .navFlex {
     flex-wrap: wrap;
   }
+
   .navFlex > li {
     flex-basis: 100%;
   }
+
   header #branding,
   header nav,
   header nav li,
   #newsletter h1,
-  #newsletter form{
-    float:none;
-    text-align:center;
-    width:100%;
+  #newsletter form {
+    float: none;
+    text-align: center;
+    width: 100%;
   }
-  #mainContent{
+
+  #mainContent {
     grid-template-columns: 1fr;
   }
 
-  #newsletter button{
-    display:block;
-    width:100%;
+  #newsletter button {
+    display: block;
+    width: 100%;
   }
 
-  #newsletter form input[type="email"]{
-    width:100%;
-    margin-bottom:5px;
+  #newsletter form input[type="email"] {
+    width: 100%;
+    margin-bottom: 5px;
   }
+
   .form_1 {
     flex-wrap: wrap;
   }
+
   .form_1 > * {
     flex-basis: 100%;
   }
@@ -374,8 +388,9 @@ footer .headerFlex > div {
   .boxes {
     grid-template-columns: 1fr;
   }
-  .container{
-  width:90%;
-  margin:auto;
-}
+
+  .container {
+    width: 90%;
+    margin: auto;
+  }
 }
